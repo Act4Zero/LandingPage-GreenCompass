@@ -11,18 +11,22 @@ import NewsletterSection from "components/NewsletterSection";
 import TeamBiosSection from "components/TeamBiosSection";
 import ContactSection from "components/ContactSection";
 import Footer from "components/Footer";
+import './_i18n';
+import { useTranslation } from 'react-i18next';
 
 function IndexPage(props) {
+  const { t } = useTranslation();
+
   return (
     <>
       <Meta />
       <Navbar bgColor="bg-white" />
       <HeroSection
-        title="Build web applications and websites with ease"
-        subtitle="Carefully crafted, easy to customize, fully responsive UI components for your Tailwind CSS based projects."
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
         strapline=""
         size="lg"
-        bgColor="bg-blue-900"
+        bgColor="bg-green-500"
         bgImage=""
         bgImageOpacity={1}
         textColor="text-white"
