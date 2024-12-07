@@ -1,7 +1,7 @@
 import React from "react";
-import Meta from "components/Meta";
 import './_i18n';
 import { useTranslation } from 'react-i18next';
+import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import HeroSection from "components/HeroSection";
 import ContentSection from "components/ContentSection";
