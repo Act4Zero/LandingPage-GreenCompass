@@ -2,5 +2,12 @@
   "hero": {
     "title": "More sustainable future. One action at a time.",
     "subtitle": "The impact of a single individual might seem small, but the collective power of millions of consumers making conscious choices and advocating for change is significant."
+  },
+  "content": {
+    "title": "The Sustainability Gap",
+    "paragraph1": "Climate change is a pressing issue impacting our planet. We all need to take action, but it can be overwhelming. Our daily choices leave an environmental footprint, contributing to pollution, resource depletion, and a changing climate.",
+    "paragraph2": "Even small changes in your lifestyle can make a significant difference. There's a growing desire for people to live a more sustainable lifestyle. However, many individuals struggle to bridge the gap between good intentions and taking real action.",
+    "paragraph3": "An abundance of information exists, but it can be overwhelming and it often lacks clear, personalized direction. ",
+    "paragraph4": "People need a roadmap for implementing practical changes and staying motivated on their sustainability journey. That's where the Green Compass comes in handy."
   }
 }

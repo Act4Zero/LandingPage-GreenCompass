@@ -1,8 +1,11 @@
 import React from "react";
 import Meta from "components/Meta";
+import './_i18n';
+import { useTranslation } from 'react-i18next';
 import Navbar from "components/Navbar";
 import HeroSection from "components/HeroSection";
-import ProjectTimeline from "components/ProjectTimeline";
+import ContentSection from "components/ContentSection";
+import ProjectTimeline from "components/ContentSection";
 import FeaturesSection from "components/FeaturesSection";
 import CtaSection from "components/CtaSection";
 import FaqSection from "components/FaqSection";
@@ -11,8 +14,6 @@ import NewsletterSection from "components/NewsletterSection";
 import TeamBiosSection from "components/TeamBiosSection";
 import ContactSection from "components/ContactSection";
 import Footer from "components/Footer";
-import './_i18n';
-import { useTranslation } from 'react-i18next';
 
 function IndexPage(props) {
   const { t } = useTranslation();
@@ -31,7 +32,13 @@ function IndexPage(props) {
         bgImageOpacity={1}
         textColor="text-white"
       />
-      <ProjectTimeline />
+      <ContentSection
+        title={t('content.title')} 
+        paragraph1={t('content.paragraph1')}
+        paragraph2={t('content.paragraph2')}
+        paragraph3={t('content.paragraph3')}
+        paragraph4={t('content.paragraph4')}
+      />
       <FeaturesSection
         title="Amazing features packed in a neat package"
         subtitle="You will love working with your newly updated and customized dashboard."
