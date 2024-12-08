@@ -40,9 +40,9 @@ function IndexPage(props) {
         paragraph4={t('content.paragraph4')}
       />
       <FeaturesSection
-        title="Amazing features packed in a neat package"
-        subtitle="You will love working with your newly updated and customized dashboard."
-        strapline="It's time to build"
+        title={t('features.title')}
+        subtitle={t('features.subtitle')}
+        strapline={t('features.strapline')}
         size="md"
         bgColor="bg-white"
         bgImage=""

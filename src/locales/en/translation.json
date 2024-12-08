@@ -9,5 +9,30 @@
     "paragraph2": "Even small changes in your lifestyle can make a significant difference. There's a growing desire for people to live a more sustainable lifestyle. However, many individuals struggle to bridge the gap between good intentions and taking real action.",
     "paragraph3": "An abundance of information exists, but it can be overwhelming and it often lacks clear, personalized direction. ",
     "paragraph4": "People need a roadmap for implementing practical changes and staying motivated on their sustainability journey. That's where the Green Compass comes in handy."
+  },
+  "features": {
+    "title": "Packed with features to support your eco-conscious goals.",
+    "subtitle": "Experience seamless, purpose-driven functionality.",
+    "strapline": "Built for Impact",
+    "feature1": {
+      "title": "Your Gateway to a Greener World",
+      "description": "The Sustainability Map connects you to nearby eco-friendly businesses and services tailored to your values. Easily filter for what matters most—clean energy, zero-waste practices, or locally sourced products."
+    },
+    "feature2": {
+      "title": "Empower Your Sustainable Future",
+      "description": "Dive into a world of learning designed to inspire and equip you for a greener tomorrow. The Knowledge Hub offers a rich collection of resources to deepen your understanding of the planet, our environment, and the steps you can take to live more sustainably."
+    },
+    "feature3": {
+      "title": "Make Every Action Count",
+      "description": "Take charge of your carbon footprint by discovering your green identity. Track your progress, set goals, and get personalized recommendations to reduce your impact—one small change at a time, building toward a healthier planet."
+    },
+    "feature4": {
+      "title": "Collaborate and Grow with the Community",
+      "description": "Connect with friends, family, and like-minded individuals to compare sustainability profiles, share goals, and work together toward a greener future. Stay engaged with leaderboards, challenges, and rewards, while nurturing communication and knowledge sharing to inspire collective impact."
+    },
+    "feature5": {
+      "title": "Shop with Purpose",
+      "description": "Discover sustainable goods and services from verified businesses, all in one app. Order with confidence, enjoy exclusive user-only deals, and make every purchase a step toward a greener future."
+    }
   }
 }

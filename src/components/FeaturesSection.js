@@ -1,48 +1,53 @@
 import React from "react";
 import {
-  AdjustmentsVerticalIcon,
+  ShoppingBagIcon,
   ChartPieIcon,
   GlobeAmericasIcon,
-  BoltIcon,
+  BookOpenIcon,
+  UserGroupIcon
 } from "@heroicons/react/24/solid";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
 import FeatureIcon2 from "components/FeatureIcon2";
+import { useTranslation } from 'react-i18next';
 
 function FeaturesSection(props) {
+  const { t } = useTranslation();
   const features = {
     // Left column
     left: [
       {
-        title: "Customizable",
-        description:
-          "Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.",
-        icon: AdjustmentsVerticalIcon,
-        iconColor: "orange",
+        title: t('features.feature1.title'),
+        description: t('features.feature1.description'),
+        icon: GlobeAmericasIcon,
+        iconColor: "emerald",
       },
       {
-        title: "Rich Statistics",
-        description:
-          "Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.",
-        icon: ChartPieIcon,
+        title: t('features.feature2.title'),
+        description: t('features.feature2.description'),
+        icon: BookOpenIcon,
         iconColor: "red",
       },
     ],
     // Right column
     right: [
       {
-        title: "Works globally",
-        description:
-          "Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.",
-        icon: GlobeAmericasIcon,
-        iconColor: "emerald",
+        title: t('features.feature3.title'),
+        description: t('features.feature3.description'),
+        icon: ChartPieIcon,
+        iconColor: "purple",
       },
       {
-        title: "Lighting fast UI",
-        description:
-          "Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.",
-        icon: BoltIcon,
-        iconColor: "purple",
+        title: t('features.feature4.title'),
+        description: t('features.feature4.description'),
+        icon: UserGroupIcon,
+        iconColor: "blue",
+      },
+      {
+        title: t('features.feature5.title'),
+        description: t('features.feature5.description'),
+        icon: ShoppingBagIcon,
+        iconColor: "pink",
       },
     ],
   };
