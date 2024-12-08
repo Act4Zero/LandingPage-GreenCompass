@@ -16,11 +16,11 @@ function CtaSection(props) {
     >
       <div className="container py-10 md:py-0">
         <div className="relative">
-          <div className="pattern-dots text-blue-300 absolute bottom-0 right-0 w-32 h-32 lg:w-48 lg:h-48 transform translate-x-12 translate-y-16" />
-          <div className="pattern-dots text-blue-300 absolute top-0 left-0 w-32 h-32 lg:w-48 lg:h-48 transform -translate-x-12 -translate-y-16" />
-          <div className="absolute inset-0 -m-6 rounded-xl transform rotate-2 bg-blue-50 bg-opacity-60" />
-          <div className="absolute inset-0 -m-6 rounded-xl transform -rotate-2 bg-blue-100 bg-opacity-60" />
-          <div className="p-12 lg:py-16 lg:px-16 bg-blue-800 rounded shadow-lg text-center relative">
+          <div className="pattern-leaves text-green-400 absolute bottom-0 right-0 w-32 h-32 lg:w-48 lg:h-48 transform translate-x-12 translate-y-16" />
+          <div className="pattern-leaves text-green-400 absolute top-0 left-0 w-32 h-32 lg:w-48 lg:h-48 transform -translate-x-12 -translate-y-16" />
+          <div className="absolute inset-0 -m-6 rounded-xl transform rotate-2 bg-green-200 bg-opacity-60" />
+          <div className="absolute inset-0 -m-6 rounded-xl transform -rotate-2 bg-green-300 bg-opacity-60" />
+          <div className="p-12 lg:py-16 lg:px-16 bg-green-400 rounded shadow-lg text-center relative">
             <div className="space-y-10">
               <SectionHeader
                 title={props.title}
@@ -28,7 +28,7 @@ function CtaSection(props) {
                 strapline={props.strapline}
               />
               <div className="text-center">
-                <Link href="/pricing" passHref={true}>
+                <Link href="/sustainability" passHref={true}>
                   <Button
                     size="xl"
                     variant="secondary"
@@ -36,7 +36,7 @@ function CtaSection(props) {
                       <ArrowRightIcon className="opacity-70 inline-block w-5 h-5" />
                     }
                   >
-                    Let's get started
+                    {props.ctaText}
                   </Button>
                 </Link>
               </div>

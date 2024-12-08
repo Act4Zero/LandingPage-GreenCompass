@@ -50,8 +50,9 @@ function IndexPage(props) {
         textColor=""
       />
       <CtaSection
-        title="Ready? Let’s do it!"
-        subtitle="Get your own custom dashboard and start building amazing services, always with the most solid and rock steady foundation."
+        title={t('cta.title')}
+        subtitle={t('cta.subtitle')}
+        ctaText={t('cta.button')}
         strapline=""
         size="lg"
         bgColor="bg-white"

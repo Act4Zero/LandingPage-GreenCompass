@@ -34,5 +34,10 @@
       "title": "Shop with Purpose",
       "description": "Discover sustainable goods and services from verified businesses, all in one app. Order with confidence, enjoy exclusive user-only deals, and make every purchase a step toward a greener future."
     }
+  },
+  "cta": {
+    "title": "Try the App Today",
+    "subtitle": "Get a hands-on experience with our sustainability journey! Download the app now to explore its current features and start making an impact.",
+    "button": "Get Started"
   }
 }
