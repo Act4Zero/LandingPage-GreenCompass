@@ -1,21 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
-
-const milestonesData = [
-  { title: "Milestone 1", description: "Kickoff & Team Alignment", details: "Official project start, identifying key stakeholders, and setting initial scopes." },
-  { title: "Milestone 2", description: "Design & Architecture", details: "Design planning, wireframes, and preparing the dev environment." },
-  { title: "Milestone 3", description: "Core Development", details: "Implementing core features and initial integration tests." },
-  { title: "Milestone 4", description: "Mid-Project Review", details: "Reviewing progress, adjusting scope, and refining processes." },
-  { title: "Milestone 5", description: "UI/UX Polishing", details: "Enhancing user experience, responsiveness, and visual consistency." },
-  { title: "Milestone 6", description: "Feature Freeze", details: "Focusing on stability and bug fixes, halting new feature development." },
-  { title: "Milestone 7", description: "Beta Release", details: "Releasing a beta version to a test user group for feedback." },
-  { title: "Milestone 8", description: "Performance Optimization", details: "Improving load times, scalability, and resource usage." },
-  { title: "Milestone 9", description: "Security & Compliance", details: "Ensuring data protection, privacy compliance, and robust security measures." },
-  { title: "Milestone 10", description: "Launch", details: "Final public release and post-launch support strategy." },
-];
+import { useTranslation } from 'react-i18next';
 
 const ProjectTimeline = () => {
+  
   const [visibleIndex, setVisibleIndex] = useState(0);
   const refs = useRef([]);
+  const { t } = useTranslation();
+const getText = () => {
+    return t('project-timeline.milestones', { returnObjects: true }) || {};
+};
+
+const milestonesData = [
+    { title: getText()['1'].title, description: getText()['1'].description, details: getText()['1'].details },
+    { title: getText()['2'].title, description: getText()['2'].description, details: getText()['2'].details },
+    { title: getText()['3'].title, description: getText()['3'].description, details: getText()['3'].details },
+    { title: getText()['4'].title, description: getText()['4'].description, details: getText()['4'].details },
+    { title: getText()['5'].title, description: getText()['5'].description, details: getText()['5'].details },
+    { title: getText()['6'].title, description: getText()['6'].description, details: getText()['6'].details },
+    { title: getText()['7'].title, description: getText()['7'].description, details: getText()['7'].details },
+    { title: getText()['8'].title, description: getText()['8'].description, details: getText()['8'].details }
+];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,7 +58,7 @@ const ProjectTimeline = () => {
   return (
     <div className="relative bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="container mx-auto px-6 py-10 relative z-10">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">Project Timeline</h1>
+        <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">{t('project-timeline.title')}</h1>
 
         {/* Scrollable area */}
         <div className="relative h-[800px] overflow-y-scroll no-scrollbar py-10">
@@ -131,7 +135,6 @@ const MilestoneMarker = ({ details }) => {
       </div>
       {/* Tooltip */}
       <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-3 w-56 p-4 bg-white text-gray-800 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 z-10">
-        <p className="font-semibold mb-1">More details</p>
         <p className="text-sm">{details}</p>
       </div>
     </div>
@@ -139,3 +142,4 @@ const MilestoneMarker = ({ details }) => {
 };
 
 export default ProjectTimeline;
+
