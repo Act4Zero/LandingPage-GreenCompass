@@ -5,7 +5,7 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import HeroSection from "components/HeroSection";
 import ContentSection from "components/ContentSection";
-import ProjectTimeline from "components/ContentSection";
+import ProjectTimeline from "components/ProjectTimeline";
 import FeaturesSection from "components/FeaturesSection";
 import CtaSection from "components/CtaSection";
 import FaqSection from "components/FaqSection";
