@@ -62,9 +62,9 @@ function IndexPage(props) {
       />
       <ProjectTimeline />
       <FaqSection
-        title="Frequently Asked Questions"
+        title={t('faq.title')}
         subtitle=""
-        strapline="We answer"
+        strapline={t('faq.strapline')}
         size="md"
         bgColor="bg-white"
         bgImage=""

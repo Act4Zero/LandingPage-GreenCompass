@@ -84,5 +84,40 @@
         "details": "Share the product with the world."
       }
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Get answers to common questions about our app.",
+    "strapline": "We answer",
+    "questions": {
+      "1": {
+      "question": "Why do individuals need this app?",
+      "answer": "We all want to help the planet, but knowing where to start can be overwhelming. Our product bridges the gap between good intentions and real action by providing the knowledge, tools, and community support needed to make a measurable impact on our future."
+      },
+      "2": {
+      "question": "Who is this app for?",
+      "answer": "Individual consumers hold immense power in addressing climate change through collective action and cumulative impact. While the efforts of one person might feel small, the combined choices of millions can drive significant change. Green Compass empowers individuals to understand their impact, take meaningful action, and connect with a community striving for a more sustainable and hopeful future."
+      },
+      "3": {
+      "question": "Where Green Compass Fits in the Sustainability Space?",
+      "answer": "Green Compass empowers individuals to reduce their carbon footprint, shift demand toward sustainable alternatives, and inspire collective action. By nurturing awareness, advocacy, and community connections, it enables users to drive meaningful change and shape a more sustainable future."
+      },
+      "4": {
+      "question": "What can I do with the app right now?",
+      "answer": "Green Compass currently provides a curated feed of sustainability articles, offering actionable insights and inspiration to kickstart your eco-conscious journey. This feature marks our starting point, a deliberate step to bring value from the very beginning and build a foundation for a more comprehensive sustainability platform in the future."
+      },
+      "5": {
+      "question": "Will more features be added to the app?",
+      "answer": "Absolutely! We're actively exploring new features to enhance your sustainability journey, including tools for tracking your impact, connecting with like-minded individuals, and accessing more interactive content. Stay tuned as we grow and evolve, guided by your feedback and our mission to empower sustainable living."
+      },
+      "6": {
+      "question": "Can users suggest features or content for the app?",
+      "answer": "Absolutely! We value your input and believe the best ideas come from our community. If you have suggestions for features or content, you can reach out to us directly. Your feedback helps us shape Green Compass into a platform that truly meets your needs."
+      },
+      "7": {
+      "question": "How do I stay informed about updates and new features?",
+      "answer": "You can stay up-to-date by following us on social media, or subscribing to our newsletter. We’ll keep you informed about the latest updates, new features, and exciting developments in the Green Compass journey."
+      }
+    }
   }
 }
