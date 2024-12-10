@@ -119,5 +119,10 @@
       "answer": "You can stay up-to-date by following us on social media, or subscribing to our newsletter. We’ll keep you informed about the latest updates, new features, and exciting developments in the Green Compass journey."
       }
     }
+  },
+  "download": {
+    "title": "Download the App",
+    "subtitle": "Start your sustainability journey today.",
+    "iosTooltip": "Available soon"
   }
 }

@@ -73,7 +73,11 @@ function IndexPage(props) {
         showSupportButton={true}
         supportUrl="https://zendesk.com"
       />
-      <DownloadTheApp />
+      <DownloadTheApp
+        title={t('download.title')}
+        subtitle={t('download.subtitle')}
+        iosTooltip={t('download.iosTooltip')}
+      />
       <NewsletterSection
         title="Subscribe to our newsletter"
         subtitle="Join us and receive the best curated news, freebies and resources directly to your inbox every week!"

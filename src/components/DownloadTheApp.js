@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 function DownloadTheApp({
+  title,
+  subtitle,
+  iosTooltip,
   imageSrc = "/images/mobile-mosaic-mockup.png",
   androidLink = "https://play.google.com/store/apps/details?id=com.act4zero.greencompass.android",
   iosLink = "#",
@@ -11,9 +14,9 @@ function DownloadTheApp({
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
         {/* Text and Buttons */}
         <div className="w-full md:w-1/2 lg:w-5/12 md:pr-8 lg:pr-12 mb-10 md:mb-0 text-center md:text-left">
-          <h2 className="text-4xl font-extrabold text-gray-900">Get Our App</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900">{title}</h2>
           <p className="text-lg text-gray-600 mt-4 mb-8">
-            Download now and start enjoying our features
+            {subtitle}
           </p>
 
           <div className="flex flex-col items-center md:items-start space-y-6">
@@ -43,7 +46,7 @@ function DownloadTheApp({
               />
               {/* Tooltip shown on hover */}
               <div className="absolute bottom-full mb-2 hidden group-hover:block px-2 py-1 text-sm text-white bg-black rounded">
-                Available soon
+                {iosTooltip}
               </div>
             </div>
           </div>
