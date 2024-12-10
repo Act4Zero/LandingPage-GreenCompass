@@ -79,8 +79,6 @@ function IndexPage(props) {
         iosTooltip={t('download.iosTooltip')}
       />
       <NewsletterSection
-        title="Subscribe to our newsletter"
-        subtitle="Join us and receive the best curated news, freebies and resources directly to your inbox every week!"
         strapline=""
         size="md"
         bgColor="bg-white"

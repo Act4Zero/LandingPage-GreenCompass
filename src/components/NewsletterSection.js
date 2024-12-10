@@ -5,8 +5,10 @@ import Section from "components/Section";
 import TextField from "components/TextField";
 import Button from "components/Button";
 import newsletter from "util/newsletter";
+import { Trans, useTranslation } from "react-i18next";
 
 function NewsletterSection(props) {
+  const { t } = useTranslation();
   const [subscribed, setSubscribed] = useState(false);
   const { handleSubmit, register, errors } = useForm();
 
@@ -36,12 +38,16 @@ function NewsletterSection(props) {
           <div className="p-2 rounded text-center relative bg-blue-500 bg-opacity-10">
             <div className="p-8 lg:py-12 lg:px-16 bg-white rounded">
               <h3 className="text-2xl sm:text-3xl font-extrabold mb-2">
-                {props.title}
+                {t("newsletter.title")}
               </h3>
-              <p className="prose prose-indigo mb-6">{props.subtitle}</p>
+              <p className="prose prose-indigo mb-6">
+                {t("newsletter.subtitle")}
+              </p>
 
               {subscribed === true && (
-                <div className="mt-3 text-center">You are now subscribed!</div>
+                <div className="mt-3 text-center">
+                  {t("newsletter.success")}
+                </div>
               )}
 
               {subscribed === false && (
@@ -51,23 +57,23 @@ function NewsletterSection(props) {
                       type="email"
                       id="email"
                       name="email"
-                      placeholder="Your email"
+                      placeholder={t("newsletter.placeholder")}
                       error={errors.email}
                       inputRef={register({
-                        required: "Please enter an email address",
+                        required: t("newsletter.inputRequired"),
                       })}
                     />
                     <Button type="submit" size="lg">
-                      Subscribe
+                      {t("newsletter.button")}
                     </Button>
                   </div>
                   <p className="text-sm text-gray-600 leading-6">
-                    No spam ever, unsubscribe at any time.
+                    {t("newsletter.note")}
                     <br />
-                    Check out our{" "}
+                    {t("newsletter.privacyPolicy.text")}{" "}
                     <Link href="/legal/privacy-policy">
                       <a className="font-medium text-blue-600 hover:text-blue-400">
-                        Privacy Policy
+                        {t("newsletter.privacyPolicy.link")}
                       </a>
                     </Link>
                   </p>
