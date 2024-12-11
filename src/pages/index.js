@@ -87,9 +87,9 @@ function IndexPage(props) {
         iosTooltip={t("download.iosTooltip")}
       />
       <ContactSection
-        title="Get in touch"
-        subtitle="If something does not make sense, feel free to contact us and we will get back to you as soon as possible."
-        strapline="We reply in 24hrs"
+        title={t("contact.title")}
+        subtitle={t("contact.subtitle")}
+        strapline=""
         size="md"
         bgColor="bg-white"
         bgImage=""
