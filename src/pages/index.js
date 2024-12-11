@@ -23,8 +23,8 @@ function IndexPage(props) {
       <Meta />
       <Navbar bgColor="bg-white" />
       <HeroSection
-        title={t('hero.title')}
-        subtitle={t('hero.subtitle')}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
         strapline=""
         size="lg"
         bgColor="bg-green-500"
@@ -33,16 +33,16 @@ function IndexPage(props) {
         textColor="text-white"
       />
       <ContentSection
-        title={t('content.title')} 
-        paragraph1={t('content.paragraph1')}
-        paragraph2={t('content.paragraph2')}
-        paragraph3={t('content.paragraph3')}
-        paragraph4={t('content.paragraph4')}
+        title={t("content.title")}
+        paragraph1={t("content.paragraph1")}
+        paragraph2={t("content.paragraph2")}
+        paragraph3={t("content.paragraph3")}
+        paragraph4={t("content.paragraph4")}
       />
       <FeaturesSection
-        title={t('features.title')}
-        subtitle={t('features.subtitle')}
-        strapline={t('features.strapline')}
+        title={t("features.title")}
+        subtitle={t("features.subtitle")}
+        strapline={t("features.strapline")}
         size="md"
         bgColor="bg-white"
         bgImage=""
@@ -50,9 +50,9 @@ function IndexPage(props) {
         textColor=""
       />
       <CtaSection
-        title={t('cta.title')}
-        subtitle={t('cta.subtitle')}
-        ctaText={t('cta.button')}
+        title={t("cta.title")}
+        subtitle={t("cta.subtitle")}
+        ctaText={t("cta.button")}
         strapline=""
         size="lg"
         bgColor="bg-white"
@@ -61,10 +61,18 @@ function IndexPage(props) {
         textColor="text-white"
       />
       <ProjectTimeline />
+      <NewsletterSection
+        strapline=""
+        size="md"
+        bgColor="bg-white"
+        bgImage=""
+        bgImageOpacity={1}
+        textColor=""
+      />
       <FaqSection
-        title={t('faq.title')}
+        title={t("faq.title")}
         subtitle=""
-        strapline={t('faq.strapline')}
+        strapline={t("faq.strapline")}
         size="md"
         bgColor="bg-white"
         bgImage=""
@@ -74,27 +82,9 @@ function IndexPage(props) {
         supportUrl="https://zendesk.com"
       />
       <DownloadTheApp
-        title={t('download.title')}
-        subtitle={t('download.subtitle')}
-        iosTooltip={t('download.iosTooltip')}
-      />
-      <NewsletterSection
-        strapline=""
-        size="md"
-        bgColor="bg-white"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor=""
-      />
-      <TeamBiosSection
-        title="Meet our amazing team"
-        subtitle="They are working nonstop behind the scenes to help you build better products, web services and websites."
-        strapline=""
-        size="md"
-        bgColor="bg-white"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor=""
+        title={t("download.title")}
+        subtitle={t("download.subtitle")}
+        iosTooltip={t("download.iosTooltip")}
       />
       <ContactSection
         title="Get in touch"
