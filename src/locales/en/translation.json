@@ -141,5 +141,28 @@
   "contact": {
     "title": "We’d Love to Hear From You",
     "subtitle": "Whether it’s feedback, ideas, or a desire to contribute, we’re all ears! Reach out, and let’s explore how we can make a difference together."
+  },
+  "footer": {
+    "product": {
+      "title": "Product",
+      "faq": "FAQ",
+      "features": "Features",
+      "timeline": "Timeline"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy Policy"
+    },
+    "social": {
+      "title": "Social"
+    },
+    "form": {
+      "title": "Subscribe to our newsletter",
+      "placeholder": "Your email",
+      "button": "Subscribe",
+      "required": "Please enter an email address"
+    }
   }
 }
