@@ -1,7 +1,10 @@
 import React from "react";
+import './_i18n';
+import { useTranslation } from 'react-i18next';
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import HeroSection from "components/HeroSection";
+import ContentSection from "components/ContentSection";
 import ProjectTimeline from "components/ProjectTimeline";
 import FeaturesSection from "components/FeaturesSection";
 import CtaSection from "components/CtaSection";
@@ -13,25 +16,33 @@ import ContactSection from "components/ContactSection";
 import Footer from "components/Footer";
 
 function IndexPage(props) {
+  const { t } = useTranslation();
+
   return (
     <>
       <Meta />
       <Navbar bgColor="bg-white" />
       <HeroSection
-        title="Build web applications and websites with ease"
-        subtitle="Carefully crafted, easy to customize, fully responsive UI components for your Tailwind CSS based projects."
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
         strapline=""
         size="lg"
-        bgColor="bg-blue-900"
+        bgColor="bg-green-500"
         bgImage=""
         bgImageOpacity={1}
         textColor="text-white"
       />
-      <ProjectTimeline />
+      <ContentSection
+        title={t("content.title")}
+        paragraph1={t("content.paragraph1")}
+        paragraph2={t("content.paragraph2")}
+        paragraph3={t("content.paragraph3")}
+        paragraph4={t("content.paragraph4")}
+      />
       <FeaturesSection
-        title="Amazing features packed in a neat package"
-        subtitle="You will love working with your newly updated and customized dashboard."
-        strapline="It's time to build"
+        title={t("features.title")}
+        subtitle={t("features.subtitle")}
+        strapline={t("features.strapline")}
         size="md"
         bgColor="bg-white"
         bgImage=""
@@ -39,8 +50,9 @@ function IndexPage(props) {
         textColor=""
       />
       <CtaSection
-        title="Ready? Let’s do it!"
-        subtitle="Get your own custom dashboard and start building amazing services, always with the most solid and rock steady foundation."
+        title={t("cta.title")}
+        subtitle={t("cta.subtitle")}
+        ctaText={t("cta.button")}
         strapline=""
         size="lg"
         bgColor="bg-white"
@@ -49,10 +61,18 @@ function IndexPage(props) {
         textColor="text-white"
       />
       <ProjectTimeline />
+      <NewsletterSection
+        strapline=""
+        size="md"
+        bgColor="bg-white"
+        bgImage=""
+        bgImageOpacity={1}
+        textColor=""
+      />
       <FaqSection
-        title="Frequently Asked Questions"
+        title={t("faq.title")}
         subtitle=""
-        strapline="We answer"
+        strapline={t("faq.strapline")}
         size="md"
         bgColor="bg-white"
         bgImage=""
@@ -61,31 +81,15 @@ function IndexPage(props) {
         showSupportButton={true}
         supportUrl="https://zendesk.com"
       />
-      <DownloadTheApp />
-      <NewsletterSection
-        title="Subscribe to our newsletter"
-        subtitle="Join us and receive the best curated news, freebies and resources directly to your inbox every week!"
-        strapline=""
-        size="md"
-        bgColor="bg-white"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor=""
-      />
-      <TeamBiosSection
-        title="Meet our amazing team"
-        subtitle="They are working nonstop behind the scenes to help you build better products, web services and websites."
-        strapline=""
-        size="md"
-        bgColor="bg-white"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor=""
+      <DownloadTheApp
+        title={t("download.title")}
+        subtitle={t("download.subtitle")}
+        iosTooltip={t("download.iosTooltip")}
       />
       <ContactSection
-        title="Get in touch"
-        subtitle="If something does not make sense, feel free to contact us and we will get back to you as soon as possible."
-        strapline="We reply in 24hrs"
+        title={t("contact.title")}
+        subtitle={t("contact.subtitle")}
+        strapline=""
         size="md"
         bgColor="bg-white"
         bgImage=""
