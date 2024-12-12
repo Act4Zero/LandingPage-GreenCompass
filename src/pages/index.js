@@ -1,5 +1,5 @@
 import React from "react";
-import './_i18n';
+import '../util/i18n';
 import { useTranslation } from 'react-i18next';
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
