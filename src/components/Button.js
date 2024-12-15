@@ -34,14 +34,14 @@ const Button = React.forwardRef((props, ref) => {
     },
     variant: {
       primary:
-        "border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-800 hover:border-blue-800 focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700",
+        "border-green-dark bg-green text-white hover:bg-green-dark hover:border-green-darker focus:ring-green-light focus:ring-opacity-50 active:bg-green-darkest active:border-green-darkest",
       secondary:
-        "border-blue-200 bg-blue-200 text-blue-700 hover:text-blue-700 hover:bg-blue-300 hover:border-blue-300 focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-200 active:border-blue-200",
+        "border-green-light bg-green-lightest text-green-dark hover:bg-green-light hover:border-green focus:ring-green-light focus:ring-opacity-50 active:bg-green-dark active:border-green-dark",
       simple:
-        "border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white",
+        "border-lightBg bg-white text-green-dark shadow-sm hover:bg-lightBg hover:border-green-light hover:shadow focus:ring-green-light focus:ring-opacity-25 active:bg-white active:border-lightBg",
       light:
-        "border-gray-200 bg-gray-200 text-gray-700 hover:text-gray-700 hover:bg-gray-300 hover:border-gray-300 focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 active:border-gray-200",
-      dark: "border-gray-700 bg-gray-700 text-white hover:text-white hover:bg-gray-800 hover:border-gray-800 focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-700 active:border-gray-700",
+        "border-accentLight bg-accentLight text-brown hover:bg-lightBg hover:border-brown focus:ring-brown focus:ring-opacity-25 active:bg-accentLight active:border-lightBg",
+      dark: "border-green-darkest bg-green-darkest text-white hover:bg-green-dark hover:border-green focus:ring-green focus:ring-opacity-50 active:bg-green-darkest active:border-green-darker",
     },
   };
 

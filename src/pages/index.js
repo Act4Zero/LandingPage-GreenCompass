@@ -26,10 +26,10 @@ function IndexPage(props) {
         subtitle={t("hero.subtitle")}
         strapline=""
         size="lg"
-        bgColor="bg-green-500"
+        bgColor="white"
         bgImage=""
         bgImageOpacity={1}
-        textColor="text-white"
+        textColor="text-green-darkest"
       />
       <ContentSection
         title={t("content.title")}
