@@ -97,7 +97,7 @@ function IndexPage(props) {
       />
       <Footer
         size="md"
-        bgColor="white"
+        bgColor="bg-green-dark"
         bgImage=""
         bgImageOpacity={1}
         textColor=""

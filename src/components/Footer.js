@@ -14,26 +14,23 @@ function Footer(props) {
 
   const onSubmit = ({ email }) => {
     setSubscribed(true);
-    // Parent component can optionally
-    // find out when subscribed.
     props.onSubscribed && props.onSubscribed();
-    // Subscribe them
     newsletter.subscribe({ email });
   };
 
   return (
     <Section
       size={props.size}
-      bgColor={props.bgColor}
+      bgColor={props.bgColor || "bg-green-dark"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor={props.textColor}
+      textColor={props.textColor || "text-white"}
       className={props.sticky && "mt-auto"}
     >
       <footer className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <h4 className="text-sm uppercase font-semibold tracking-wider text-gray-400">
+            <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
               {t("footer.product.title")}
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
@@ -43,7 +40,7 @@ function Footer(props) {
                 { url: "/", name: t("footer.product.timeline") },
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
-                  <a className="font-medium text-gray-600 hover:text-gray-500">
+                  <a className="font-medium text-green-light hover:text-green">
                     {link.name}
                   </a>
                 </Link>
@@ -51,17 +48,20 @@ function Footer(props) {
             </nav>
           </div>
           <div>
-            <h4 className="text-sm uppercase font-semibold tracking-wider text-gray-400">
+            <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
               {t("footer.company.title")}
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
               {[
                 { url: "/about", name: t("footer.company.about") },
                 { url: "/contact", name: t("footer.company.contact") },
-                { url: "/legal/privacy-policy", name: t("footer.company.privacy") },
+                {
+                  url: "/legal/privacy-policy",
+                  name: t("footer.company.privacy"),
+                },
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
-                  <a className="font-medium text-gray-600 hover:text-gray-500">
+                  <a className="font-medium text-green-light hover:text-green">
                     {link.name}
                   </a>
                 </Link>
@@ -69,7 +69,7 @@ function Footer(props) {
             </nav>
           </div>
           <div>
-            <h4 className="text-sm uppercase font-semibold tracking-wider text-gray-400">
+            <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
               {t("footer.social.title")}
             </h4>
             <div className="mt-6 flex flex-row space-x-4">
@@ -95,7 +95,7 @@ function Footer(props) {
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
                   <a
-                    className="text-gray-400 hover:text-blue-600"
+                    className="text-accentLight hover:text-green-light"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -110,12 +110,14 @@ function Footer(props) {
                 </Link>
               ))}
             </div>
-            <h4 className="mt-10 text-sm uppercase font-semibold tracking-wider text-gray-400">
+            <h4 className="mt-10 text-sm uppercase font-semibold tracking-wider text-accentLight">
               {t("footer.form.title")}
             </h4>
 
             {subscribed === true && (
-              <div className="mt-3">You are now subscribed!</div>
+              <div className="mt-3 text-green-light">
+                You are now subscribed!
+              </div>
             )}
 
             {subscribed === false && (
@@ -136,7 +138,7 @@ function Footer(props) {
                     })}
                   />
                 </div>
-                <Button type="submit" size="sm">
+                <Button type="submit" size="sm" variant="primary">
                   {t("footer.form.button")}
                 </Button>
               </form>
