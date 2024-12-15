@@ -14,54 +14,54 @@ function FaqSection(props) {
   const faqItems = [
     {
       question: getText()["1"].question,
-      answer: getText()["1"].answer
+      answer: getText()["1"].answer,
     },
     {
       question: getText()["2"].question,
-      answer: getText()["2"].answer
+      answer: getText()["2"].answer,
     },
     {
       question: getText()["3"].question,
-      answer: getText()["3"].answer
+      answer: getText()["3"].answer,
     },
     {
       question: getText()["4"].question,
-      answer: getText()["4"].answer
+      answer: getText()["4"].answer,
     },
     {
       question: getText()["5"].question,
-      answer: getText()["5"].answer
+      answer: getText()["5"].answer,
     },
     {
       question: getText()["6"].question,
-      answer: getText()["6"].answer
+      answer: getText()["6"].answer,
     },
     {
       question: getText()["7"].question,
-      answer: getText()["7"].answer
+      answer: getText()["7"].answer,
     },
   ];
 
   return (
     <Section
       size={props.size}
-      bgColor={props.bgColor}
+      bgColor={props.bgColor || "bg-lightBg"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor={props.textColor}
+      textColor={props.textColor || "text-green-darkest"}
     >
       <div className="space-y-12 container">
         <SectionHeader
           title={props.title}
           subtitle={props.subtitle}
           strapline={props.strapline}
-          className="text-center"
+          className="text-center text-green-darkest"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {faqItems.map((item, index) => (
-            <div className="prose prose-indigo" key={index}>
-              <h4>{item.question}</h4>
-              <p>{item.answer}</p>
+            <div className="prose prose-green" key={index}>
+              <h4 className="text-green-darkest">{item.question}</h4>
+              <p className="text-green-dark">{item.answer}</p>
             </div>
           ))}
         </div>
@@ -72,9 +72,9 @@ function FaqSection(props) {
               href={props.supportUrl}
               target="_blank"
               size="lg"
-              variant="simple"
+              variant="primary"
               startIcon={
-                <ArrowTopRightOnSquareIcon className="opacity-50 inline-block w-5 h-5" />
+                <ArrowTopRightOnSquareIcon className="opacity-70 inline-block w-5 h-5" />
               }
             >
               Get in touch

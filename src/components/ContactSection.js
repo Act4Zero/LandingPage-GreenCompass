@@ -15,31 +15,24 @@ function ContactSection(props) {
   const { handleSubmit, register, errors, reset } = useForm();
 
   const onSubmit = (data) => {
-    // Show pending indicator
     setPending(true);
-
-    console.log(data);
 
     contact
       .submit(data)
       .then(() => {
-        // Clear form
         reset();
-        // Show success alert message
         setFormAlert({
           type: "success",
           message: "Your message has been sent!",
         });
       })
       .catch((error) => {
-        // Show error alert message
         setFormAlert({
           type: "error",
           message: error.message,
         });
       })
       .finally(() => {
-        // Hide pending indicator
         setPending(false);
       });
   };
@@ -47,20 +40,21 @@ function ContactSection(props) {
   return (
     <Section
       size={props.size}
-      bgColor={props.bgColor}
+      bgColor={props.bgColor || "bg-lightBg"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor={props.textColor}
+      textColor={props.textColor || "text-green-darkest"}
     >
       <div className="relative overflow-hidden">
-        <div className="pattern-dots text-gray-200 absolute top-0 left-0 w-32 h-48 md:h-96 transform translate-y-12 -translate-x-16 md:-translate-x-4" />
-        <div className="pattern-dots text-gray-200 absolute bottom-0 right-0 w-32 h-48 md:h-96 transform -translate-y-12 translate-x-16 md:translate-x-6" />
+        {/* Pattern Backgrounds */}
+        <div className="pattern-dots text-green-light absolute top-0 left-0 w-32 h-48 md:h-96 transform translate-y-12 -translate-x-16 md:-translate-x-4" />
+        <div className="pattern-dots text-green-light absolute bottom-0 right-0 w-32 h-48 md:h-96 transform -translate-y-12 translate-x-16 md:translate-x-6" />
         <div className="relative container xl:max-w-7xl mx-auto px-4 lg:px-8 space-y-16">
           <SectionHeader
             title={props.title}
             subtitle={props.subtitle}
             strapline={props.strapline}
-            className="text-center"
+            className="text-center text-green-darkest"
           />
           <div className="mx-auto max-w-2xl">
             {formAlert && (
@@ -117,13 +111,12 @@ function ContactSection(props) {
                 isBlock={true}
                 startIcon={
                   !pending && (
-                    <PaperAirplaneIcon className="opacity-50 inline-block w-5 h-5" />
+                    <PaperAirplaneIcon className="opacity-70 inline-block w-5 h-5" />
                   )
                 }
-                className="w-48"
+                className="w-48 bg-green text-white hover:bg-green-dark"
               >
                 {!pending && <>Send message</>}
-
                 {pending && <LoadingIcon className="w-6" />}
               </Button>
             </form>

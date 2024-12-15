@@ -10,15 +10,15 @@ function HeroSection(props) {
   return (
     <Section
       size={props.size}
-      bgColor={props.bgColor}
+      bgColor={props.bgColor || "bg-green-lightest"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor={props.textColor}
+      textColor={props.textColor || "text-green-darkest"}
     >
       <div className="relative container">
         <div className="text-center">
           <Link href="/">
-            <a className="inline-block mb-10 text-blue-600 hover:text-blue-400">
+            <a className="inline-block mb-10 text-green-dark hover:text-green">
               <Image
                 src="/images/GCLogo-no-bg.png"
                 alt="Green Compass Logo"
@@ -39,7 +39,7 @@ function HeroSection(props) {
               size="xl"
               variant="secondary"
               endIcon={
-                <ArrowRightIcon className="opacity-70 inline-block w-5 h-5" />
+                <ArrowRightIcon className="opacity-70 inline-block w-5 h-5 text-green-dark" />
               }
             >
               Get Started
@@ -53,8 +53,8 @@ function HeroSection(props) {
         </div>
         <div className="pb-4 md:pb-0">
           <div className="relative mx-5 lg:mx-32">
-            <div className="absolute inset-0 rounded-xl bg-blue-600 bg-opacity-20 -m-4 transform rotate-2" />
-            <div className="absolute inset-0 rounded-xl bg-blue-600 bg-opacity-25 -m-4 transform -rotate-2" />
+            <div className="absolute inset-0 rounded-xl bg-green bg-opacity-20 -m-4 transform rotate-2" />
+            <div className="absolute inset-0 rounded-xl bg-green bg-opacity-25 -m-4 transform -rotate-2" />
             <img
               className="relative rounded-lg mx-auto shadow-lg"
               src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=1280"

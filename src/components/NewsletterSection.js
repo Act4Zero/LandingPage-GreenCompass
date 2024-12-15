@@ -14,38 +14,37 @@ function NewsletterSection(props) {
 
   const onSubmit = ({ email }) => {
     setSubscribed(true);
-    // Parent component can optionally
-    // find out when subscribed.
     props.onSubscribed && props.onSubscribed();
-    // Subscribe them
     newsletter.subscribe({ email });
   };
 
   return (
     <Section
       size={props.size}
-      bgColor={props.bgColor}
+      bgColor={props.bgColor || "bg-lightBg"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor={props.textColor}
+      textColor={props.textColor || "text-green-darkest"}
     >
       <div className="container py-10 md:py-0">
         <div className="lg:w-2/3 xl:w-1/2 mx-auto relative">
-          <div className="absolute pattern-dots text-gray-200 top-0 left-0 w-32 h-48 md:h-96 transform -translate-y-12 -translate-x-16 -rotate-3" />
-          <div className="absolute pattern-dots text-gray-200 bottom-0 right-0 w-32 h-48 md:h-96 transform translate-y-12 translate-x-16 rotate-3" />
-          <div className="absolute rounded-full top-0 right-0 w-32 h-32 bg-yellow-200 bg-opacity-50 -mt-12 -mr-12" />
-          <div className="absolute rounded-xl bottom-0 left-0 w-32 h-32 bg-blue-200 bg-opacity-50 -mb-10 -ml-10 transform rotate-3" />
-          <div className="p-2 rounded text-center relative bg-blue-500 bg-opacity-10">
-            <div className="p-8 lg:py-12 lg:px-16 bg-white rounded">
-              <h3 className="text-2xl sm:text-3xl font-extrabold mb-2">
+          {/* Pattern and Accent Backgrounds */}
+          <div className="absolute pattern-dots text-green-light top-0 left-0 w-32 h-48 md:h-96 transform -translate-y-12 -translate-x-16 -rotate-3" />
+          <div className="absolute pattern-dots text-green-light bottom-0 right-0 w-32 h-48 md:h-96 transform translate-y-12 translate-x-16 rotate-3" />
+          <div className="absolute rounded-full top-0 right-0 w-32 h-32 bg-accentLight bg-opacity-50 -mt-12 -mr-12" />
+          <div className="absolute rounded-xl bottom-0 left-0 w-32 h-32 bg-brown bg-opacity-25 -mb-10 -ml-10 transform rotate-3" />
+          {/* Newsletter Content */}
+          <div className="p-2 rounded text-center relative bg-green-lightest bg-opacity-10">
+            <div className="p-8 lg:py-12 lg:px-16 bg-white rounded shadow-lg">
+              <h3 className="text-2xl sm:text-3xl font-extrabold mb-2 text-green-darkest">
                 {t("newsletter.title")}
               </h3>
-              <p className="prose prose-indigo mb-6">
+              <p className="prose prose-green mb-6 text-green-dark">
                 {t("newsletter.subtitle")}
               </p>
 
               {subscribed === true && (
-                <div className="mt-3 text-center">
+                <div className="mt-3 text-center text-green-dark">
                   {t("newsletter.success")}
                 </div>
               )}
@@ -63,16 +62,16 @@ function NewsletterSection(props) {
                         required: t("newsletter.inputRequired"),
                       })}
                     />
-                    <Button type="submit" size="lg">
+                    <Button type="submit" size="lg" variant="primary">
                       {t("newsletter.button")}
                     </Button>
                   </div>
-                  <p className="text-sm text-gray-600 leading-6">
+                  <p className="text-sm text-green-dark leading-6">
                     {t("newsletter.note")}
                     <br />
                     {t("newsletter.privacyPolicy.text")}{" "}
                     <Link href="/legal/privacy-policy">
-                      <a className="font-medium text-blue-600 hover:text-blue-400">
+                      <a className="font-medium text-green hover:text-green-dark">
                         {t("newsletter.privacyPolicy.link")}
                       </a>
                     </Link>
