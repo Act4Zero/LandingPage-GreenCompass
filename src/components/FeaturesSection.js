@@ -4,50 +4,48 @@ import {
   ChartPieIcon,
   GlobeAmericasIcon,
   BookOpenIcon,
-  UserGroupIcon
+  UserGroupIcon,
 } from "@heroicons/react/24/solid";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
 import FeatureIcon2 from "components/FeatureIcon2";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 function FeaturesSection(props) {
   const { t } = useTranslation();
   const features = {
-    // Left column
     left: [
       {
-        title: t('features.feature1.title'),
-        description: t('features.feature1.description'),
+        title: t("features.feature1.title"),
+        description: t("features.feature1.description"),
         icon: GlobeAmericasIcon,
-        iconColor: "emerald",
+        iconColor: "green",
       },
       {
-        title: t('features.feature2.title'),
-        description: t('features.feature2.description'),
+        title: t("features.feature2.title"),
+        description: t("features.feature2.description"),
         icon: BookOpenIcon,
-        iconColor: "red",
+        iconColor: "brown",
       },
     ],
-    // Right column
     right: [
       {
-        title: t('features.feature3.title'),
-        description: t('features.feature3.description'),
+        title: t("features.feature3.title"),
+        description: t("features.feature3.description"),
         icon: ChartPieIcon,
-        iconColor: "purple",
+        iconColor: "green",
       },
       {
-        title: t('features.feature4.title'),
-        description: t('features.feature4.description'),
+        title: t("features.feature4.title"),
+        description: t("features.feature4.description"),
         icon: UserGroupIcon,
-        iconColor: "blue",
+        iconColor: "green",
       },
       {
-        title: t('features.feature5.title'),
-        description: t('features.feature5.description'),
+        title: t("features.feature5.title"),
+        description: t("features.feature5.description"),
         icon: ShoppingBagIcon,
-        iconColor: "pink",
+        iconColor: "brown",
       },
     ],
   };
@@ -55,10 +53,10 @@ function FeaturesSection(props) {
   return (
     <Section
       size={props.size}
-      bgColor={props.bgColor}
+      bgColor={props.bgColor || "bg-lightBg"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor={props.textColor}
+      textColor={props.textColor || "text-green-darkest"}
     >
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-center space-y-12 lg:space-y-0 lg:space-x-20">
@@ -67,6 +65,7 @@ function FeaturesSection(props) {
               title={props.title}
               subtitle={props.subtitle}
               strapline={props.strapline}
+              className="text-green-dark"
             />
           </div>
           <div className="lg:w-7/12 xl:w-7/12 flex-none relative">
@@ -76,14 +75,16 @@ function FeaturesSection(props) {
               <div className="md:w-1/2 md:mt-24 space-y-6">
                 {features.left.map((feature, index) => (
                   <div
-                    className="group bg-white p-5 transition ease-out duration-200 border-2 border-gray-200 rounded-2xl hover:border-gray-300"
+                    className="group bg-white p-5 transition ease-out duration-200 border-2 border-green-lightest rounded-2xl hover:border-green-light"
                     key={index}
                   >
                     <FeatureIcon2 color={feature.iconColor} className="mb-6">
                       <feature.icon />
                     </FeatureIcon2>
-                    <h4 className="text-lg font-bold mb-2">{feature.title}</h4>
-                    <p className="leading-relaxed text-gray-600">
+                    <h4 className="text-lg font-bold mb-2 text-green-darkest">
+                      {feature.title}
+                    </h4>
+                    <p className="leading-relaxed text-green-dark">
                       {feature.description}
                     </p>
                   </div>
@@ -92,14 +93,16 @@ function FeaturesSection(props) {
               <div className="md:w-1/2 space-y-6">
                 {features.right.map((feature, index) => (
                   <div
-                    className="group bg-white p-5 transition ease-out duration-200 border-2 border-gray-200 rounded-2xl hover:border-gray-300"
+                    className="group bg-white p-5 transition ease-out duration-200 border-2 border-green-lightest rounded-2xl hover:border-green-light"
                     key={index}
                   >
                     <FeatureIcon2 color={feature.iconColor} className="mb-6">
                       <feature.icon />
                     </FeatureIcon2>
-                    <h4 className="text-lg font-bold mb-2">{feature.title}</h4>
-                    <p className="leading-relaxed text-gray-600">
+                    <h4 className="text-lg font-bold mb-2 text-green-darkest">
+                      {feature.title}
+                    </h4>
+                    <p className="leading-relaxed text-green-dark">
                       {feature.description}
                     </p>
                   </div>

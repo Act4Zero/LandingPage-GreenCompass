@@ -29,6 +29,14 @@ function FeatureIcon2(props) {
         outer: "bg-pink-300",
         inner: "bg-pink-700",
       },
+      green: {
+        outer: "bg-green-light",
+        inner: "bg-green-dark",
+      },
+      brown: {
+        outer: "bg-accentLight",
+        inner: "bg-brown",
+      },
     },
     size: {
       normal: {
@@ -46,21 +54,23 @@ function FeatureIcon2(props) {
     },
   };
 
+  const resolvedColor = classes.color[color] || classes.color.orange; // Default to orange
+  const resolvedSize = classes.size[size] || classes.size.normal; // Default to normal
+
   return (
     <div
-      className={
-        `inline-flex items-center justify-center relative ${classes.size[size].wrap}` +
-        (props.className ? ` ${props.className}` : "")
-      }
+      className={`inline-flex items-center justify-center relative ${
+        resolvedSize.wrap
+      } ${props.className || ""}`}
     >
       <div
-        className={`absolute inset-0 rounded-3xl transform rotate-6 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 ${classes.color[color].outer} ${classes.size[size].outer}`}
+        className={`absolute inset-0 rounded-3xl transform rotate-6 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 ${resolvedColor.outer} ${resolvedSize.outer}`}
       />
       <div
-        className={`absolute inset-0 rounded-2xl transform -rotate-6 bg-opacity-75 shadow-inner transition ease-out duration-200 group-hover:rotate-2 group-hover:scale-105 ${classes.color[color].inner} ${classes.size[size].inner}`}
+        className={`absolute inset-0 rounded-2xl transform -rotate-6 bg-opacity-75 shadow-inner transition ease-out duration-200 group-hover:rotate-2 group-hover:scale-105 ${resolvedColor.inner} ${resolvedSize.inner}`}
       />
       <div
-        className={`text-white relative transform transition ease-out duration-200 group-hover:scale-110 inline-block ${classes.size[size].icon}`}
+        className={`text-white relative transform transition ease-out duration-200 group-hover:scale-110 inline-block ${resolvedSize.icon}`}
       >
         {props.children}
       </div>
