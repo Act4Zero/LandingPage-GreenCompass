@@ -1,5 +1,5 @@
 import React from "react";
-import { CubeTransparentIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
@@ -15,10 +15,11 @@ function HeroSection(props) {
       bgImageOpacity={props.bgImageOpacity}
       textColor={props.textColor || "text-green-darkest"}
     >
-      <div className="relative container">
-        <div className="text-center">
+      <div className="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
+        {/* Logo and Header */}
+        <div>
           <Link href="/">
-            <a className="inline-block mb-10 text-green-dark hover:text-green">
+            <a className="inline-block mb-8">
               <Image
                 src="/images/GCLogo-no-bg.png"
                 alt="Green Compass Logo"
@@ -33,8 +34,10 @@ function HeroSection(props) {
             strapline={props.strapline}
           />
         </div>
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-2 sm:space-y-0 sm:space-x-2 pt-10 pb-16">
-          <Link href="/pricing" passHref={true}>
+
+        {/* Call-to-Actions */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+          <Link href="/pricing" passHref>
             <Button
               size="xl"
               variant="secondary"
@@ -45,22 +48,20 @@ function HeroSection(props) {
               Get Started
             </Button>
           </Link>
-          <Link href="/about" passHref={true}>
+          <Link href="/about" passHref>
             <Button size="xl" variant="primary">
-              Learn more
+              Learn More
             </Button>
           </Link>
         </div>
-        <div className="pb-4 md:pb-0">
-          <div className="relative mx-5 lg:mx-32">
-            <div className="absolute inset-0 rounded-xl bg-green bg-opacity-20 -m-4 transform rotate-2" />
-            <div className="absolute inset-0 rounded-xl bg-green bg-opacity-25 -m-4 transform -rotate-2" />
-            <img
-              className="relative rounded-lg mx-auto shadow-lg"
-              src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=1280"
-              alt=""
-            />
-          </div>
+
+        {/* Hero Image */}
+        <div className="relative mt-10 lg:mt-16 mx-auto max-w-full sm:max-w-4xl lg:max-w-6xl overflow-hidden">
+          <img
+            className="relative rounded-lg mx-auto shadow-lg object-cover"
+            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=1280"
+            alt="Hero Image"
+          />
         </div>
       </div>
     </Section>

@@ -32,9 +32,10 @@ function Section(props) {
         />
       )}
 
+      {/* Simplified container */}
       <div
         className={
-          "[&>.container]:relative" +
+          "container mx-auto" +
           (size === "sm" ? " py-10" : "") +
           (size === "md" ? " py-10 md:py-20" : "") +
           (size === "lg" ? " py-10 md:py-32" : "")
