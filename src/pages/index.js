@@ -11,7 +11,6 @@ import CtaSection from "components/CtaSection";
 import FaqSection from "components/FaqSection";
 import DownloadTheApp from "components/DownloadTheApp";
 import NewsletterSection from "components/NewsletterSection";
-import TeamBiosSection from "components/TeamBiosSection";
 import ContactSection from "components/ContactSection";
 import Footer from "components/Footer";
 
@@ -21,7 +20,7 @@ function IndexPage(props) {
   return (
     <>
       <Meta />
-      <Navbar bgColor="bg-white" />
+      <Navbar bgColor="white" />
       <HeroSection
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
@@ -55,7 +54,7 @@ function IndexPage(props) {
         ctaText={t("cta.button")}
         strapline=""
         size="lg"
-        bgColor="bg-white"
+        bgColor="white"
         bgImage=""
         bgImageOpacity={1}
         textColor="text-white"
@@ -74,7 +73,7 @@ function IndexPage(props) {
         subtitle=""
         strapline={t("faq.strapline")}
         size="md"
-        bgColor="bg-white"
+        bgColor="white"
         bgImage=""
         bgImageOpacity={1}
         textColor=""
@@ -91,14 +90,14 @@ function IndexPage(props) {
         subtitle={t("contact.subtitle")}
         strapline=""
         size="md"
-        bgColor="bg-white"
+        bgColor="white"
         bgImage=""
         bgImageOpacity={1}
         textColor=""
       />
       <Footer
         size="md"
-        bgColor="bg-white"
+        bgColor="white"
         bgImage=""
         bgImageOpacity={1}
         textColor=""
