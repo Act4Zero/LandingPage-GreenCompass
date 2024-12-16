@@ -34,7 +34,7 @@ function CtaSection(props) {
                 subtitleColor="text-green-lightest"
               />
               <div className="text-center">
-                <Link href="/sustainability" passHref={true}>
+                <Link href="#download" passHref={true}>
                   <Button
                     size="xl"
                     variant="primary"

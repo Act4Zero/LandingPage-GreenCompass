@@ -111,7 +111,7 @@ const ProjectTimeline = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-lightBg to-green-lightest">
+    <div id="timeline" className="relative bg-gradient-to-b from-lightBg to-green-lightest">
       <div className="container mx-auto px-6 py-10 relative z-10">
         <h1 className="text-4xl font-bold text-center text-green-darkest mb-10">
           {t("project-timeline.title")}

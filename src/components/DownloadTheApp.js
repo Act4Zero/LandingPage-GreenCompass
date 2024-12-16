@@ -10,7 +10,9 @@ function DownloadTheApp({
   iosLink = "#",
 }) {
   return (
-    <section className="bg-lightBg py-16">
+    <section 
+      id="download"
+      className="bg-lightBg py-16">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
         {/* Text and Buttons */}
         <div className="w-full md:w-1/2 lg:w-5/12 md:pr-8 lg:pr-12 mb-10 md:mb-0 text-center md:text-left">

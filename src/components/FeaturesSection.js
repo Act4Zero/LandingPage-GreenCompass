@@ -52,6 +52,7 @@ function FeaturesSection(props) {
 
   return (
     <Section
+      id={props.id}
       size={props.size}
       bgColor={props.bgColor || "bg-lightBg"}
       bgImage={props.bgImage}

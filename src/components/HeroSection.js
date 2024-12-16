@@ -37,7 +37,7 @@ function HeroSection(props) {
 
         {/* Call-to-Actions */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
-          <Link href="/pricing" passHref>
+          <Link href="#content" passHref>
             <Button
               size="xl"
               variant="secondary"
@@ -48,7 +48,7 @@ function HeroSection(props) {
               Get Started
             </Button>
           </Link>
-          <Link href="/about" passHref>
+          <Link href="#features" passHref>
             <Button size="xl" variant="primary">
               Learn More
             </Button>

@@ -2,7 +2,9 @@ import React from "react";
 
 function ContentSection(props) {
   return (
-    <section className="bg-lightBg py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8 text-green-darkest">
+    <section 
+      id={props.id}
+      className="bg-lightBg py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8 text-green-darkest">
       <div className="w-full max-w-full sm:max-w-4xl mx-auto text-center">
         {/* Section Title */}
         <h1 className="text-3xl sm:text-4xl font-bold mb-6">{props.title}</h1>

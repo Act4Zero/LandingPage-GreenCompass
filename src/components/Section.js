@@ -3,6 +3,7 @@ import BackgroundImage from "components/BackgroundImage";
 
 function Section(props) {
   const {
+    id,
     size,
     bgColor = "bg-white",
     textColor,
@@ -16,6 +17,7 @@ function Section(props) {
 
   return (
     <section
+      id={id}
       className={
         "section relative" +
         (bgColor ? ` ${bgColor}` : "") +
