@@ -32,6 +32,7 @@ function IndexPage(props) {
         textColor="text-green-darkest"
       />
       <ContentSection
+        id="content"
         title={t("content.title")}
         paragraph1={t("content.paragraph1")}
         paragraph2={t("content.paragraph2")}
@@ -39,6 +40,7 @@ function IndexPage(props) {
         paragraph4={t("content.paragraph4")}
       />
       <FeaturesSection
+        id="features"
         title={t("features.title")}
         subtitle={t("features.subtitle")}
         strapline={t("features.strapline")}
@@ -69,6 +71,7 @@ function IndexPage(props) {
         textColor=""
       />
       <FaqSection
+        id="faq"
         title={t("faq.title")}
         subtitle=""
         strapline={t("faq.strapline")}
@@ -86,6 +89,7 @@ function IndexPage(props) {
         iosTooltip={t("download.iosTooltip")}
       />
       <ContactSection
+        id="contact"
         title={t("contact.title")}
         subtitle={t("contact.subtitle")}
         strapline=""

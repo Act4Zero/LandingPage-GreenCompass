@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
@@ -44,6 +45,7 @@ function FaqSection(props) {
 
   return (
     <Section
+      id="faq"
       size={props.size}
       bgColor={props.bgColor || "bg-lightBg"}
       bgImage={props.bgImage}
@@ -68,17 +70,17 @@ function FaqSection(props) {
 
         {props.showSupportButton && (
           <div className="text-center">
-            <Button
-              href={props.supportUrl}
-              target="_blank"
-              size="lg"
-              variant="primary"
-              startIcon={
-                <ArrowTopRightOnSquareIcon className="opacity-70 inline-block w-5 h-5" />
-              }
-            >
-              Get in touch
-            </Button>
+            <Link href="#contact" passHref={true}>
+              <Button
+                size="lg"
+                variant="primary"
+                startIcon={
+                  <ArrowTopRightOnSquareIcon className="opacity-70 inline-block w-5 h-5" />
+                }
+              >
+                Get in touch
+              </Button>
+            </Link>
           </div>
         )}
       </div>
