@@ -111,9 +111,12 @@ const ProjectTimeline = () => {
   };
 
   return (
-    <div id="timeline" className="relative bg-gradient-to-b from-lightBg to-green-lightest">
+    <div
+      id="timeline"
+      className="relative bg-gradient-to-b from-green-dark to-lightBg"
+    >
       <div className="container mx-auto px-6 py-10 relative z-10">
-        <h1 className="text-4xl font-bold text-center text-green-darkest mb-10">
+        <h1 className="text-4xl font-bold text-center text-white mb-10">
           {t("project-timeline.title")}
         </h1>
 
@@ -121,7 +124,7 @@ const ProjectTimeline = () => {
         <div className="relative h-[800px] overflow-y-scroll no-scrollbar py-10">
           <div className="relative w-full" style={{ height: "2000px" }}>
             {/* Straight vertical line */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-green-light to-green-dark z-0" />
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-[3px] bg-gradient-to-b from-accentLight to-green-darkest z-0" />
 
             {milestonesData.map((m, i) => {
               const topPosition =
@@ -146,7 +149,7 @@ const ProjectTimeline = () => {
                     {/* Pass the icon component to MilestoneMarker */}
                     <MilestoneMarker details={m.details} Icon={m.icon} />
                     <div
-                      className={`bg-white rounded-lg shadow-lg p-4 max-w-sm absolute top-1/2 transform -translate-y-1/2 ${
+                      className={`bg-accentLight rounded-lg shadow-lg p-4 max-w-sm absolute top-1/2 transform -translate-y-1/2 ${
                         isEven
                           ? "right-full mr-6 text-right"
                           : "left-full ml-6 text-left"
@@ -171,10 +174,10 @@ const ProjectTimeline = () => {
           <button
             key={i}
             onClick={() => scrollToMilestone(i)}
-            className={`w-3 h-3 rounded-full border border-green-dark transition-transform duration-300 ${
+            className={`w-3 h-3 rounded-full border border-green-darkest transition-transform duration-300 ${
               visibleIndex === i
-                ? "bg-green-dark scale-125"
-                : "bg-white hover:bg-green-light"
+                ? "bg-green-darkest scale-125"
+                : "bg-accentLight hover:bg-green-dark"
             }`}
           />
         ))}
@@ -186,12 +189,12 @@ const ProjectTimeline = () => {
 const MilestoneMarker = ({ details, Icon }) => {
   return (
     <div className="relative group flex-shrink-0 z-10">
-      <div className="relative w-12 h-12 bg-gradient-to-br from-green-light to-green-dark rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+      <div className="relative w-12 h-12 bg-gradient-to-br from-green-dark to-green-light rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
         {/* Dynamic Icon */}
         <Icon className="h-6 w-6 text-white" />
       </div>
       {/* Tooltip */}
-      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-3 w-56 p-4 bg-white text-green-darkest rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 z-10">
+      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-3 w-56 p-4 bg-green-dark text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 z-10">
         <p className="text-sm">{details}</p>
       </div>
     </div>
