@@ -12,7 +12,7 @@ function TextField(props) {
   } = props;
 
   const classes = {
-    base: "block border placeholder-green-light rounded w-full focus:outline-none focus:ring focus:ring-green-light focus:ring-opacity-50",
+    base: "block border placeholder-accentLight rounded w-full focus:outline-none focus:ring focus:ring-green-light focus:ring-opacity-50",
     size: {
       sm: "py-2 px-3 text-sm",
       md: "py-3 px-4 text-base",
