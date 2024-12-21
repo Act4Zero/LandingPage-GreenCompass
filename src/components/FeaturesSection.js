@@ -16,34 +16,34 @@ function FeaturesSection(props) {
   const features = {
     left: [
       {
-        title: t("features.feature1.title"),
-        description: t("features.feature1.description"),
+        title: t("index.features.feature1.title"),
+        description: t("index.features.feature1.description"),
         icon: GlobeAmericasIcon,
         iconColor: "green",
       },
       {
-        title: t("features.feature2.title"),
-        description: t("features.feature2.description"),
+        title: t("index.features.feature2.title"),
+        description: t("index.features.feature2.description"),
         icon: BookOpenIcon,
         iconColor: "brown",
       },
     ],
     right: [
       {
-        title: t("features.feature3.title"),
-        description: t("features.feature3.description"),
+        title: t("index.features.feature3.title"),
+        description: t("index.features.feature3.description"),
         icon: ChartPieIcon,
         iconColor: "green",
       },
       {
-        title: t("features.feature4.title"),
-        description: t("features.feature4.description"),
+        title: t("index.features.feature4.title"),
+        description: t("index.features.feature4.description"),
         icon: UserGroupIcon,
         iconColor: "green",
       },
       {
-        title: t("features.feature5.title"),
-        description: t("features.feature5.description"),
+        title: t("index.features.feature5.title"),
+        description: t("index.features.feature5.description"),
         icon: ShoppingBagIcon,
         iconColor: "brown",
       },

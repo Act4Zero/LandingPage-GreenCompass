@@ -1,168 +1,174 @@
 {
-  "hero": {
-    "title": "More sustainable future. One action at a time.",
-    "subtitle": "The impact of a single individual might seem small, but the collective power of millions of consumers making conscious choices and advocating for change is significant."
-  },
-  "content": {
-    "title": "The Sustainability Gap",
-    "paragraph1": "Climate change is a pressing issue impacting our planet. We all need to take action, but it can be overwhelming. Our daily choices leave an environmental footprint, contributing to pollution, resource depletion, and a changing climate.",
-    "paragraph2": "Even small changes in your lifestyle can make a significant difference. There's a growing desire for people to live a more sustainable lifestyle. However, many individuals struggle to bridge the gap between good intentions and taking real action.",
-    "paragraph3": "An abundance of information exists, but it can be overwhelming and it often lacks clear, personalized direction. ",
-    "paragraph4": "People need a roadmap for implementing practical changes and staying motivated on their sustainability journey. That's where the Green Compass comes in handy."
-  },
-  "features": {
-    "title": "Packed with features to support your eco-conscious goals.",
-    "subtitle": "Experience seamless, purpose-driven functionality.",
-    "strapline": "Built for Impact",
-    "feature1": {
-      "title": "Your Gateway to a Greener World",
-      "description": "The Sustainability Map connects you to nearby eco-friendly businesses and services tailored to your values. Easily filter for what matters most—clean energy, zero-waste practices, or locally sourced products."
+  "index": {
+    "hero": {
+      "title": "More sustainable future. One action at a time.",
+      "subtitle": "The impact of a single individual might seem small, but the collective power of millions of consumers making conscious choices and advocating for change is significant."
     },
-    "feature2": {
-      "title": "Empower Your Sustainable Future",
-      "description": "Dive into a world of learning designed to inspire and equip you for a greener tomorrow. The Knowledge Hub offers a rich collection of resources to deepen your understanding of the planet, our environment, and the steps you can take to live more sustainably."
+    "content": {
+      "title": "The Sustainability Gap",
+      "paragraph1": "Climate change is a pressing issue impacting our planet. We all need to take action, but it can be overwhelming. Our daily choices leave an environmental footprint, contributing to pollution, resource depletion, and a changing climate.",
+      "paragraph2": "Even small changes in your lifestyle can make a significant difference. There's a growing desire for people to live a more sustainable lifestyle. However, many individuals struggle to bridge the gap between good intentions and taking real action.",
+      "paragraph3": "An abundance of information exists, but it can be overwhelming and it often lacks clear, personalized direction. ",
+      "paragraph4": "People need a roadmap for implementing practical changes and staying motivated on their sustainability journey. That's where the Green Compass comes in handy."
     },
-    "feature3": {
-      "title": "Make Every Action Count",
-      "description": "Take charge of your carbon footprint by discovering your green identity. Track your progress, set goals, and get personalized recommendations to reduce your impact—one small change at a time, building toward a healthier planet."
-    },
-    "feature4": {
-      "title": "Collaborate and Grow with the Community",
-      "description": "Connect with friends, family, and like-minded individuals to compare sustainability profiles, share goals, and work together toward a greener future. Stay engaged with leaderboards, challenges, and rewards, while nurturing communication and knowledge sharing to inspire collective impact."
-    },
-    "feature5": {
-      "title": "Shop with Purpose",
-      "description": "Discover sustainable goods and services from verified businesses, all in one app. Order with confidence, enjoy exclusive user-only deals, and make every purchase a step toward a greener future."
-    }
-  },
-  "cta": {
-    "title": "Try the App Today",
-    "subtitle": "Get a hands-on experience with our sustainability journey! Download the app now to explore its current features and start making an impact.",
-    "button": "Get Started"
-  },
-  "project-timeline": {
-    "title": "Project Timeline",
-    "milestones": {
-      "1": {
-        "title": "February 2024",
-        "description": "Market Research",
-        "details": "Exploring the market and started to form the overall product idea."
+    "features": {
+      "title": "Packed with features to support your eco-conscious goals.",
+      "subtitle": "Experience seamless, purpose-driven functionality.",
+      "strapline": "Built for Impact",
+      "feature1": {
+        "title": "Your Gateway to a Greener World",
+        "description": "The Sustainability Map connects you to nearby eco-friendly businesses and services tailored to your values. Easily filter for what matters most—clean energy, zero-waste practices, or locally sourced products."
       },
-      "2": {
-        "title": "May 2024",
-        "description": "Bootstraped mobile apps",
-        "details": "Established the mobile apps foundations. Prioritization and planning of the first feature."
+      "feature2": {
+        "title": "Empower Your Sustainable Future",
+        "description": "Dive into a world of learning designed to inspire and equip you for a greener tomorrow. The Knowledge Hub offers a rich collection of resources to deepen your understanding of the planet, our environment, and the steps you can take to live more sustainably."
       },
-      "3": {
-        "title": "May 2024",
-        "description": "Product strategy",
-        "details": "Our product market strategy is inspired by the growth of a tree: starting as a small seed, we nurture and scale development step by step until we reach full maturity."
+      "feature3": {
+        "title": "Make Every Action Count",
+        "description": "Take charge of your carbon footprint by discovering your green identity. Track your progress, set goals, and get personalized recommendations to reduce your impact—one small change at a time, building toward a healthier planet."
       },
-      "4": {
-        "title": "June 2024",
-        "description": "Feature Planning Framework",
-        "details": "Developed a streamlined feature process enabling rapid prototyping, strategic planning, and efficient delivery."
+      "feature4": {
+        "title": "Collaborate and Grow with the Community",
+        "description": "Connect with friends, family, and like-minded individuals to compare sustainability profiles, share goals, and work together toward a greener future. Stay engaged with leaderboards, challenges, and rewards, while nurturing communication and knowledge sharing to inspire collective impact."
       },
-      "5": {
-        "title": "September 2024",
-        "description": "Released 1.0.0 in Google PlayStore",
-        "details": "Our initial app feature aggregates popular RSS feeds, delivering curated insights on key sustainability topics within the Knowledge Hub."
-      },
-      "6": {
-        "title": "March 2025",
-        "description": "Enhance Feed Contents",
-        "details": "Integrate educational videos into the existing article feed, creating a seamless experience where users can effortlessly scroll through and explore both articles and videos in one unified stream."
-      },
-      "7": {
-        "title": "June 2025",
-        "description": "Your Daily Dose of Sustainability",
-        "details": "A little something each day to inspire, surprise, and empower your green journey. Stay tuned!"
-      },
-      "8": {
-        "title": "July 2025",
-        "description": "Product Launch",
-        "details": "Share the product with the world."
+      "feature5": {
+        "title": "Shop with Purpose",
+        "description": "Discover sustainable goods and services from verified businesses, all in one app. Order with confidence, enjoy exclusive user-only deals, and make every purchase a step toward a greener future."
       }
-    }
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Get answers to common questions about our app.",
-    "strapline": "We answer",
-    "questions": {
-      "1": {
-      "question": "Why do individuals need this app?",
-      "answer": "We all want to help the planet, but knowing where to start can be overwhelming. Our product bridges the gap between good intentions and real action by providing the knowledge, tools, and community support needed to make a measurable impact on our future."
-      },
-      "2": {
-      "question": "Who is this app for?",
-      "answer": "Individual consumers hold immense power in addressing climate change through collective action and cumulative impact. While the efforts of one person might feel small, the combined choices of millions can drive significant change. Green Compass empowers individuals to understand their impact, take meaningful action, and connect with a community striving for a more sustainable and hopeful future."
-      },
-      "3": {
-      "question": "Where Green Compass Fits in the Sustainability Space?",
-      "answer": "Green Compass empowers individuals to reduce their carbon footprint, shift demand toward sustainable alternatives, and inspire collective action. By nurturing awareness, advocacy, and community connections, it enables users to drive meaningful change and shape a more sustainable future."
-      },
-      "4": {
-      "question": "What can I do with the app right now?",
-      "answer": "Green Compass currently provides a curated feed of sustainability articles, offering actionable insights and inspiration to kickstart your eco-conscious journey. This feature marks our starting point, a deliberate step to bring value from the very beginning and build a foundation for a more comprehensive sustainability platform in the future."
-      },
-      "5": {
-      "question": "Will more features be added to the app?",
-      "answer": "Absolutely! We're actively exploring new features to enhance your sustainability journey, including tools for tracking your impact, connecting with like-minded individuals, and accessing more interactive content. Stay tuned as we grow and evolve, guided by your feedback and our mission to empower sustainable living."
-      },
-      "6": {
-      "question": "Can users suggest features or content for the app?",
-      "answer": "Absolutely! We value your input and believe the best ideas come from our community. If you have suggestions for features or content, you can reach out to us directly. Your feedback helps us shape Green Compass into a platform that truly meets your needs."
-      },
-      "7": {
-      "question": "How do I stay informed about updates and new features?",
-      "answer": "You can stay up-to-date by following us on social media, or subscribing to our newsletter. We’ll keep you informed about the latest updates, new features, and exciting developments in the Green Compass journey."
+    },
+    "cta": {
+      "title": "Try the App Today",
+      "subtitle": "Get a hands-on experience with our sustainability journey! Download the app now to explore its current features and start making an impact.",
+      "button": "Get Started"
+    },
+    "project-timeline": {
+      "title": "Project Timeline",
+      "milestones": {
+        "1": {
+          "title": "February 2024",
+          "description": "Market Research",
+          "details": "Exploring the market and started to form the overall product idea."
+        },
+        "2": {
+          "title": "May 2024",
+          "description": "Bootstraped mobile apps",
+          "details": "Established the mobile apps foundations. Prioritization and planning of the first feature."
+        },
+        "3": {
+          "title": "May 2024",
+          "description": "Product strategy",
+          "details": "Our product market strategy is inspired by the growth of a tree: starting as a small seed, we nurture and scale development step by step until we reach full maturity."
+        },
+        "4": {
+          "title": "June 2024",
+          "description": "Feature Planning Framework",
+          "details": "Developed a streamlined feature process enabling rapid prototyping, strategic planning, and efficient delivery."
+        },
+        "5": {
+          "title": "September 2024",
+          "description": "Released 1.0.0 in Google PlayStore",
+          "details": "Our initial app feature aggregates popular RSS feeds, delivering curated insights on key sustainability topics within the Knowledge Hub."
+        },
+        "6": {
+          "title": "March 2025",
+          "description": "Enhance Feed Contents",
+          "details": "Integrate educational videos into the existing article feed, creating a seamless experience where users can effortlessly scroll through and explore both articles and videos in one unified stream."
+        },
+        "7": {
+          "title": "June 2025",
+          "description": "Your Daily Dose of Sustainability",
+          "details": "A little something each day to inspire, surprise, and empower your green journey. Stay tuned!"
+        },
+        "8": {
+          "title": "July 2025",
+          "description": "Product Launch",
+          "details": "Share the product with the world."
+        }
       }
-    }
-  },
-  "download": {
-    "title": "Download the App",
-    "subtitle": "Start your sustainability journey today.",
-    "iosTooltip": "Available soon"
-  },
-  "newsletter": {
-    "title": "Subscribe to Our Newsletter",
-    "subtitle": "Stay informed about the latest updates and features.",
-    "placeholder": "Your email",
-    "button": "Subscribe",
-    "success": "Thank you for subscribing!",
-    "inputRequired": "Please enter an email address",
-    "note": "Unsubscribe at any time.",
-    "privacyPolicy": {
-      "text": "Check out our",
-      "link": "Privacy Policy"
-    }
-  },
-  "contact": {
-    "title": "We’d Love to Hear From You",
-    "subtitle": "Whether it’s feedback, ideas, or a desire to contribute, we’re all ears! Reach out, and let’s explore how we can make a difference together."
-  },
-  "footer": {
-    "product": {
-      "title": "Product",
-      "faq": "FAQ",
-      "features": "Features",
-      "timeline": "Timeline"
     },
-    "company": {
-      "title": "Company",
-      "about": "About",
-      "contact": "Contact",
-      "privacy": "Privacy Policy"
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Get answers to common questions about our app.",
+      "strapline": "We answer",
+      "questions": {
+        "1": {
+          "question": "Why do individuals need this app?",
+          "answer": "We all want to help the planet, but knowing where to start can be overwhelming. Our product bridges the gap between good intentions and real action by providing the knowledge, tools, and community support needed to make a measurable impact on our future."
+        },
+        "2": {
+          "question": "Who is this app for?",
+          "answer": "Individual consumers hold immense power in addressing climate change through collective action and cumulative impact. While the efforts of one person might feel small, the combined choices of millions can drive significant change. Green Compass empowers individuals to understand their impact, take meaningful action, and connect with a community striving for a more sustainable and hopeful future."
+        },
+        "3": {
+          "question": "Where Green Compass Fits in the Sustainability Space?",
+          "answer": "Green Compass empowers individuals to reduce their carbon footprint, shift demand toward sustainable alternatives, and inspire collective action. By nurturing awareness, advocacy, and community connections, it enables users to drive meaningful change and shape a more sustainable future."
+        },
+        "4": {
+          "question": "What can I do with the app right now?",
+          "answer": "Green Compass currently provides a curated feed of sustainability articles, offering actionable insights and inspiration to kickstart your eco-conscious journey. This feature marks our starting point, a deliberate step to bring value from the very beginning and build a foundation for a more comprehensive sustainability platform in the future."
+        },
+        "5": {
+            "question": "Will more features be added to the app?",
+            "answer": "Absolutely! We're actively exploring new features to enhance your sustainability journey, including tools for tracking your impact, connecting with like-minded individuals, and accessing more interactive content. Stay tuned as we grow and evolve, guided by your feedback and our mission to empower sustainable living."
+        },
+        "6": {
+            "question": "Can users suggest features or content for the app?",
+            "answer": "Absolutely! We value your input and believe the best ideas come from our community. If you have suggestions for features or content, you can reach out to us directly. Your feedback helps us shape Green Compass into a platform that truly meets your needs."
+        },
+        "7": {
+            "question": "How do I stay informed about updates and new features?",
+            "answer": "You can stay up-to-date by following us on social media, or subscribing to our newsletter. We’ll keep you informed about the latest updates, new features, and exciting developments in the Green Compass journey."
+        }
+      }
     },
-    "social": {
-      "title": "Social"
+    "download": {
+      "title": "Download the App",
+      "subtitle": "Start your sustainability journey today.",
+      "iosTooltip": "Available soon"
     },
-    "form": {
-      "title": "Subscribe to our newsletter",
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "subtitle": "Stay informed about the latest updates and features.",
       "placeholder": "Your email",
       "button": "Subscribe",
-      "required": "Please enter an email address"
+      "success": "Thank you for subscribing!",
+      "inputRequired": "Please enter an email address",
+      "note": "Unsubscribe at any time.",
+      "privacyPolicy": {
+        "text": "Check out our",
+        "link": "Privacy Policy"
+      }
+    },
+    "contact": {
+      "title": "We’d Love to Hear From You",
+      "subtitle": "Whether it’s feedback, ideas, or a desire to contribute, we’re all ears! Reach out, and let’s explore how we can make a difference together."
+    },
+    "footer": {
+      "product": {
+        "title": "Product",
+        "faq": "FAQ",
+        "features": "Features",
+        "timeline": "Timeline"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "contact": "Contact",
+        "privacy": "Privacy Policy"
+      },
+      "social": {
+        "title": "Social"
+      },
+      "form": {
+        "title": "Subscribe to our newsletter",
+        "placeholder": "Your email",
+        "button": "Subscribe",
+        "required": "Please enter an email address"
+      }
     }
+  },
+  "explainer": {
+    "title": "How Green Compass Brings Sustainability to Life",
+    "subtitle": "Discover how Green Compass empowers you to take small, impactful actions that lead to big change."
   }
 }

@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 function FaqSection(props) {
   const { t } = useTranslation();
   const getText = () => {
-    return t("faq.questions", { returnObjects: true }) || {};
+    return t("index.faq.questions", { returnObjects: true }) || {};
   };
 
   const faqItems = [
