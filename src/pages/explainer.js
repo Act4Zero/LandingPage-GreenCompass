@@ -12,13 +12,25 @@ function ExplainerPage(props) {
     return t("explainer", { returnObjects: true }) || {};
   };
 
+  const challengeParagraphs = [
+    getText().challenge.subtitle,
+    ...getText().challenge.paragraphs,
+    getText().challenge.conclusion,
+  ];
+
   return (
     <>
       <Meta />
       <Navbar bgColor="white" />
       <ContentSection
         title={getText().title}
-        paragraph1={getText().subtitle}
+        titleSize="h2"
+        paragraphs={[getText().subtitle]}
+      />
+      <ContentSection
+        title={getText().challenge.title}
+        titleSize="h3"
+        paragraphs={challengeParagraphs}
       />
       <CtaSection
         title={t("cta.title")}

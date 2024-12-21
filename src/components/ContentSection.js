@@ -1,6 +1,9 @@
 import React from "react";
+import parse from "html-react-parser";
 
 function ContentSection(props) {
+  const TitleTag = props.titleSize || "h1"; // Default to h1 if no titleSize is provided
+
   return (
     <section
       id={props.id}
@@ -8,14 +11,11 @@ function ContentSection(props) {
     >
       <div className="w-full max-w-4xl mx-auto text-center">
         {/* Section Title */}
-        <h1 className="text-4xl sm:text-5xl font-bold mb-8">{props.title}</h1>
+        <TitleTag className="font-bold mb-8">{props.title}</TitleTag>
 
         {/* Content Paragraphs */}
         <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-left sm:text-center">
-          {props.paragraph1 && <p>{props.paragraph1}</p>}
-          {props.paragraph2 && <p>{props.paragraph2}</p>}
-          {props.paragraph3 && <p>{props.paragraph3}</p>}
-          {props.paragraph4 && <p>{props.paragraph4}</p>}
+          {props.paragraphs && parse(props.paragraphs.join(""))}
         </div>
 
         {/* Call-to-Action Button */}

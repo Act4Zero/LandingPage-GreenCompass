@@ -6,10 +6,10 @@
     },
     "content": {
       "title": "The Sustainability Gap",
-      "paragraph1": "Climate change is a pressing issue impacting our planet. We all need to take action, but it can be overwhelming. Our daily choices leave an environmental footprint, contributing to pollution, resource depletion, and a changing climate.",
-      "paragraph2": "Even small changes in your lifestyle can make a significant difference. There's a growing desire for people to live a more sustainable lifestyle. However, many individuals struggle to bridge the gap between good intentions and taking real action.",
-      "paragraph3": "An abundance of information exists, but it can be overwhelming and it often lacks clear, personalized direction. ",
-      "paragraph4": "People need a roadmap for implementing practical changes and staying motivated on their sustainability journey. That's where the Green Compass comes in handy."
+      "paragraph1": "<p>Climate change is a pressing issue impacting our planet. We all need to take action, but it can be overwhelming. Our daily choices leave an environmental footprint, contributing to pollution, resource depletion, and a changing climate.</p>",
+      "paragraph2": "<p>Even small changes in your lifestyle can make a significant difference. There's a growing desire for people to live a more sustainable lifestyle. However, many individuals struggle to bridge the gap between good intentions and taking real action.</p>",
+      "paragraph3": "<p>An abundance of information exists, but it can be overwhelming and it often lacks clear, personalized direction.</p>",
+      "paragraph4": "<p>People need a roadmap for implementing practical changes and staying motivated on their sustainability journey. That's where the Green Compass comes in handy.</p>"
     },
     "features": {
       "title": "Packed with features to support your eco-conscious goals.",
@@ -169,6 +169,18 @@
   },
   "explainer": {
     "title": "How Green Compass Brings Sustainability to Life",
-    "subtitle": "Discover how Green Compass empowers you to take small, impactful actions that lead to big change."
+    "subtitle": "Discover how Green Compass empowers you to take small, impactful actions that lead to big change.",
+    "challenge": {
+      "title": "Growing Carbon Footprint",
+      "subtitle": "The global climate crisis is fueled by rising carbon emissions from daily activities—transportation, energy use, and consumption. While awareness of the issue has grown, it’s often not enough to drive meaningful action. The scale of the problem can feel overwhelming, leaving individuals uncertain about where to begin or how their choices make a difference.",
+      "paragraphs": [
+        "<ul>",
+        "</br><li><strong>The Reality of Emissions:</strong> Every choice we make—what we eat, how we travel, the energy we consume—contributes to our carbon footprint. While these emissions may seem small individually, the collective impact is staggering.</li>",
+        "</br><li><strong>A Lack of Connection:</strong> Many people struggle to connect their daily habits to the bigger picture of climate change, making it challenging to take steps toward reducing their footprint.</li>",
+        "</br><li><strong>Barriers to Action:</strong> Without clear feedback or accessible tools, it’s easy for people to feel disconnected from the solutions, unsure of how their actions can lead to meaningful change.</li>",
+        "</ul>"
+      ],
+      "conclusion": "</br><strong>The question remains:</strong> How can we empower individuals to understand their impact, take action, and drive collective change?"
+    }
   }
 }

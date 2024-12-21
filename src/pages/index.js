@@ -34,10 +34,12 @@ function IndexPage(props) {
       <ContentSection
         id="content"
         title={t("index.content.title")}
-        paragraph1={t("index.content.paragraph1")}
-        paragraph2={t("index.content.paragraph2")}
-        paragraph3={t("index.content.paragraph3")}
-        paragraph4={t("index.content.paragraph4")}
+        paragraphs={[
+          t("index.content.paragraph1"),
+          t("index.content.paragraph2"),
+          t("index.content.paragraph3"),
+          t("index.content.paragraph4"),
+        ]}
       />
       <FeaturesSection
         id="features"
