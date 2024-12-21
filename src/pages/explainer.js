@@ -6,6 +6,7 @@ import Navbar from "components/Navbar";
 import ContentSection from "components/ContentSection";
 import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
 import ChallengeSection from "components/explainer/Challenge";
+import ExplainerCta from "components/explainer/ExplainerCta";
 
 function ExplainerPage(props) {
   const { t } = useTranslation();
@@ -67,6 +68,7 @@ function ExplainerPage(props) {
         paragraphs={solutionParagraphs}
       />
       <ChallengeSection />
+      <ExplainerCta />
       <Footer
         size="md"
         bgColor="bg-green-dark"
