@@ -3,8 +3,8 @@ import "../util/i18n";
 import { useTranslation } from "react-i18next";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
-import CtaSection from "components/CtaSection";
 import ContentSection from "components/ContentSection";
+import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
 
 function ExplainerPage(props) {
   const { t } = useTranslation();
@@ -15,7 +15,13 @@ function ExplainerPage(props) {
   const challengeParagraphs = [
     getText().challenge.subtitle,
     ...getText().challenge.paragraphs,
-    getText().challenge.conclusion,
+    getText().challenge.conclusion
+  ];
+
+  const solutionParagraphs = [
+    getText().solution.subtitle,
+    ...getText().solution.paragraphs,
+    getText().solution.conclusion
   ];
 
   return (
@@ -32,18 +38,41 @@ function ExplainerPage(props) {
         titleSize="h3"
         paragraphs={challengeParagraphs}
       />
-      <CtaSection
-        title={t("cta.title")}
-        subtitle={t("cta.subtitle")}
-        ctaText={t("cta.button")}
-        strapline=""
-        size="lg"
-        bgColor="white"
+      <EvidenceOfImpact
+        title="Research on the impact of carbon tracking apps"
+        content={
+          <>
+            <p>
+              According to a 2024 study published in the{" "}
+              <em>Journal of Cleaner Production</em>, providing users with
+              feedback through carbon tracking apps significantly reduces
+              emissions by increasing awareness and encouraging actionable
+              changes (Hoffmann et al., 2024).
+            </p>
+            <p>
+              The research highlights that feedback can reduce carbon emissions
+              by an average of <strong>23%</strong>, with specific reductions
+              ranging from 12% in mobility to 35% in household activities.
+              Moreover, individual traits like perceived green self-efficacy
+              amplify the feedback’s effect, whereas a strong green
+              self-identity diminishes it.
+            </p>
+          </>
+        }
+      />
+      <ContentSection
+        title={getText().solution.title}
+        titleSize="h3"
+        paragraphs={solutionParagraphs}
+      />
+      <Footer
+        size="md"
+        bgColor="bg-green-dark"
         bgImage=""
         bgImageOpacity={1}
-        textColor="text-white"
+        textColor=""
+        sticky={false}
       />
-      <Footer />
     </>
   );
 }

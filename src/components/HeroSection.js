@@ -48,7 +48,7 @@ function HeroSection(props) {
               Get Started
             </Button>
           </Link>
-          <Link href="#features" passHref>
+          <Link href="/explainer" passHref>
             <Button size="xl" variant="primary">
               Learn More
             </Button>
