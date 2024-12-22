@@ -3,7 +3,7 @@ export default function ExplainerBanner(props) {
     <div className="relative bg-green-lightest rounded-lg shadow-lg mt-8 overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1542202229-7d93c33f5d07?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Nature scene"
+        alt="A scenic view of a forest with sunlight filtering through the trees"
         className="w-full h-64 object-cover"
       />
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
