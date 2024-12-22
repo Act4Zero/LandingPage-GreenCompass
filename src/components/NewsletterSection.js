@@ -37,15 +37,15 @@ function NewsletterSection(props) {
           <div className="p-2 rounded text-center relative bg-green-lightest bg-opacity-10">
             <div className="p-8 lg:py-12 lg:px-16 bg-white rounded shadow-lg">
               <h3 className="text-2xl sm:text-3xl font-extrabold mb-2 text-green-darkest">
-                {t("newsletter.title")}
+                {t("index.newsletter.title")}
               </h3>
               <p className="prose prose-green mb-6 text-green-dark">
-                {t("newsletter.subtitle")}
+                {t("index.newsletter.subtitle")}
               </p>
 
               {subscribed === true && (
                 <div className="mt-3 text-center text-green-dark">
-                  {t("newsletter.success")}
+                  {t("index.newsletter.success")}
                 </div>
               )}
 
@@ -56,23 +56,23 @@ function NewsletterSection(props) {
                       type="email"
                       id="email"
                       name="email"
-                      placeholder={t("newsletter.placeholder")}
+                      placeholder={t("index.newsletter.placeholder")}
                       error={errors.email}
                       inputRef={register({
-                        required: t("newsletter.inputRequired"),
+                        required: t("index.newsletter.inputRequired"),
                       })}
                     />
                     <Button type="submit" size="lg" variant="primary">
-                      {t("newsletter.button")}
+                      {t("index.newsletter.button")}
                     </Button>
                   </div>
                   <p className="text-sm text-green-dark leading-6">
-                    {t("newsletter.note")}
+                    {t("index.newsletter.note")}
                     <br />
-                    {t("newsletter.privacyPolicy.text")}{" "}
+                    {t("index.newsletter.privacyPolicy.text")}{" "}
                     <Link href="/legal/privacy-policy">
                       <a className="font-medium text-green hover:text-green-dark">
-                        {t("newsletter.privacyPolicy.link")}
+                        {t("index.newsletter.privacyPolicy.link")}
                       </a>
                     </Link>
                   </p>

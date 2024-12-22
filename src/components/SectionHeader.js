@@ -16,7 +16,8 @@ function SectionHeader(props) {
   return (
     <header
       className={
-        "mb-8 last:mb-0" + (props.className ? ` ${props.className}` : "")
+        "py-8 mb-8 last:mb-0 text-center" +
+        (props.className ? ` ${props.className}` : "")
       }
     >
       {props.strapline && (

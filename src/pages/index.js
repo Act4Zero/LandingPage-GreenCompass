@@ -22,8 +22,8 @@ function IndexPage(props) {
       <Meta />
       <Navbar bgColor="white" />
       <HeroSection
-        title={t("hero.title")}
-        subtitle={t("hero.subtitle")}
+        title={t("index.hero.title")}
+        subtitle={t("index.hero.subtitle")}
         strapline=""
         size="lg"
         bgColor="white"
@@ -33,17 +33,19 @@ function IndexPage(props) {
       />
       <ContentSection
         id="content"
-        title={t("content.title")}
-        paragraph1={t("content.paragraph1")}
-        paragraph2={t("content.paragraph2")}
-        paragraph3={t("content.paragraph3")}
-        paragraph4={t("content.paragraph4")}
+        title={t("index.content.title")}
+        paragraphs={[
+          t("index.content.paragraph1"),
+          t("index.content.paragraph2"),
+          t("index.content.paragraph3"),
+          t("index.content.paragraph4"),
+        ]}
       />
       <FeaturesSection
         id="features"
-        title={t("features.title")}
-        subtitle={t("features.subtitle")}
-        strapline={t("features.strapline")}
+        title={t("index.features.title")}
+        subtitle={t("index.features.subtitle")}
+        strapline={t("index.features.strapline")}
         size="md"
         bgColor="bg-white"
         bgImage=""
@@ -51,9 +53,9 @@ function IndexPage(props) {
         textColor=""
       />
       <CtaSection
-        title={t("cta.title")}
-        subtitle={t("cta.subtitle")}
-        ctaText={t("cta.button")}
+        title={t("index.cta.title")}
+        subtitle={t("index.cta.subtitle")}
+        ctaText={t("index.cta.button")}
         strapline=""
         size="lg"
         bgColor="white"
@@ -72,9 +74,9 @@ function IndexPage(props) {
       />
       <FaqSection
         id="faq"
-        title={t("faq.title")}
+        title={t("index.faq.title")}
         subtitle=""
-        strapline={t("faq.strapline")}
+        strapline={t("index.faq.strapline")}
         size="md"
         bgColor="white"
         bgImage=""
@@ -84,14 +86,14 @@ function IndexPage(props) {
         supportUrl="https://zendesk.com"
       />
       <DownloadTheApp
-        title={t("download.title")}
-        subtitle={t("download.subtitle")}
-        iosTooltip={t("download.iosTooltip")}
+        title={t("index.download.title")}
+        subtitle={t("index.download.subtitle")}
+        iosTooltip={t("index.download.iosTooltip")}
       />
       <ContactSection
         id="contact"
-        title={t("contact.title")}
-        subtitle={t("contact.subtitle")}
+        title={t("index.contact.title")}
+        subtitle={t("index.contact.subtitle")}
         strapline=""
         size="md"
         bgColor="white"

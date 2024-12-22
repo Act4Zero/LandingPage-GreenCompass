@@ -38,7 +38,37 @@
   scrollbar-width: none; /* Firefox */
 }
 
-
 html {
   scroll-behavior: smooth;
+}
+
+/* Add custom styles for heading tags */
+h1 {
+  font-size: 2.25rem; /* Example size for h1 */
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.875rem; /* Example size for h2 */
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem; /* Example size for h3 */
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem; /* Example size for h4 */
+  line-height: 1.75rem;
+}
+
+h5 {
+  font-size: 1rem; /* Example size for h5 */
+  line-height: 1.5rem;
+}
+
+h6 {
+  font-size: 0.875rem; /* Example size for h6 */
+  line-height: 1.25rem;
 }

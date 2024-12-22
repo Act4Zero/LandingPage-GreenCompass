@@ -17,7 +17,9 @@ const ProjectTimeline = () => {
   const { t } = useTranslation();
 
   const getText = () => {
-    return t("project-timeline.milestones", { returnObjects: true }) || {};
+    return (
+      t("index.project-timeline.milestones", { returnObjects: true }) || {}
+    );
   };
 
   const milestonesData = [
@@ -117,7 +119,7 @@ const ProjectTimeline = () => {
     >
       <div className="container mx-auto px-6 py-10 relative z-10">
         <h1 className="text-4xl font-bold text-center text-white mb-10">
-          {t("project-timeline.title")}
+          {t("index.project-timeline.title")}
         </h1>
 
         {/* Scrollable area */}

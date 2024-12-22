@@ -31,13 +31,13 @@ function Footer(props) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
-              {t("footer.product.title")}
+              {t("index.footer.product.title")}
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
               {[
-                { url: "#faq", name: t("footer.product.faq") },
-                { url: "#features", name: t("footer.product.features") },
-                { url: "#timeline", name: t("footer.product.timeline") },
+                { url: "#faq", name: t("index.footer.product.faq") },
+                { url: "#features", name: t("index.footer.product.features") },
+                { url: "#timeline", name: t("index.footer.product.timeline") },
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
                   <a className="font-medium text-green-light hover:text-green">
@@ -49,14 +49,14 @@ function Footer(props) {
           </div>
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
-              {t("footer.company.title")}
+              {t("index.footer.company.title")}
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
               {[
-                { url: "/about", name: t("footer.company.about") },
+                { url: "/about", name: t("index.footer.company.about") },
                 {
                   url: "/legal/privacy-policy",
-                  name: t("footer.company.privacy"),
+                  name: t("index.footer.company.privacy"),
                 },
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
@@ -69,7 +69,7 @@ function Footer(props) {
           </div>
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
-              {t("footer.social.title")}
+              {t("index.footer.social.title")}
             </h4>
             <div className="mt-6 flex flex-row space-x-4">
               {[
@@ -110,7 +110,7 @@ function Footer(props) {
               ))}
             </div>
             <h4 className="mt-10 text-sm uppercase font-semibold tracking-wider text-accentLight">
-              {t("footer.form.title")}
+              {t("index.footer.form.title")}
             </h4>
 
             {subscribed === true && (
@@ -129,16 +129,16 @@ function Footer(props) {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder={t("footer.form.placeholder")}
+                    placeholder={t("index.footer.form.placeholder")}
                     error={errors.email}
                     size="sm"
                     inputRef={register({
-                      required: t("form.required"),
+                      required: t("index.form.required"),
                     })}
                   />
                 </div>
                 <Button type="submit" size="sm" variant="primary">
-                  {t("footer.form.button")}
+                  {t("index.footer.form.button")}
                 </Button>
               </form>
             )}

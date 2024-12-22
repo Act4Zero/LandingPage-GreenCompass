@@ -1,21 +1,23 @@
 import React from "react";
+import parse from "html-react-parser";
 
 function ContentSection(props) {
+  const TitleTag = props.titleSize || "h1"; // Default to h1 if no titleSize is provided
+  const backgroundColor =
+    props.backgroundColor || "bg-gradient-to-br from-green-lightest to-lightBg";
+
   return (
     <section
       id={props.id}
-      className="bg-gradient-to-br from-green-lightest to-lightBg py-12 px-6 sm:py-16 lg:py-20 lg:px-8 text-green-darkest"
+      className={`${backgroundColor} py-12 px-6 sm:py-16 lg:py-20 lg:px-8 text-green-darkest`}
     >
       <div className="w-full max-w-4xl mx-auto text-center">
         {/* Section Title */}
-        <h1 className="text-4xl sm:text-5xl font-bold mb-8">{props.title}</h1>
+        <TitleTag className="font-bold mb-8">{props.title}</TitleTag>
 
         {/* Content Paragraphs */}
         <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-left sm:text-center">
-          {props.paragraph1 && <p>{props.paragraph1}</p>}
-          {props.paragraph2 && <p>{props.paragraph2}</p>}
-          {props.paragraph3 && <p>{props.paragraph3}</p>}
-          {props.paragraph4 && <p>{props.paragraph4}</p>}
+          {props.paragraphs && parse(props.paragraphs.join(""))}
         </div>
 
         {/* Call-to-Action Button */}
