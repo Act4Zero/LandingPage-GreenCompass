@@ -1,7 +1,7 @@
 import React from "react";
-import "../util/i18n";
+import "util/i18n";
 import { useTranslation } from "react-i18next";
-import Challenge from "./Challenge";
+import Challenge from "./ChallengeCta";
 
 function SolutionShowcase() {
     const { t } = useTranslation();

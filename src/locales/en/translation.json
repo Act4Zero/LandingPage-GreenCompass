@@ -206,6 +206,16 @@
         "title": "Positive Feedback Loops",
         "description": "Receive real-time feedback and celebrate milestones along the way."
       }
+    },
+    "challenge-cta": {
+      "title": "If 10,000 users complete this week’s challenge…",
+      "subtitle": "We’ll collectively save <strong>100 tons of CO2</strong> – the equivalent of planting <strong>5,000 trees!</strong>",
+      "button": "Join the Challenge",
+      "dialog": {
+        "title": "Challenge Details",
+        "subtitle": "Join our community in this week’s challenge to reduce your carbon footprint. Together, we can make a significant impact on the planet. Are you in?",
+        "button": "Maybe later"
+      }
     }
   }
 }
