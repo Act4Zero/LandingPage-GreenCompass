@@ -12,7 +12,7 @@ function ChallengeSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-lightBg to-accentLight py-12 px-6 sm:py-16 lg:py-20 lg:px-8 text-green-darkest bg-[url('/assets/texture.svg')] bg-cover">
+    <section className="white py-12 px-6 sm:py-16 lg:py-20 lg:px-8 text-green-darkest bg-[url('/assets/texture.svg')] bg-cover">
       <div className="max-w-4xl mx-auto text-center">
         <h3 className="font-bold text-2xl mb-6 text-green-dark">
           {getText().title}
