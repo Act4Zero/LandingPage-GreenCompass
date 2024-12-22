@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
-import ExplainerCta from "components/explainer/ExplainerCta";
+import ExplainerBanner from "components/explainer/ExplainerBanner";
 import SectionHeader from "components/SectionHeader";
 import ChallengeSection from "components/explainer/ChallengeSection";
 import SolutionShowcase from "components/explainer/SolutionShowcase";
@@ -26,8 +26,11 @@ function ExplainerPage(props) {
       />
       <ChallengeSection />
       <SolutionShowcase />
-      <EvidenceOfImpact/>
-      <ExplainerCta />
+      <EvidenceOfImpact />
+      <ExplainerBanner
+        title={getText().banner.title}
+        subtitle={getText().banner.subtitle}
+      />
       <Footer
         size="md"
         bgColor="bg-green-dark"
