@@ -3,11 +3,13 @@ import parse from "html-react-parser";
 
 function ContentSection(props) {
   const TitleTag = props.titleSize || "h1"; // Default to h1 if no titleSize is provided
+  const backgroundColor =
+    props.backgroundColor || "bg-gradient-to-br from-green-lightest to-lightBg";
 
   return (
     <section
       id={props.id}
-      className="bg-gradient-to-br from-green-lightest to-lightBg py-12 px-6 sm:py-16 lg:py-20 lg:px-8 text-green-darkest"
+      className={`${backgroundColor} py-12 px-6 sm:py-16 lg:py-20 lg:px-8 text-green-darkest`}
     >
       <div className="w-full max-w-4xl mx-auto text-center">
         {/* Section Title */}

@@ -7,6 +7,7 @@ import ContentSection from "components/ContentSection";
 import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
 import ChallengeSection from "components/explainer/Challenge";
 import ExplainerCta from "components/explainer/ExplainerCta";
+import SectionHeader from "components/SectionHeader";
 
 function ExplainerPage(props) {
   const { t } = useTranslation();
@@ -30,10 +31,10 @@ function ExplainerPage(props) {
     <>
       <Meta />
       <Navbar bgColor="white" />
-      <ContentSection
+      <SectionHeader
         title={getText().title}
-        titleSize="h2"
-        paragraphs={[getText().subtitle]}
+        subtitle={getText().subtitle}
+        strapline=""
       />
       <ContentSection
         title={getText().challenge.title}
