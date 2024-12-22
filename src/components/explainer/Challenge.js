@@ -8,7 +8,7 @@ export default function ChallengeSection() {
   };
 
   return (
-    <div className="bg-lightBg p-8 rounded-lg shadow-md text-center">
+    <div className="white p-8 rounded-lg shadow-md text-center">
       <h2 className="text-3xl font-bold text-green-dark">
         If 10,000 users complete this week’s challenge…
       </h2>
@@ -19,7 +19,7 @@ export default function ChallengeSection() {
       </p>
       <button
         onClick={toggleModal}
-        className="mt-6 bg-green-light text-white py-2 px-4 rounded hover:bg-green-dark"
+        className="mt-6 bg-green text-white py-2 px-4 rounded hover:bg-green-dark"
       >
         Join the Challenge
       </button>

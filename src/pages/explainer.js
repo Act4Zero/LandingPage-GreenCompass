@@ -3,24 +3,17 @@ import "../util/i18n";
 import { useTranslation } from "react-i18next";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
-import ContentSection from "components/ContentSection";
 import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
-import Challenge from "components/explainer/Challenge";
 import ExplainerCta from "components/explainer/ExplainerCta";
 import SectionHeader from "components/SectionHeader";
 import ChallengeSection from "components/explainer/ChallengeSection";
+import SolutionShowcase from "components/explainer/SolutionShowcase";
 
 function ExplainerPage(props) {
   const { t } = useTranslation();
   const getText = () => {
     return t("explainer", { returnObjects: true }) || {};
   };
-
-  const solutionParagraphs = [
-    getText().solution.subtitle,
-    ...getText().solution.paragraphs,
-    getText().solution.conclusion
-  ];
 
   return (
     <>
@@ -32,6 +25,7 @@ function ExplainerPage(props) {
         strapline=""
       />
       <ChallengeSection />
+      <SolutionShowcase />
       <EvidenceOfImpact
         title="Research on the impact of carbon tracking apps"
         content={
@@ -54,12 +48,6 @@ function ExplainerPage(props) {
           </>
         }
       />
-      <ContentSection
-        title={getText().solution.title}
-        titleSize="h3"
-        paragraphs={solutionParagraphs}
-      />
-      <Challenge />
       <ExplainerCta />
       <Footer
         size="md"

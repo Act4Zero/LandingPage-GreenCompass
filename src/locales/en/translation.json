@@ -188,17 +188,24 @@
       "conclusion": "</br><strong>The question remains:</strong> How can we empower individuals to understand their impact, take action, and drive collective change?"
     },
     "solution": {
-      "title": "Empowering Change Through Actionable Tools",
-      "subtitle": "Green Compass bridges the gap between awareness and action, offering individuals the tools they need to make impactful, sustainable choices every day. By combining knowledge, personalized insights, and community engagement, our app helps turn good intentions into measurable progress.",
-      "paragraphs": [
-        "<ul>",
-        "</br><li><strong>Knowledge Hub:</strong> Educates people with curated articles, videos, and resources that make sustainability simple and accessible. Instead of feeling overwhelmed, users gain the clarity they need to make informed decisions.</li>",
-        "</br><li><strong>Actionable Insights:</strong> By providing personalized recommendations and tracking features, Green Compass empowers individuals to understand their carbon footprint and take small, meaningful steps to reduce it—whether that’s switching to reusable products, optimizing energy use, or making conscious travel choices.</li>",
-        "</br><li><strong>Community Impact:</strong> Individual actions are amplified when connected to a broader movement. Through collective goals, challenges, and progress tracking, users can see the power of their contributions in driving change alongside others.</li>",
-        "</br><li><strong>Positive Feedback Loops:</strong> Research shows that real-time feedback encourages better habits. Green Compass ensures users can track their progress, celebrate milestones, and visualize how their actions contribute to the bigger picture of a sustainable future.</li>",
-        "</ul>"
-      ],
-      "conclusion": "</br>Green Compass doesn’t just raise awareness—it inspires and enables action, proving that even small choices, when made collectively, can drive significant change. Together, we’re building a greener, more sustainable world—one step at a time."
+      "title": "How We Help You Make a Difference",
+      "subtitle": "Green Compass turns intentions into measurable actions through these tools.",
+      "solution1": {
+        "title": "What Can You Learn?",
+        "description": "Discover articles, videos, and resources to simplify sustainable living."
+      },
+      "solution2": {
+        "title": "Your Next Steps Toward Change",
+        "description": "Track your carbon footprint and take meaningful actions to reduce emissions."
+      },
+      "solution3": {
+        "title": "The Power of Collective Action",
+        "description": "Join challenges, collaborate, and celebrate collective progress."
+      },
+      "solution4": {
+        "title": "Positive Feedback Loops",
+        "description": "Receive real-time feedback and celebrate milestones along the way."
+      }
     }
   }
 }
