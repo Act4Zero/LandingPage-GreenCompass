@@ -5,21 +5,16 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import ContentSection from "components/ContentSection";
 import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
-import ChallengeSection from "components/explainer/Challenge";
+import Challenge from "components/explainer/Challenge";
 import ExplainerCta from "components/explainer/ExplainerCta";
 import SectionHeader from "components/SectionHeader";
+import ChallengeSection from "components/explainer/ChallengeSection";
 
 function ExplainerPage(props) {
   const { t } = useTranslation();
   const getText = () => {
     return t("explainer", { returnObjects: true }) || {};
   };
-
-  const challengeParagraphs = [
-    getText().challenge.subtitle,
-    ...getText().challenge.paragraphs,
-    getText().challenge.conclusion
-  ];
 
   const solutionParagraphs = [
     getText().solution.subtitle,
@@ -36,11 +31,7 @@ function ExplainerPage(props) {
         subtitle={getText().subtitle}
         strapline=""
       />
-      <ContentSection
-        title={getText().challenge.title}
-        titleSize="h3"
-        paragraphs={challengeParagraphs}
-      />
+      <ChallengeSection />
       <EvidenceOfImpact
         title="Research on the impact of carbon tracking apps"
         content={
@@ -68,7 +59,7 @@ function ExplainerPage(props) {
         titleSize="h3"
         paragraphs={solutionParagraphs}
       />
-      <ChallengeSection />
+      <Challenge />
       <ExplainerCta />
       <Footer
         size="md"
