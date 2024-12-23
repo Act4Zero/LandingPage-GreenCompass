@@ -4,26 +4,7 @@ import InteractiveCharts from "./InteractiveCharts";
 
 const ContentSections = () => {
   return (
-    <div className="bg-lightBg">
-      {/* Introduction Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-green-dark mb-6">
-            Carbon Footprint Tracking: Insights and Impacts
-          </h1>
-          <blockquote className="text-lg text-gray-700 italic border-l-4 border-green-dark pl-4 mb-6">
-            "Providing users with feedback through carbon tracking apps
-            significantly reduces emissions by increasing awareness and
-            encouraging actionable changes." - Hoffmann et al., 2024
-          </blockquote>
-          <p className="text-lg text-gray-700">
-            Discover how digital tools like Carbon Footprint Tracking Apps
-            empower users to reduce their environmental impact and make
-            informed, sustainable choices.
-          </p>
-        </div>
-      </section>
-
+    <div className="white">
       {/* Key Findings Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
