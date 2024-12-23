@@ -1,50 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import InteractiveCharts from "./InteractiveCharts";
 
 const ContentSections = () => {
   return (
     <div className="white">
-      {/* Key Findings Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-green-dark mb-6">
-            Key Findings
-          </h2>
-          <div className="prose lg:prose-xl">
-            <h3>Reduction in Carbon Emissions</h3>
-            <ul>
-              <li>
-                <strong>23%</strong> average reduction in carbon emissions
-                through feedback.
-              </li>
-              <li>
-                Breakdown by domain: <strong>12%</strong> for mobility,{" "}
-                <strong>35%</strong> for household activities.
-              </li>
-            </ul>
-            <InteractiveCharts/>
-            <h3>Behavior-Intention Gap</h3>
-            <p>
-              Apps address the "behavior-intention gap" by providing actionable
-              feedback, helping users align their intentions with real-world
-              actions.
-            </p>
-            <h3>Role of Individual Traits</h3>
-            <ul>
-              <li>
-                <strong>Perceived Green Self-Efficacy:</strong> Amplifies
-                feedback effectiveness.
-              </li>
-              <li>
-                <strong>Green Self-Identity:</strong> Moderates the impact of
-                feedback.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Domain-Specific Impacts Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-lightBg">
         <div className="max-w-7xl mx-auto">
