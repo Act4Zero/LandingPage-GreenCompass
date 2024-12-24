@@ -258,9 +258,30 @@
       }
     },
     "cta": {
-      "title": "Dive Into the Details",
-      "subtitle": "Discover the power of Carbon Footprint Tracking Apps and take the first step on your journey toward sustainability.",
+      "description": "Discover the power of Carbon Footprint Tracking Apps and take the first step on your journey toward sustainability.",
       "button": "Read the Full Research"
+    },
+    "domain": {
+      "title": "Domain-Specific Impacts",
+      "subtitle": "Everyday choices shape our planet’s future. Explore how adjustments across four key domains—Mobility, Food, Heating, and Household Activities—can contribute to a sustainable lifestyle.",
+      "domains": {
+        "mobility": {
+          "title": "Mobility",
+          "description": "Reduce emissions by carpooling, using public transport, or switching to greener transportation options."
+        },
+        "food": {
+          "title": "Food",
+          "description": "Minimize emissions by adopting plant-based diets, buying local, or reducing food waste."
+        },
+        "heating": {
+          "title": "Heating",
+          "description": "Lower emissions by upgrading to energy-efficient systems, improving insulation, or optimizing thermostat use."
+        },
+        "household": {
+          "title": "Household Activities",
+          "description": "Conserve energy and reduce emissions through smart devices, unplugging unused electronics, and mindful consumption."
+        }
+      }
     }
   }
 }

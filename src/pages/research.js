@@ -5,39 +5,36 @@ import Navbar from "components/Navbar";
 import Introduction from "components/research/Introduction";
 import Insights from "components/research/Insights";
 import ResearchCta from "components/research/ResearchCta";
-import ContentSections from "components/research/ContentSections";
+import DomainImpact from "components/research/DomainImpact";
 import Footer from "components/Footer";
 
 function ResearchPage(props) {
-    const { t } = useTranslation();
-    const getText = () => {
-      return t("research", { returnObjects: true }) || {};
-    };
-    
-    return (
-      <>
-        <Meta />
-        <Navbar bgColor="white" />
-        <Introduction />
-        <Insights
-          description={getText().insights.description2}
-        />
-        <ResearchCta
-          title={getText().cta.title}
-          subtitle={getText().cta.subtitle}
-          buttonText={getText().cta.button}
-        />
-        <ContentSections />
-        <Footer
-          size="md"
-          bgColor="bg-green-dark"
-          bgImage=""
-          bgImageOpacity={1}
-          textColor=""
-          sticky={false}
-        />
-      </>
-    );
+  const { t } = useTranslation();
+  const getText = () => {
+    return t("research", { returnObjects: true }) || {};
+  };
+
+  return (
+    <>
+      <Meta />
+      <Navbar bgColor="white" />
+      <Introduction />
+      <Insights description={getText().insights.description2} />
+      <ResearchCta
+        subtitle={getText().cta.description}
+        buttonText={getText().cta.button}
+      />
+      <DomainImpact />
+      <Footer
+        size="md"
+        bgColor="bg-green-dark"
+        bgImage=""
+        bgImageOpacity={1}
+        textColor=""
+        sticky={false}
+      />
+    </>
+  );
 }
 
 export default ResearchPage;
