@@ -36,28 +36,6 @@ const ContentSections = () => {
           </div>
         </div>
       </section>
-
-      {/* Call to Action Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-green-light">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-green-dark mb-6">
-            Take Action
-          </h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Learn more about the power of Carbon Footprint Tracking Apps and
-            start your journey toward sustainability.
-          </p>
-          <Link href="/path-to-research-pdf" passHref>
-            <a
-              className="inline-block px-6 py-3 bg-green-dark text-white font-semibold rounded-lg shadow-md hover:bg-green-darker transition duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the Full Research
-            </a>
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };

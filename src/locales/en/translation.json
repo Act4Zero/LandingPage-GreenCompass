@@ -256,6 +256,11 @@
         "label4": "Heating",
         "label5": "Household"
       }
+    },
+    "cta": {
+      "title": "Dive Into the Details",
+      "subtitle": "Discover the power of Carbon Footprint Tracking Apps and take the first step on your journey toward sustainability.",
+      "button": "Read the Full Research"
     }
   }
 }

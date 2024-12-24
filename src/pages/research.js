@@ -4,6 +4,7 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import Introduction from "components/research/Introduction";
 import Insights from "components/research/Insights";
+import ResearchCta from "components/research/ResearchCta";
 import ContentSections from "components/research/ContentSections";
 import Footer from "components/Footer";
 
@@ -20,6 +21,11 @@ function ResearchPage(props) {
         <Introduction />
         <Insights
           description={getText().insights.description2}
+        />
+        <ResearchCta
+          title={getText().cta.title}
+          subtitle={getText().cta.subtitle}
+          buttonText={getText().cta.button}
         />
         <ContentSections />
         <Footer
