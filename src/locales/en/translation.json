@@ -231,5 +231,57 @@
       "title": "Together, We Can Create a Brighter, Sustainable Future",
       "subtitle": "Small actions make a big difference. Let’s take the next step toward a greener world."
     }
+  },
+  "research": {
+    "title": "Carbon Footprint Tracking: Insights and Impacts",
+    "quote": "\"Providing users with feedback through carbon tracking apps significantly reduces emissions by increasing awareness and encouraging actionable changes.\" - Hoffmann et al., 2024",
+    "subtitle": "Discover how digital tools like Carbon Footprint Tracking Apps empower users to reduce their environmental impact and make informed, sustainable choices.",
+    "insights": {
+      "label1": "Average reduction in carbon emissions through feedback.",
+      "label2": "reduction in mobility emissions",
+      "label3": "reduction in household emissions",
+      "description1": "Feedback bridges the gap between awareness and action, helping users align intentions with real-world habits.",
+      "description2": "Apps address the \"behavior-intention gap\" by providing actionable feedback, helping users align their intentions with real-world actions."
+    },
+    "chart": {
+      "pie": {
+        "label1": "Reduced Emissions",
+        "label2": "Remaining Emissions"
+      },
+      "bar": {
+        "title": "Domain-Specific Reductions",
+        "label1": "Reduction",
+        "label2": "Mobility",
+        "label3": "Food",
+        "label4": "Heating",
+        "label5": "Household"
+      }
+    },
+    "cta": {
+      "description": "Discover the power of Carbon Footprint Tracking Apps and take the first step on your journey toward sustainability.",
+      "button": "Read the Full Research"
+    },
+    "domain": {
+      "title": "Domain-Specific Impacts",
+      "subtitle": "Everyday choices shape our planet’s future. Explore how adjustments across four key domains—Mobility, Food, Heating, and Household Activities—can contribute to a sustainable lifestyle.",
+      "domains": {
+        "mobility": {
+          "title": "Mobility",
+          "description": "Reduce emissions by carpooling, using public transport, or switching to greener transportation options."
+        },
+        "food": {
+          "title": "Food",
+          "description": "Minimize emissions by adopting plant-based diets, buying local, or reducing food waste."
+        },
+        "heating": {
+          "title": "Heating",
+          "description": "Lower emissions by upgrading to energy-efficient systems, improving insulation, or optimizing thermostat use."
+        },
+        "household": {
+          "title": "Household Activities",
+          "description": "Conserve energy and reduce emissions through smart devices, unplugging unused electronics, and mindful consumption."
+        }
+      }
+    }
   }
 }

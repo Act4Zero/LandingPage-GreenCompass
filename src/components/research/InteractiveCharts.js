@@ -9,6 +9,8 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
+import "util/i18n";
+import { useTranslation } from "react-i18next";
 
 // Register Chart.js components
 ChartJS.register(
@@ -21,12 +23,18 @@ ChartJS.register(
 );
 
 const InteractiveCharts = () => {
+  const { t } = useTranslation();
+  const getText = () => {
+    return t("research", { returnObjects: true }) || {};
+  };
+
   // Data for Bar Chart
+  const barText = getText().chart.bar;
   const barData = {
-    labels: ["Mobility", "Food", "Heating", "Household"],
+    labels: [barText.label2, barText.label3, barText.label4, barText.label5],
     datasets: [
       {
-        label: "Reduction (%)",
+        label: getText().chart.bar.label1 + "(%)",
         data: [12, 16.4, 26.9, 35],
         backgroundColor: "rgba(75, 192, 192, 0.6)",
         borderColor: "rgba(75, 192, 192, 1)",
@@ -40,7 +48,7 @@ const InteractiveCharts = () => {
     plugins: {
       tooltip: {
         callbacks: {
-          label: (context) => `Reduction: ${context.raw}%`,
+          label: (context) => `${barText.label1} ${context.raw}%`,
         },
       },
       legend: {
@@ -52,15 +60,16 @@ const InteractiveCharts = () => {
         beginAtZero: true,
         title: {
           display: true,
-          text: "Reduction (%)",
+          text: `${barText.label1} (%)`,
         },
       },
     },
   };
 
   // Data for Pie Chart
+  const pieText = getText().chart.pie;
   const pieData = {
-    labels: ["Reduced Emissions", "Remaining Emissions"],
+    labels: [pieText.label1, pieText.label2],
     datasets: [
       {
         data: [23, 77],
@@ -88,27 +97,42 @@ const InteractiveCharts = () => {
     },
   };
 
+  const insightsText = getText().insights;
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8 bg-lightBg">
+    <div className="py-10 px-4 sm:px-6 lg:px-8 white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-green-dark mb-6">
-          Interactive Charts
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Bar Chart */}
-          <div>
-            <h3 className="text-xl font-semibold text-green-dark mb-4">
-              Domain-Specific Reductions
-            </h3>
-            <Bar data={barData} options={barOptions} />
+        {/* Key Findings Section */}
+        <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
+          <div className="text-center lg:text-left">
+            <div className="text-6xl font-bold text-green-dark">23%</div>
+            <p className="text-lg text-gray-700">{insightsText.label1}</p>
+            <ul className="mt-4 space-y-2">
+              <li className="flex items-center">
+                <span className="mr-2">🚗</span> <strong>12%</strong>{" "}
+                {insightsText.label2}
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">🏠</span> <strong>35%</strong>{" "}
+                {insightsText.label3}
+              </li>
+            </ul>
           </div>
-
-          {/* Pie Chart */}
           <div>
-            <h3 className="text-xl font-semibold text-green-dark mb-4">
-              Average Reduction
-            </h3>
             <Pie data={pieData} options={pieOptions} />
+          </div>
+        </div>
+        <div className="mt-12 text-center">
+          <p className="text-lg text-gray-700">{insightsText.description1}</p>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <div className="w-full max-w-3xl">
+            {/* Bar Chart */}
+            <div>
+              <h4 className="text-xl font-semibold text-green-dark mb-4 text-center lg:text-left">
+                {barText.title}
+              </h4>
+              <Bar data={barData} options={barOptions} />
+            </div>
           </div>
         </div>
       </div>

@@ -2,27 +2,39 @@ import "../util/i18n";
 import { useTranslation } from "react-i18next";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
-import ContentSections from "components/research/ContentSections";
+import Introduction from "components/research/Introduction";
+import Insights from "components/research/Insights";
+import ResearchCta from "components/research/ResearchCta";
+import DomainImpact from "components/research/DomainImpact";
 import Footer from "components/Footer";
 
 function ResearchPage(props) {
-    const { t } = useTranslation();
-    
-    return (
-      <>
-        <Meta />
-        <Navbar bgColor="white" />
-        <ContentSections />
-        <Footer
-          size="md"
-          bgColor="bg-green-dark"
-          bgImage=""
-          bgImageOpacity={1}
-          textColor=""
-          sticky={false}
-        />
-      </>
-    );
+  const { t } = useTranslation();
+  const getText = () => {
+    return t("research", { returnObjects: true }) || {};
+  };
+
+  return (
+    <>
+      <Meta />
+      <Navbar bgColor="white" />
+      <Introduction />
+      <Insights description={getText().insights.description2} />
+      <ResearchCta
+        subtitle={getText().cta.description}
+        buttonText={getText().cta.button}
+      />
+      <DomainImpact />
+      <Footer
+        size="md"
+        bgColor="bg-green-dark"
+        bgImage=""
+        bgImageOpacity={1}
+        textColor=""
+        sticky={false}
+      />
+    </>
+  );
 }
 
 export default ResearchPage;
