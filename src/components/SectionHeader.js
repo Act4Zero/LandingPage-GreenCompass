@@ -14,9 +14,11 @@ function SectionHeader(props) {
     bgColor = "", // Use empty string as default
   } = props;
 
+  const paddingVertical = props.paddingVertical || "py-8";
+
   return (
     <header
-      className={`py-8 mb-8 last:mb-0 text-center ${
+      className={`${paddingVertical} last:mb-0 text-center ${
         bgColor ? `${bgColor} rounded-lg shadow-md` : ""
       } ${props.className || ""}`}
     >
