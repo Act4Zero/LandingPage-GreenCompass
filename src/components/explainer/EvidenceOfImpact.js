@@ -48,7 +48,10 @@ const EvidenceOfImpact = () => {
               {getText()["button-more"]}
             </a>
           </Link>
-          <Link href="/path-to-research-pdf" passHref>
+          <Link
+            href="https://www.sciencedirect.com/science/article/pii/S0959652623041392"
+            passHref
+          >
             <a
               className="inline-block px-6 py-3 bg-green-dark text-white font-semibold rounded-lg shadow-md hover:bg-green-darker transition duration-200"
               target="_blank"
