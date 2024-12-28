@@ -7,44 +7,41 @@ function DomainImpact() {
   const getText = () => {
     return t("research.domain", { returnObjects: true }) || {};
   };
-  const domains = getText().domains || [];
+  const domains = getText().domains || {};
 
   return (
-    <div className="white">
-      <section className="py-12 px-4 sm:px-6 lg:px-8 white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-green-dark mb-6">{getText().title}</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{getText().subtitle}</p>
-        </div>
+    <section className="py-16 px-6 bg-gradient-to-b from-lightBg to-green-lightest text-green-darkest">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Section Title */}
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-6">
+          {getText().title}
+        </h2>
+        {/* Section Subtitle */}
+        <p className="text-lg sm:text-xl text-green-dark max-w-2xl mx-auto mb-10">
+          {getText().subtitle}
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-green-dark mb-3">
-              {domains.mobility.title}
+      {/* Domain Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {Object.keys(domains).map((key, index) => (
+          <div
+            key={index}
+            className="p-6 rounded-lg shadow-lg bg-white hover:bg-green-lightest hover:shadow-xl transform transition-transform duration-300"
+          >
+            {/* Title */}
+            <h3 className="text-xl font-bold text-green-darkest mb-3">
+              {domains[key].title}
             </h3>
-            <p className="text-gray-600">{domains.mobility.description}</p>
+            {/* Description */}
+            <p className="text-green-dark leading-relaxed">
+              {domains[key].description}
+            </p>
           </div>
-
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-green-dark mb-3">
-              {domains.food.title}
-            </h3>
-            <p className="text-gray-600">{domains.food.description}</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-green-dark mb-3">{domains.heating.title}</h3>
-            <p className="text-gray-600">{domains.heating.description}</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-green-dark mb-3">{domains.household.title}</h3>
-            <p className="text-gray-600">{domains.household.description}</p>
-          </div>
-        </div>
-      </section>
-    </div>
+        ))}
+      </div>
+    </section>
   );
-};
+}
 
 export default DomainImpact;

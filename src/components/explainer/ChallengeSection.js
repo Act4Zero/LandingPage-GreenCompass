@@ -12,7 +12,7 @@ function ChallengeSection() {
   };
 
   return (
-    <section className="py-12 px-6 sm:py-16 lg:py-20 lg:px-8 bg-gradient-to-b from-lightBg to-green-lightest text-green-darkest relative">
+    <section className="py-12 px-6 sm:py-16 lg:py-20 lg:px-8 bg-gradient-to-b text-green-darkest relative">
       <div className="relative max-w-4xl mx-auto text-center">
         {/* Subtitle */}
         <p className="text-green-dark leading-relaxed mb-8">

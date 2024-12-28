@@ -20,13 +20,11 @@ function ExplainerPage(props) {
       <Meta />
       <Navbar bgColor="white" />
       <SectionHeader
-        bgColor="bg-gradient-to-b from-lightBg to-green-lightest"
         title={getText().title}
         subtitle={getText().subtitle}
         className="mb-0"
         strapline=""
       />
-      <div className="h-2 bg-gradient-to-b from-green-lightest to-green-lighter"></div>
       <ChallengeSection />
       <SolutionShowcase />
       <EvidenceOfImpact />
