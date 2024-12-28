@@ -12,52 +12,38 @@ function ChallengeSection() {
   };
 
   return (
-    <section className="white py-12 px-6 sm:py-16 lg:py-20 lg:px-8 text-green-darkest bg-[url('/assets/texture.svg')] bg-cover">
-      <div className="max-w-4xl mx-auto text-center">
-        <h3 className="font-bold text-2xl mb-6 text-green-dark">
-          {getText().title}
-        </h3>
-        <p className="text-gray-700 leading-relaxed mb-8">
+    <section className="py-12 px-6 sm:py-16 lg:py-20 lg:px-8 bg-gradient-to-b from-lightBg to-green-lightest text-green-darkest relative">
+      <div className="relative max-w-4xl mx-auto text-center">
+        {/* Subtitle */}
+        <p className="text-green-dark leading-relaxed mb-8">
           {getText().subtitle}
         </p>
+        {/* Challenge Details */}
         <div className="space-y-8 sm:space-y-12">
-          <div className="flex items-center">
-            <Icon
-              path={mdiMoleculeCo2}
-              size={2}
-              className="text-green-dark mr-4 hover:text-green-light transition-transform transform hover:scale-105"
-            />
-            <h4 className="font-bold text-lg">{getText().paragraph1.title}</h4>
-          </div>
-          <p className="text-gray-700 leading-relaxed">
-            {getText().paragraph1.content}
-          </p>
-          <div className="border-t border-gray-300 my-6"></div>
-          <div className="flex items-center">
-            <Icon
-              path={mdiPipeDisconnected}
-              size={2}
-              className="text-green-dark mr-4 hover:text-green-light transition-transform transform hover:scale-105"
-            />
-            <h4 className="font-bold text-lg">{getText().paragraph2.title}</h4>
-          </div>
-          <p className="text-gray-700 leading-relaxed">
-            {getText().paragraph2.content}
-          </p>
-          <div className="border-t border-gray-300 my-6"></div>
-          <div className="flex items-center">
-            <Icon
-              path={mdiBoomGateAlert}
-              size={2}
-              className="text-green-dark mr-4 hover:text-green-light transition-transform transform hover:scale-105"
-            />
-            <h4 className="font-bold text-lg">{getText().paragraph3.title}</h4>
-          </div>
-          <p className="text-gray-700 leading-relaxed">
-            {getText().paragraph3.content}
-          </p>
+          {[
+            { icon: mdiMoleculeCo2, paragraph: getText().paragraph1 },
+            { icon: mdiPipeDisconnected, paragraph: getText().paragraph2 },
+            { icon: mdiBoomGateAlert, paragraph: getText().paragraph3 },
+          ].map((item, index) => (
+            <div key={index} className="space-y-4">
+              <div className="flex items-center">
+                <Icon
+                  path={item.icon}
+                  size={2}
+                  className="text-green-dark mr-4 hover:text-green hover:scale-105 transition-transform"
+                />
+                <h4 className="font-bold text-lg text-green-darkest">
+                  {item.paragraph.title}
+                </h4>
+              </div>
+              <p className="text-green-dark leading-relaxed">
+                {item.paragraph.content}
+              </p>
+            </div>
+          ))}
         </div>
-        <div className="mt-8 bg-white text-green-darkest py-4 px-6 rounded-lg shadow-lg border border-green-dark">
+        {/* Conclusion */}
+        <div className="mt-8 bg-white text-green-darkest py-6 px-8 rounded-lg shadow-lg border border-green-dark">
           {parse(getText().conclusion)}
         </div>
       </div>
