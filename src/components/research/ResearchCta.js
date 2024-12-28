@@ -3,15 +3,18 @@ import Link from "next/link";
 
 function ResearchCta(props) {
   return (
-    <section className="py-16 px-6 sm:px-8 lg:px-12 bg-gradient-to-r from-green-200 via-green-100 to-green-200">
-      <div className="max-w-5xl mx-auto text-center space-y-6">
-        <p className="text-lg text-gray-800 leading-relaxed">{props.subtitle}</p>
+    <section className="py-16 px-6 bg-gradient-to-b from-green-lightest to-lightBg text-green-darkest">
+      <div className="max-w-5xl mx-auto text-center space-y-8">
+        {/* Subtitle */}
+        <p className="text-lg sm:text-xl leading-relaxed">{props.subtitle}</p>
+
+        {/* Button */}
         <Link
           href="https://www.sciencedirect.com/science/article/pii/S0959652623041392"
           passHref
         >
           <a
-            className="inline-block px-8 py-4 bg-green-600 text-white font-medium text-lg rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-4 bg-green-dark text-white font-medium text-lg rounded-lg shadow-lg hover:bg-green-darker hover:scale-105 transform transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -21,6 +24,6 @@ function ResearchCta(props) {
       </div>
     </section>
   );
-};
+}
 
 export default ResearchCta;

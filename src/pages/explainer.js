@@ -22,6 +22,7 @@ function ExplainerPage(props) {
       <SectionHeader
         title={getText().title}
         subtitle={getText().subtitle}
+        className="mb-0"
         strapline=""
       />
       <ChallengeSection />

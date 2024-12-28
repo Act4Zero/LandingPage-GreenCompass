@@ -11,15 +11,16 @@ function SectionHeader(props) {
     straplineColor = "text-green-dark",
     titleColor = "text-green-darkest",
     subtitleColor = "text-green-dark",
+    bgColor = "", // Use empty string as default
   } = props;
 
   return (
     <header
-      className={
-        "py-8 mb-8 last:mb-0 text-center" +
-        (props.className ? ` ${props.className}` : "")
-      }
+      className={`py-8 mb-8 last:mb-0 text-center ${
+        bgColor ? `${bgColor} rounded-lg shadow-md` : ""
+      } ${props.className || ""}`}
     >
+      {/* Strapline */}
       {props.strapline && (
         <div
           className={`text-sm uppercase font-bold tracking-wider mb-1 ${straplineColor}`}
@@ -28,12 +29,14 @@ function SectionHeader(props) {
         </div>
       )}
 
+      {/* Title */}
       {props.title && (
         <h1 className={`text-3xl md:text-4xl font-extrabold ${titleColor}`}>
           {props.title}
         </h1>
       )}
 
+      {/* Subtitle */}
       {props.subtitle && (
         <h2
           className={`mt-4 inline-block text-lg md:text-xl md:leading-relaxed font-medium max-w-screen-md opacity-80 ${subtitleColor}`}
