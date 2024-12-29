@@ -317,6 +317,11 @@
           "description": "Continuously evolving to make sustainable living easier and more effective."
         }
       } 
+    },
+    "cta": {
+      "title": "Why It Matters",
+      "subtitle": "Climate change is a global challenge with personal implications. The choices we make every day shape the world we live in. Learn how collective action can make a lasting impact—and how you can be part of the solution.",
+      "button": "Learn Why"
     }
   }
 }

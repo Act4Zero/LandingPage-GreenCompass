@@ -7,6 +7,7 @@ import SectionHeader from "components/SectionHeader";
 import MissionStatement from "components/about/MissionStatement";
 import VisionStatement from "components/about/VisionStatement";
 import CoreValues from "components/about/CoreValues";
+import WhyItMatters from "components/about/WhyItMatters";
 
 function AboutPage(props) {
     const { t } = useTranslation();
@@ -29,6 +30,11 @@ function AboutPage(props) {
             subtitle={getText().vision.subtitle}
         />
         <CoreValues />
+        <WhyItMatters 
+            title={getText().cta.title}
+            subtitle={getText().cta.subtitle}
+            button={getText().cta.button}
+        />
         <Footer
             size="md"
             bgColor="bg-green-dark"
