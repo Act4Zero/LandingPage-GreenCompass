@@ -37,7 +37,7 @@ function SolutionShowcase() {
   ];
 
   return (
-    <section className="py-16 px-8 bg-gradient-to-b from-green-lightest to-lightBg text-green-darkest relative">
+    <section className="py-16 px-8 bg-gradient-to-b from-white to-lightBg text-green-darkest relative">
       <div className="relative max-w-7xl mx-auto text-center">
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-12">
