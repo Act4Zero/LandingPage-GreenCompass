@@ -5,6 +5,7 @@ import "../util/i18n";
 import { useTranslation } from "react-i18next";
 import SectionHeader from "components/SectionHeader";
 import MissionStatement from "components/about/MissionStatement";
+import VisionStatement from "components/about/VisionStatement";
 
 function AboutPage(props) {
     const { t } = useTranslation();
@@ -22,6 +23,10 @@ function AboutPage(props) {
             paddingVertical="py-24"
         />
         <MissionStatement />
+        <VisionStatement 
+            title={getText().vision.title}
+            subtitle={getText().vision.subtitle}
+        />
         <Footer
             size="md"
             bgColor="bg-green-dark"
