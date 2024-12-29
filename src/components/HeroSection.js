@@ -59,7 +59,8 @@ function HeroSection(props) {
         <div className="relative mt-10 lg:mt-16 mx-auto max-w-full sm:max-w-4xl lg:max-w-6xl overflow-hidden">
           <img
             className="relative rounded-lg mx-auto shadow-lg object-cover"
-            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=1280"
+            src="https://images.unsplash.com/photo-1565223402699-0cdfa8a5bda9"
+            style={{ width: "1000px", height: "600px" }}
             alt="Hero Image"
           />
         </div>

@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import SectionHeader from "components/SectionHeader";
 import MissionStatement from "components/about/MissionStatement";
 import VisionStatement from "components/about/VisionStatement";
+import CoreValues from "components/about/CoreValues";
 
 function AboutPage(props) {
     const { t } = useTranslation();
@@ -27,6 +28,7 @@ function AboutPage(props) {
             title={getText().vision.title}
             subtitle={getText().vision.subtitle}
         />
+        <CoreValues />
         <Footer
             size="md"
             bgColor="bg-green-dark"
