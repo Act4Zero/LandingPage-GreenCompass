@@ -4,7 +4,7 @@ import parse from "html-react-parser";
 function ContentSection(props) {
   const TitleTag = props.titleSize || "h1"; // Default to h1 if no titleSize is provided
   const backgroundColor =
-    props.backgroundColor || "bg-gradient-to-br from-green-lightest to-lightBg";
+    props.backgroundColor || "bg-gradient-to-br from-white to-lightBg";
 
   return (
     <section

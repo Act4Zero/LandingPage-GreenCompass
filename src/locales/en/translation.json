@@ -283,5 +283,45 @@
         }
       }
     }
+  },
+  "about": {
+    "headline": "Empowering Sustainable Living, One Action at a Time",
+    "subtitle": "At Green Compass, we believe in the transformative power of small actions. Our platform was created to make sustainable living simple, accessible, and impactful for individuals and communities alike. Whether it’s reducing carbon footprints, learning new habits, or connecting with like-minded people, we’re here to guide and inspire you every step of the way.",
+    "mission": {
+      "title": "",
+      "subtitle": " Our mission is to empower individuals to create a more sustainable future through meaningful actions. Together, we can make sustainability simple, actionable, and impactful for everyone.",
+      "description": "By promoting awareness, driving action, and nurturing a sense of community, we aim to bridge the gap between intentions and impactful change."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "subtitle": "We envision a future where sustainability isn’t just an aspiration but a way of life. A future where individuals, communities, and businesses come together, driven by shared purpose and awareness, to create a thriving planet for generations to come. Together, we can make sustainable living second nature."
+    },
+    "core-values": {
+      "title": "Our Core Values",
+      "subtitle": "These principles guide everything we do, ensuring our approach to sustainability is as impactful as it is meaningful.",
+      "values": {
+        "1": {
+          "title": "Empowerment",
+          "description": "Giving people the confidence and resources to take action."
+        },
+        "2": {
+          "title": "Collaboration",
+          "description": "Building a community that thrives on shared goals and collective impact."
+        },
+        "3": {
+          "title": "Transparency",
+          "description": "Offering clear, honest insights into sustainability and our approach."
+        },
+        "4": {
+          "title": "Innovation",
+          "description": "Continuously evolving to make sustainable living easier and more effective."
+        }
+      } 
+    },
+    "cta": {
+      "title": "Why It Matters",
+      "subtitle": "Climate change is a global challenge with personal implications. The choices we make every day shape the world we live in. Learn how collective action can make a lasting impact—and how you can be part of the solution.",
+      "button": "Learn Why"
+    }
   }
 }
