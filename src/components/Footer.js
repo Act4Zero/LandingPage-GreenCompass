@@ -35,9 +35,9 @@ function Footer(props) {
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
               {[
-                { url: "#faq", name: t("index.footer.product.faq") },
-                { url: "#features", name: t("index.footer.product.features") },
-                { url: "#timeline", name: t("index.footer.product.timeline") },
+                { url: "/#faq", name: t("index.footer.product.faq") },
+                { url: "/#features", name: t("index.footer.product.features") },
+                { url: "/#timeline", name: t("index.footer.product.timeline") },
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
                   <a className="font-medium text-green-light hover:text-green">
