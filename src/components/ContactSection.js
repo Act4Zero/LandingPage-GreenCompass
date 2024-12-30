@@ -5,7 +5,7 @@ import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
 import FormAlert from "components/FormAlert";
 import TextField from "components/TextField";
-import Button from "components/Button";
+import Button from "components/common/Button";
 import LoadingIcon from "components/LoadingIcon";
 import contact from "util/contact";
 

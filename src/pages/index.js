@@ -40,6 +40,8 @@ function IndexPage(props) {
           t("index.content.paragraph3"),
           t("index.content.paragraph4"),
         ]}
+        showButton={true}
+        buttonText={t("index.content.cta")}
       />
       <FeaturesSection
         id="features"
