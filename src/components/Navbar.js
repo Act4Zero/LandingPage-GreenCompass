@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Section from "components/Section";
-import Button from "components/Button";
+import Button from "components/common/Button";
 import Image from "next/image";
 
 function Navbar(props) {

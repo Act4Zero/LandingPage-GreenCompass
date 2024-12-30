@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import Section from "components/Section";
 import TextField from "components/TextField";
-import Button from "components/Button";
+import Button from "components/common/Button";
 import newsletter from "util/newsletter";
 import { Trans, useTranslation } from "react-i18next";
 

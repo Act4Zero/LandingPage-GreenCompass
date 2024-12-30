@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
-import Button from "components/Button";
+import Button from "components/common/Button";
 
 function CtaSection(props) {
   return (
