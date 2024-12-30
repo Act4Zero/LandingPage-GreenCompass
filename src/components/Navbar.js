@@ -38,10 +38,10 @@ function Navbar(props) {
             <Link href="/about">
               <a className={classes.navLink}>About</a>
             </Link>
-            <Link href="#faq">
+            <Link href="/#faq">
               <a className={classes.navLink}>FAQ</a>
             </Link>
-            <Link href="#contact">
+            <Link href="/#contact">
               <a className={classes.navLink}>Contact</a>
             </Link>
           </div>
