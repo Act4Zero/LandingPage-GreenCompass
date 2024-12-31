@@ -38,6 +38,9 @@ function Navbar(props) {
             <Link href="/about">
               <a className={classes.navLink}>About</a>
             </Link>
+            <Link href="/#features">
+              <a className={classes.navLink}>Features</a>
+            </Link>
             <Link href="/#faq">
               <a className={classes.navLink}>FAQ</a>
             </Link>
@@ -68,6 +71,12 @@ function Navbar(props) {
           <nav className="flex flex-col space-y-3 bg-lightBg border rounded-lg p-4 mt-3">
             <Link href="/about">
               <a className={classes.dropdownLink}>About</a>
+            </Link>
+            <Link href="/#features">
+              <a className={classes.dropdownLink}>Features</a>
+            </Link>
+            <Link href="/#timeline">
+              <a className={classes.dropdownLink}>Project Timeline</a>
             </Link>
             <Link href="#faq">
               <a className={classes.dropdownLink}>FAQ</a>
