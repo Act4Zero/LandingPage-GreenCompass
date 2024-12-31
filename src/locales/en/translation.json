@@ -149,11 +149,13 @@
         "title": "Product",
         "faq": "FAQ",
         "features": "Features",
-        "timeline": "Timeline"
+        "download": "Downloads"
       },
-      "company": {
-        "title": "Company",
+      "project": {
+        "title": "Project",
         "about": "About",
+        "timeline": "Timeline",
+        "research": "Research",
         "contact": "Contact",
         "privacy": "Privacy Policy"
       },

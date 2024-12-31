@@ -6,6 +6,7 @@ import TextField from "components/TextField";
 import Button from "components/common/Button";
 import newsletter from "util/newsletter";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 function Footer(props) {
   const [subscribed, setSubscribed] = useState(false);
@@ -35,9 +36,9 @@ function Footer(props) {
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
               {[
-                { url: "/#faq", name: t("index.footer.product.faq") },
                 { url: "/#features", name: t("index.footer.product.features") },
-                { url: "/#timeline", name: t("index.footer.product.timeline") },
+                { url: "/#download", name: t("index.footer.product.download") },
+                { url: "/#faq", name: t("index.footer.product.faq") },
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
                   <a className="font-medium text-green-light hover:text-green">
@@ -49,14 +50,16 @@ function Footer(props) {
           </div>
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
-              {t("index.footer.company.title")}
+              {t("index.footer.project.title")}
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
               {[
-                { url: "/about", name: t("index.footer.company.about") },
+                { url: "/about", name: t("index.footer.project.about") },
+                { url: "/#timeline", name: t("index.footer.project.timeline") },
+                { url: "/research", name: t("index.footer.project.research") },
                 {
                   url: "/legal/privacy-policy",
-                  name: t("index.footer.company.privacy"),
+                  name: t("index.footer.project.privacy"),
                 },
               ].map((link, index) => (
                 <Link href={link.url} key={index}>
