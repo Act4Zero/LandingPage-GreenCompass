@@ -29,7 +29,20 @@ function Footer(props) {
       className={props.sticky && "mt-auto"}
     >
       <footer className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="flex items-start justify-start text-left">
+            <Link href="/">
+              <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-green-darkest hover:text-green">
+                <Image
+                  src="/images/GCLogo-no-bg.png"
+                  alt=""
+                  width={48}
+                  height={48}
+                  className="transition-transform hover:scale-105"
+                />
+              </a>
+            </Link>
+          </div>
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
               {t("index.footer.product.title")}
