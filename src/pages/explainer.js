@@ -5,7 +5,7 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
 import ExplainerBanner from "components/explainer/ExplainerBanner";
-import SectionHeader from "components/SectionHeader";
+import SectionHeader from "components/common/SectionHeader";
 import ChallengeSection from "components/explainer/ChallengeSection";
 import SolutionShowcase from "components/explainer/SolutionShowcase";
 

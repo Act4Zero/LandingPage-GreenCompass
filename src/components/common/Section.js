@@ -1,5 +1,5 @@
 import React from "react";
-import BackgroundImage from "components/BackgroundImage";
+import BackgroundImage from "components/common/BackgroundImage";
 
 function Section(props) {
   const {
