@@ -44,8 +44,8 @@ function DownloadTheApp({
               <Image
                 src="/images/apple-app-store.svg"
                 alt="Download on the App Store"
-                width={160}
-                height={48}
+                width={180}
+                height={64}
                 className="opacity-50 transition transform group-hover:scale-105"
               />
               <div className="absolute bottom-full mb-2 hidden group-hover:block px-3 py-2 text-sm text-white bg-green-dark rounded shadow-lg">

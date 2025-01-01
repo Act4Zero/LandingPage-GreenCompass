@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import Section from "components/Section";
-import SectionHeader from "components/SectionHeader";
+import Section from "components/common/Section";
+import SectionHeader from "components/common/SectionHeader";
 import Button from "components/common/Button";
 
 function CtaSection(props) {

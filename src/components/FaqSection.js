@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import Section from "components/Section";
-import SectionHeader from "components/SectionHeader";
+import Section from "components/common/Section";
+import SectionHeader from "components/common/SectionHeader";
 import Button from "components/common/Button";
 import { useTranslation } from "react-i18next";
 

@@ -6,9 +6,9 @@ import {
   BookOpenIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-import Section from "components/Section";
-import SectionHeader from "components/SectionHeader";
-import FeatureIcon2 from "components/FeatureIcon2";
+import Section from "components/common/Section";
+import SectionHeader from "components/common/SectionHeader";
+import FeatureIcon2 from "components/common/FeatureIcon2";
 import { useTranslation } from "react-i18next";
 
 function FeaturesSection(props) {

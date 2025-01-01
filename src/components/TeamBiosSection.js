@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Section from "components/Section";
-import SectionHeader from "components/SectionHeader";
+import Section from "components/common/Section";
+import SectionHeader from "components/common/SectionHeader";
 
 function TeamBiosSection(props) {
   const teamBios = [

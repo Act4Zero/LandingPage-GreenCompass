@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
-import Section from "components/Section";
-import SectionHeader from "components/SectionHeader";
+import Section from "components/common/Section";
+import SectionHeader from "components/common/SectionHeader";
 import FormAlert from "components/FormAlert";
-import TextField from "components/TextField";
+import TextField from "components/common/TextField";
 import Button from "components/common/Button";
-import LoadingIcon from "components/LoadingIcon";
+import LoadingIcon from "components/common/LoadingIcon";
 import contact from "util/contact";
 
 function ContactSection(props) {

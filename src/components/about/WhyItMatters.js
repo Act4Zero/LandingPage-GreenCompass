@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Button from "components/common/Button";
 
 function WhyItMattersCTA(props) {
   return (
@@ -14,9 +15,12 @@ function WhyItMattersCTA(props) {
         </p>
         <div className="mt-8">
           <Link href="/explainer" passHref>
-            <a className="px-6 py-3 bg-green-dark text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-green-darker transition-transform transform hover:scale-105">
-              {props.button || "Learn More"}
-            </a>
+            <Button
+              size="xl"
+              variant="primary"
+            >
+              {props.button}
+            </Button>
           </Link>
         </div>
       </div>

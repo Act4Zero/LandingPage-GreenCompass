@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import Section from "components/Section";
-import TextField from "components/TextField";
+import Section from "components/common/Section";
+import TextField from "components/common/TextField";
 import Button from "components/common/Button";
 import newsletter from "util/newsletter";
 import { Trans, useTranslation } from "react-i18next";
