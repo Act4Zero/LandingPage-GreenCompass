@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaLeaf, FaHome, FaCar } from "react-icons/fa";
 import "util/i18n";
 import { useTranslation } from "react-i18next";
+import Button from "components/common/Button";
 
 const EvidenceOfImpact = () => {
   const { t } = useTranslation();
@@ -45,25 +46,17 @@ const EvidenceOfImpact = () => {
         {/* Buttons */}
         <div className="mt-8 flex justify-center space-x-4">
           <Link href="/research" passHref>
-            <a
-              className="inline-block px-6 py-3 bg-green-dark text-white font-semibold rounded-lg shadow-md hover:bg-green-darker transition duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Button size="xl" variant="primary">
               {getText()["button-more"]}
-            </a>
+            </Button>
           </Link>
           <Link
             href="https://www.sciencedirect.com/science/article/pii/S0959652623041392"
             passHref
           >
-            <a
-              className="inline-block px-6 py-3 bg-green-dark text-white font-semibold rounded-lg shadow-md hover:bg-green-darker transition duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Button size="xl" variant="dark">
               {getText()["button-pdf"]}
-            </a>
+            </Button>
           </Link>
         </div>
       </div>
