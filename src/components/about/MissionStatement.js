@@ -18,9 +18,9 @@ function MissionStatement() {
           ].map(({ Icon, label }, index) => (
             <div
               key={index}
-              className="flex flex-col items-center bg-green-light rounded-full p-9 shadow-md w-40 h-40 transition-transform transform hover:scale-105"
+              className="flex flex-col items-center bg-green-lightest rounded-full p-10 shadow-md w-40 h-40 transition-transform transform hover:scale-105"
             >
-              <Icon className="text-4xl text-green-dark mb-2" />
+              <Icon className="text-3xl text-green mb-2" />
               <p className="text-sm text-green-dark font-medium">{label}</p>
             </div>
           ))}
