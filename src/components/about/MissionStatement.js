@@ -1,5 +1,6 @@
 import React from "react";
-import { FaLeaf, FaGlobe, FaHandsHelping } from "react-icons/fa";
+import { FaPeopleGroup, FaLeaf } from "react-icons/fa6";
+import { TiGlobe } from "react-icons/ti";
 
 function MissionStatement() {
   return (
@@ -12,8 +13,8 @@ function MissionStatement() {
         <div className="flex flex-wrap justify-center gap-8">
           {[
             { Icon: FaLeaf, label: "Sustainability" },
-            { Icon: FaGlobe, label: "Global Impact" },
-            { Icon: FaHandsHelping, label: "Community" },
+            { Icon: TiGlobe, label: "Global Impact" },
+            { Icon: FaPeopleGroup, label: "Community" },
           ].map(({ Icon, label }, index) => (
             <div
               key={index}
