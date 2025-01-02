@@ -22,19 +22,19 @@ const EvidenceOfImpact = () => {
         <p className="text-lg text-green-dark mb-8">{getText().subtitle}</p>
 
         {/* Evidence Items */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
           <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
-            <FaLeaf className="text-green-dark text-6xl mb-4" />
+            <FaLeaf className="text-green-dark text-4xl mb-3" />
             <h3 className="text-2xl font-bold text-green-darkest">23%</h3>
             <p className="text-green-dark">{getText().evidence1}</p>
           </div>
           <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
-            <FaHome className="text-green-dark text-6xl mb-4" />
+            <FaHome className="text-green-dark text-4xl mb-3" />
             <h3 className="text-2xl font-bold text-green-darkest">35%</h3>
             <p className="text-green-dark">{getText().evidence2}</p>
           </div>
           <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
-            <FaCar className="text-green-dark text-6xl mb-4" />
+            <FaCar className="text-green-dark text-4xl mb-3" />
             <h3 className="text-2xl font-bold text-green-darkest">12%</h3>
             <p className="text-green-dark">{getText().evidence3}</p>
           </div>

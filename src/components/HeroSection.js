@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Section from "components/common/Section";
 import SectionHeader from "components/common/SectionHeader";
@@ -41,9 +40,6 @@ function HeroSection(props) {
             <Button
               size="xl"
               variant="secondary"
-              endIcon={
-                <ArrowRightIcon className="opacity-70 inline-block w-5 h-5 text-green-dark" />
-              }
             >
               Get Started
             </Button>

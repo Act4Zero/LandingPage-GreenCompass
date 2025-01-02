@@ -13,35 +13,27 @@ function CoreValues() {
   const getText = () => {
     return t("about.core-values", { returnObjects: true }) || {};
   };
-  const valuesText = getText().values || [];
+  const valuesText = getText().values;
 
   const values = [
     {
-      title: valuesText[0]?.title || "Collaboration",
-      description:
-        valuesText[0]?.description ||
-        "Working together to achieve shared goals.",
+      title: valuesText[1].title,
+      description: valuesText[1]?.description,
       icon: <FaHandsHelping />,
     },
     {
-      title: valuesText[1]?.title || "Empowerment",
-      description:
-        valuesText[1]?.description ||
-        "Giving people the confidence and resources to take action.",
+      title: valuesText[2]?.title,
+      description: valuesText[2]?.description,
       icon: <FaUsers />,
     },
     {
-      title: valuesText[2]?.title || "Growth",
-      description:
-        valuesText[2]?.description ||
-        "Building a community that thrives on shared goals and collective impact.",
+      title: valuesText[3]?.title,
+      description: valuesText[3]?.description,
       icon: <FaChartLine />,
     },
     {
-      title: valuesText[3]?.title || "Transparency",
-      description:
-        valuesText[3]?.description ||
-        "Offering clear, honest insights into sustainability and our approach.",
+      title: valuesText[4]?.title,
+      description: valuesText[4]?.description,
       icon: <FaLightbulb />,
     },
   ];
@@ -67,7 +59,7 @@ function CoreValues() {
             className="flex flex-col items-center p-6 rounded-lg shadow-md bg-white text-center hover:shadow-lg transform transition-transform hover:scale-105"
           >
             {/* Icon */}
-            <div className="text-5xl text-green-darkest mb-4">{value.icon}</div>
+            <div className="text-3xl text-green mb-4">{value.icon}</div>
             {/* Title */}
             <h3 className="text-lg font-bold text-green-darkest mb-2">
               {value.title}
