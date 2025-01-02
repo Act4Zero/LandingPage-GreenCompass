@@ -1,6 +1,8 @@
 import React from "react";
 import "util/i18n";
 import { useTranslation } from "react-i18next";
+import { FaBookOpen, FaLeaf } from "react-icons/fa";
+import { FaPeopleGroup, FaPersonWalkingArrowLoopLeft } from "react-icons/fa6";
 
 function SolutionShowcase() {
   const { t } = useTranslation();
@@ -13,26 +15,26 @@ function SolutionShowcase() {
     {
       title: getText().solution1.title,
       description: getText().solution1.description,
-      icon: "📘",
+      icon: <FaBookOpen/>,
       bgColor: "bg-white",
     },
     {
       title: getText().solution2.title,
       description: getText().solution2.description,
-      icon: "🌱",
+      icon: <FaLeaf/>,
       bgColor: "bg-green-lightest",
     },
     {
       title: getText().solution3.title,
       description: getText().solution3.description,
-      icon: "🤝",
-      bgColor: "bg-green-light",
+      icon: <FaPeopleGroup/>,
+      bgColor: "bg-white",
     },
     {
       title: getText().solution4.title,
       description: getText().solution4.description,
-      icon: "🔄",
-      bgColor: "bg-accentLight",
+      icon: <FaPersonWalkingArrowLoopLeft/>,
+      bgColor: "bg-green-lightest",
     },
   ];
 
@@ -59,12 +61,7 @@ function SolutionShowcase() {
               className={`p-6 rounded-lg shadow-lg ${solution.bgColor} flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-xl`}
             >
               {/* Icon */}
-              {solution.icon && (
-                <div className="text-4xl mb-4 text-green-darkest">
-                  {solution.icon}
-                </div>
-              )}
-
+              <div className="text-3xl text-green mb-4">{solution.icon}</div>
               {/* Title */}
               <h3 className="text-xl font-semibold text-green-darkest mb-3">
                 {solution.title}
