@@ -7,12 +7,12 @@ function SectionHeader(props) {
   }
 
   // Define default colors from theme
-  const {
-    straplineColor = "text-green-dark",
-    titleColor = "text-green-darkest",
-    subtitleColor = "text-green-dark",
-    bgColor = "", // Use empty string as default
-  } = props;
+  const textColor = props.textColor || {
+    strapline: "text-green-dark",
+    title: "text-green-darkest",
+    subtitle: "text-green-dark",
+  };
+  const bgColor = props.bgColor;
 
   const paddingVertical = props.paddingVertical || "py-8";
 
@@ -25,7 +25,7 @@ function SectionHeader(props) {
       {/* Strapline */}
       {props.strapline && (
         <div
-          className={`text-sm uppercase font-bold tracking-wider mb-1 ${straplineColor}`}
+          className={`text-sm uppercase font-bold tracking-wider mb-1 ${textColor.strapline}`}
         >
           {props.strapline}
         </div>
@@ -33,7 +33,9 @@ function SectionHeader(props) {
 
       {/* Title */}
       {props.title && (
-        <h1 className={`text-3xl md:text-4xl font-extrabold ${titleColor}`}>
+        <h1
+          className={`text-3xl md:text-4xl font-extrabold ${textColor.title}`}
+        >
           {props.title}
         </h1>
       )}
@@ -41,7 +43,7 @@ function SectionHeader(props) {
       {/* Subtitle */}
       {props.subtitle && (
         <h2
-          className={`mt-4 inline-block text-lg md:text-xl md:leading-relaxed font-medium max-w-screen-md opacity-80 ${subtitleColor}`}
+          className={`mt-4 inline-block text-lg md:text-xl md:leading-relaxed font-medium max-w-screen-md opacity-80 ${textColor.subtitle}`}
         >
           {props.subtitle}
         </h2>

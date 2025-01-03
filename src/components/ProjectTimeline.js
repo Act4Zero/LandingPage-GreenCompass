@@ -115,7 +115,7 @@ const ProjectTimeline = () => {
   return (
     <div
       id="timeline"
-      className="relative bg-gradient-to-b from-green-dark to-lightBg"
+      className="relative bg-gradient-to-b from-green to-lightBg"
     >
       <div className="container mx-auto px-6 py-10 relative z-10">
         <h1 className="text-4xl font-bold text-center text-white mb-10">
