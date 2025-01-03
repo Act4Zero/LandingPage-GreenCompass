@@ -27,9 +27,11 @@ function IndexPage(props) {
         strapline=""
         size="lg"
         bgColor="white"
-        bgImage=""
         bgImageOpacity={1}
-        textColor="text-green-darkest"
+        textColor={{
+          title: "text-accent",
+          subtitle: "text-accent",
+        }}
       />
       <ContentSection
         id="content"

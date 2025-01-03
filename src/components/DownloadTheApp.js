@@ -12,7 +12,7 @@ function DownloadTheApp({
   return (
     <section
       id="download"
-      className="bg-gradient-to-br from-lightBg to-green-lightest py-16"
+      className="bg-gradient-to-br from-green-lightest to-accent py-16"
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
         {/* Text and Buttons */}

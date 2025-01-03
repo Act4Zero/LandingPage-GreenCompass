@@ -1,4 +1,5 @@
 import React from "react";
+import aboutImage from "/public/images/about-hands.jpeg";
 
 function VisionStatement(props) {
   return (
@@ -18,10 +19,7 @@ function VisionStatement(props) {
         {/* Visual Break: Inspirational Image */}
         <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
           <img
-            src={
-              props.image ||
-              "https://images.unsplash.com/photo-1527525443983-6e60c75fff46"
-            }
+            src={aboutImage.src}
             alt={
               props.imageAlt ||
               "Collaborative community working towards sustainability"
