@@ -1,8 +1,11 @@
-export default function ExplainerBanner(props) {
+import React from "react";
+import explainerImage from "/public/images/explainer-banner-bg.jpeg";
+
+function ExplainerBanner(props) {
   return (
     <div className="relative bg-gradient-to-br from-lightBg to-green-lightest rounded-lg shadow-lg mt-0 overflow-hidden">
       <img
-        src="https://images.unsplash.com/photo-1542202229-7d93c33f5d07?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src={explainerImage.src}
         alt="A scenic view of a forest with sunlight filtering through the trees"
         className="w-full h-64 object-cover"
       />
@@ -15,3 +18,5 @@ export default function ExplainerBanner(props) {
     </div>
   );
 }
+
+export default ExplainerBanner;

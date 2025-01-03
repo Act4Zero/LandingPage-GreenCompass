@@ -69,7 +69,7 @@ function Footer(props) {
               {[
                 { url: "/about", name: t("index.footer.project.about") },
                 { url: "/#timeline", name: t("index.footer.project.timeline") },
-                { url: "/research", name: t("index.footer.project.research") },
+                { url: "/explainer", name: t("index.footer.project.research") },
                 {
                   url: "/legal/privacy-policy",
                   name: t("index.footer.project.privacy"),
