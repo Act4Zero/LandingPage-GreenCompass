@@ -27,7 +27,6 @@ function IndexPage(props) {
         strapline=""
         size="lg"
         bgColor="white"
-        bgImage="https://images.unsplash.com/photo-1528122819723-9dca3a31295d"
         bgImageOpacity={1}
         textColor={{
           title: "text-accent",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Section from "components/common/Section";
 import SectionHeader from "components/common/SectionHeader";
 import Button from "components/common/Button";
+import heroImage from "/public/images/index-hero-bg.jpg";
 
 function HeroSection(props) {
   return (
@@ -11,10 +12,10 @@ function HeroSection(props) {
       bgColor={props.bgColor || "bg-green-lightest"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor="text-white" // Ensure text remains white
+      textColor="text-white"
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url(${props.bgImage})`, // Stretch background image
+        backgroundImage: `url(${heroImage.src})`,
       }}
     >
       <div className="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
