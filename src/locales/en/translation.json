@@ -10,7 +10,7 @@
       "paragraph2": "<p>Even small changes in your lifestyle can make a significant difference. There's a growing desire for people to live a more sustainable lifestyle. However, many individuals struggle to bridge the gap between good intentions and taking real action.</p>",
       "paragraph3": "<p>An abundance of information exists, but it can be overwhelming and it often lacks clear, personalized direction.</p>",
       "paragraph4": "<p>People need a roadmap for implementing practical changes and staying motivated on their sustainability journey. That's where the Green Compass comes in handy.</p>",
-      "cta": "Learn More"
+      "cta": "Learn How"
     },
     "features": {
       "title": "Packed with features to support your eco-conscious goals.",
@@ -123,9 +123,9 @@
       }
     },
     "download": {
-      "title": "Download the App",
-      "subtitle": "Start your sustainability journey today.",
-      "iosTooltip": "Available soon"
+      "title": "Try the Beta Version of Green Compass",
+      "subtitle": "Be among the first to explore the app and help shape its future. Start your sustainability journey today and share your feedback to make an impact.",
+      "iosTooltip": "Coming soon to iOS—stay tuned!"
     },
     "newsletter": {
       "title": "Subscribe to Our Newsletter",
