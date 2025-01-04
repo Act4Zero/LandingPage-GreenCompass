@@ -1,8 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import Section from "components/common/Section";
 import SectionHeader from "components/common/SectionHeader";
-import Button from "components/common/Button";
 import heroImage from "/public/images/index-hero-bg.jpg";
 
 function HeroSection(props) {
@@ -18,23 +16,13 @@ function HeroSection(props) {
         backgroundImage: `url(${heroImage.src})`,
       }}
     >
-      <div className="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+      <div className="relative flex flex-col items-center justify-center text-center px-3 sm:px-6 lg:px-8">
         <SectionHeader
           title={props.title}
           subtitle={props.subtitle}
           strapline={props.strapline}
           textColor={props.textColor}
         />
-
-        {/* Call-to-Actions */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
-          <Link href="#content" passHref>
-            <Button size="xl" variant="secondary">
-              Get Started
-            </Button>
-          </Link>
-        </div>
       </div>
     </Section>
   );
