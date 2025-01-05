@@ -4,7 +4,7 @@ import Button from "components/common/Button";
 
 function WhyItMattersCTA(props) {
   return (
-    <section className="py-16 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-green-lightest to-lightBg">
+    <section className="py-16 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-white to-lightBg">
       <div className="max-w-7xl mx-auto text-center space-y-8">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-green-darkest">
           {props.title || "Why It Matters"}
