@@ -25,25 +25,13 @@ function IndexPage(props) {
         title={t("index.hero.title")}
         subtitle={t("index.hero.subtitle")}
         strapline=""
-        size="lg"
+        size="full"
         bgColor="white"
         bgImageOpacity={1}
         textColor={{
           title: "text-accent",
           subtitle: "text-accent",
         }}
-      />
-      <ContentSection
-        id="content"
-        title={t("index.content.title")}
-        paragraphs={[
-          t("index.content.paragraph1"),
-          t("index.content.paragraph2"),
-          t("index.content.paragraph3"),
-          t("index.content.paragraph4"),
-        ]}
-        showButton={true}
-        buttonText={t("index.content.cta")}
       />
       <FeaturesSection
         id="features"
@@ -66,6 +54,18 @@ function IndexPage(props) {
         bgImage=""
         bgImageOpacity={1}
         textColor="text-white"
+      />
+      <ContentSection
+        id="content"
+        title={t("index.content.title")}
+        paragraphs={[
+          t("index.content.paragraph1"),
+          t("index.content.paragraph2"),
+          t("index.content.paragraph3"),
+          t("index.content.paragraph4"),
+        ]}
+        showButton={true}
+        buttonText={t("index.content.cta")}
       />
       <ProjectTimeline />
       <NewsletterSection

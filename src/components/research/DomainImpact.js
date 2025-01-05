@@ -10,7 +10,7 @@ function DomainImpact() {
   const domains = getText().domains || {};
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-lightBg to-green-lightest text-green-darkest">
+    <section className="py-16 px-6 bg-gradient-to-b from-lightBg to-white text-green-darkest">
       <div className="max-w-7xl mx-auto text-center">
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-6">

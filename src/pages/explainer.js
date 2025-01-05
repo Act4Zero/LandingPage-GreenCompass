@@ -7,6 +7,7 @@ import EvidenceOfImpact from "components/explainer/EvidenceOfImpact";
 import ExplainerBanner from "components/explainer/ExplainerBanner";
 import SectionHeader from "components/common/SectionHeader";
 import ChallengeSection from "components/explainer/ChallengeSection";
+import NewsletterSection from "components/NewsletterSection";
 import SolutionShowcase from "components/explainer/SolutionShowcase";
 
 function ExplainerPage(props) {
@@ -26,6 +27,14 @@ function ExplainerPage(props) {
         strapline=""
       />
       <ChallengeSection />
+      <NewsletterSection
+        strapline=""
+        size="md"
+        bgColor="bg-white"
+        bgImage=""
+        bgImageOpacity={1}
+        textColor=""
+      />
       <SolutionShowcase />
       <EvidenceOfImpact />
       <ExplainerBanner

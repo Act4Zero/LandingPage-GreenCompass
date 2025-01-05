@@ -6,6 +6,7 @@ import Introduction from "components/research/Introduction";
 import Insights from "components/research/Insights";
 import ResearchCta from "components/research/ResearchCta";
 import DomainImpact from "components/research/DomainImpact";
+import ContactSection from "components/ContactSection";
 import Footer from "components/Footer";
 
 function ResearchPage(props) {
@@ -25,6 +26,16 @@ function ResearchPage(props) {
         buttonText={getText().cta.button}
       />
       <DomainImpact />
+      <ContactSection
+        title={getText()["reach-out"].title}
+        subtitle={getText()["reach-out"].subtitle}
+        strapline=""
+        size="md"
+        bgColor="white"
+        bgImage=""
+        bgImageOpacity={1}
+        textColor=""
+      />
       <Footer
         size="md"
         bgColor="bg-green-dark"

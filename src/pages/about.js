@@ -8,6 +8,7 @@ import MissionStatement from "components/about/MissionStatement";
 import VisionStatement from "components/about/VisionStatement";
 import CoreValues from "components/about/CoreValues";
 import WhyItMatters from "components/about/WhyItMatters";
+import ContactSection from "components/ContactSection";
 
 function AboutPage(props) {
   const { t } = useTranslation();
@@ -30,6 +31,16 @@ function AboutPage(props) {
         subtitle={getText().vision.subtitle}
       />
       <CoreValues />
+      <ContactSection
+        title={getText()["reach-out"].title}
+        subtitle={getText()["reach-out"].subtitle}
+        strapline=""
+        size="md"
+        bgColor="white"
+        bgImage=""
+        bgImageOpacity={1}
+        textColor=""
+      />
       <WhyItMatters
         title={getText().cta.title}
         subtitle={getText().cta.subtitle}

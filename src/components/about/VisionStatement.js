@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "/public/images/about-hands.jpeg";
+import aboutImage from "/public/images/about-green-compass.jpg";
 
 function VisionStatement(props) {
   return (
