@@ -40,7 +40,11 @@ function Section(props) {
           "container mx-auto" +
           (size === "sm" ? " py-10" : "") +
           (size === "md" ? " py-10 md:py-20" : "") +
-          (size === "lg" ? " py-10 md:py-32" : "")
+          (size === "lg" ? " py-10 md:py-32" : "") +
+          (size === "xl" ? " py-10 md:py-40" : "") +
+          (size === "2xl" ? " py-10 md:py-48" : "") +
+          (size === "3xl" ? " py-10 md:py-56" : "") +
+          (size === "full" ? " py-10 md:py-64" : "")
         }
       >
         {props.children}

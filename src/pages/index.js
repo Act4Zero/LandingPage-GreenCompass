@@ -25,7 +25,7 @@ function IndexPage(props) {
         title={t("index.hero.title")}
         subtitle={t("index.hero.subtitle")}
         strapline=""
-        size="lg"
+        size="full"
         bgColor="white"
         bgImageOpacity={1}
         textColor={{
