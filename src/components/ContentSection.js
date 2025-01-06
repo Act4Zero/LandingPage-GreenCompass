@@ -38,7 +38,7 @@ function ContentSection(props) {
         {/* Call-to-Action Button */}
         {props.showButton && (
           <div className="mt-10 text-center">
-            <Link href="/explainer" passHref>
+            <Link href="/explainer" passHref legacyBehavior>
               <Button size="xl" variant="primary">
                 {props.buttonText}
               </Button>

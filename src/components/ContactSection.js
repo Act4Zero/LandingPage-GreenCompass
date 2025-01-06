@@ -12,7 +12,7 @@ import contact from "util/contact";
 function ContactSection(props) {
   const [pending, setPending] = useState(false);
   const [formAlert, setFormAlert] = useState(null);
-  const { handleSubmit, register, errors, reset } = useForm();
+  const { handleSubmit, register, formState: { errors }, reset } = useForm();
 
   const onSubmit = (data) => {
     setPending(true);
@@ -85,7 +85,7 @@ function ContactSection(props) {
                     name="email"
                     placeholder="Your email address"
                     error={errors.email}
-                    inputRef={register({
+                    inputRef={register("email", {
                       required: "Please enter an email address",
                     })}
                   />
@@ -100,7 +100,7 @@ function ContactSection(props) {
                   placeholder="Write your message here"
                   error={errors.message}
                   rows={6}
-                  inputRef={register({
+                  inputRef={register("message", {
                     required: "Please enter a message",
                   })}
                 />

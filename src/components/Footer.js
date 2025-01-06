@@ -10,7 +10,11 @@ import Image from "next/image";
 
 function Footer(props) {
   const [subscribed, setSubscribed] = useState(false);
-  const { handleSubmit, register, errors } = useForm();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
   const { t } = useTranslation();
 
   const onSubmit = ({ email }) => {
@@ -31,7 +35,7 @@ function Footer(props) {
       <footer className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="flex items-start justify-start text-left">
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-green-darkest hover:text-green">
                 <Image
                   src="/images/GCLogo-no-bg.png"
@@ -53,7 +57,7 @@ function Footer(props) {
                 { url: "/#download", name: t("index.footer.product.download") },
                 { url: "/#faq", name: t("index.footer.product.faq") },
               ].map((link, index) => (
-                <Link href={link.url} key={index}>
+                <Link href={link.url} key={index} legacyBehavior>
                   <a className="font-medium text-green-light hover:text-green">
                     {link.name}
                   </a>
@@ -75,7 +79,7 @@ function Footer(props) {
                   name: t("index.footer.project.privacy"),
                 },
               ].map((link, index) => (
-                <Link href={link.url} key={index}>
+                <Link href={link.url} key={index} legacyBehavior>
                   <a className="font-medium text-green-light hover:text-green">
                     {link.name}
                   </a>
@@ -108,7 +112,7 @@ function Footer(props) {
                   ),
                 },
               ].map((link, index) => (
-                <Link href={link.url} key={index}>
+                <Link href={link.url} key={index} legacyBehavior>
                   <a
                     className="text-accentLight hover:text-green-light"
                     target="_blank"
@@ -148,8 +152,8 @@ function Footer(props) {
                     placeholder={t("index.footer.form.placeholder")}
                     error={errors.email}
                     size="sm"
-                    inputRef={register({
-                      required: t("index.form.required"),
+                    inputRef={register("email", {
+                      required: t("index.footer.form.required"),
                     })}
                   />
                 </div>

@@ -102,7 +102,7 @@ function TeamBiosSection(props) {
               <p className="text-gray-600 font-medium mb-3">{bio.role}</p>
               <div className="space-x-1 mb-3">
                 {bio.twitter && (
-                  <Link href={bio.twitter}>
+                  <Link href={bio.twitter} legacyBehavior>
                     <a
                       className="text-gray-400 hover:text-gray-600 active:text-gray-400"
                       target="_blank"
@@ -119,7 +119,7 @@ function TeamBiosSection(props) {
                 )}
 
                 {bio.linkedin && (
-                  <Link href={bio.linkedin}>
+                  <Link href={bio.linkedin} legacyBehavior>
                     <a
                       className="text-gray-400 hover:text-gray-600 active:text-gray-400"
                       target="_blank"

@@ -45,7 +45,7 @@ const EvidenceOfImpact = () => {
 
         {/* Buttons */}
         <div className="mt-8 flex justify-center space-x-4">
-          <Link href="/research" passHref>
+          <Link href="/research" passHref legacyBehavior>
             <Button size="xl" variant="primary">
               {getText()["button-more"]}
             </Button>
@@ -53,6 +53,7 @@ const EvidenceOfImpact = () => {
           <Link
             href="https://www.sciencedirect.com/science/article/pii/S0959652623041392"
             passHref
+            legacyBehavior
           >
             <Button size="xl" variant="dark">
               {getText()["button-pdf"]}

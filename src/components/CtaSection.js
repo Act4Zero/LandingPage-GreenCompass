@@ -34,7 +34,7 @@ function CtaSection(props) {
                 subtitleColor="text-green-lightest"
               />
               <div className="text-center">
-                <Link href="#download" passHref={true}>
+                <Link href="#download" passHref={true} legacyBehavior>
                   <Button
                     size="xl"
                     variant="primary"

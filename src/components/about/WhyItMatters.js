@@ -14,11 +14,8 @@ function WhyItMattersCTA(props) {
             "Understanding sustainability is key to collective impact."}
         </p>
         <div className="mt-8">
-          <Link href="/explainer" passHref>
-            <Button
-              size="xl"
-              variant="primary"
-            >
+          <Link href="/explainer" passHref legacyBehavior>
+            <Button size="xl" variant="primary">
               {props.button}
             </Button>
           </Link>

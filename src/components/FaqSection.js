@@ -70,7 +70,7 @@ function FaqSection(props) {
 
         {props.showSupportButton && (
           <div className="text-center">
-            <Link href="#contact" passHref={true}>
+            <Link href="#contact" passHref={true} legacyBehavior>
               <Button
                 size="lg"
                 variant="primary"
