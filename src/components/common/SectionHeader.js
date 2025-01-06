@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react"; // Import motion for animations
 
 function SectionHeader(props) {
   // Render nothing if no title, subtitle, or strapline
@@ -24,29 +25,38 @@ function SectionHeader(props) {
     >
       {/* Strapline */}
       {props.strapline && (
-        <div
+        <motion.div
           className={`text-sm uppercase font-bold tracking-wider mb-1 ${textColor.strapline}`}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
         >
           {props.strapline}
-        </div>
+        </motion.div>
       )}
 
       {/* Title */}
       {props.title && (
-        <h1
+        <motion.h1
           className={`text-3xl md:text-4xl font-extrabold ${textColor.title}`}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
         >
           {props.title}
-        </h1>
+        </motion.h1>
       )}
 
       {/* Subtitle */}
       {props.subtitle && (
-        <h2
+        <motion.h2
           className={`mt-4 inline-block text-lg md:text-xl md:leading-relaxed font-medium max-w-screen-md opacity-80 ${textColor.subtitle}`}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 1 }}
         >
           {props.subtitle}
-        </h2>
+        </motion.h2>
       )}
     </header>
   );
