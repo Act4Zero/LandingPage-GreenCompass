@@ -13,6 +13,7 @@ function ResearchCta(props) {
         <Link
           href="https://www.sciencedirect.com/science/article/pii/S0959652623041392"
           passHref
+          legacyBehavior
         >
           <Button size="xl" variant="primary">
             {props.buttonText}

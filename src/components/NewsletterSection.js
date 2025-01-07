@@ -10,7 +10,7 @@ import { Trans, useTranslation } from "react-i18next";
 function NewsletterSection(props) {
   const { t } = useTranslation();
   const [subscribed, setSubscribed] = useState(false);
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register, formState: { errors } } = useForm();
 
   const onSubmit = ({ email }) => {
     setSubscribed(true);
@@ -58,7 +58,7 @@ function NewsletterSection(props) {
                       name="email"
                       placeholder={t("index.newsletter.placeholder")}
                       error={errors.email}
-                      inputRef={register({
+                      inputRef={register("email", {
                         required: t("index.newsletter.inputRequired"),
                       })}
                     />
@@ -70,7 +70,7 @@ function NewsletterSection(props) {
                     {t("index.newsletter.note")}
                     <br />
                     {t("index.newsletter.privacyPolicy.text")}{" "}
-                    <Link href="/legal/privacy-policy">
+                    <Link href="/legal/privacy-policy" legacyBehavior>
                       <a className="font-medium text-green hover:text-green-dark">
                         {t("index.newsletter.privacyPolicy.link")}
                       </a>

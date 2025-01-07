@@ -30,7 +30,7 @@ function Navbar(props) {
       <div className="container py-4">
         <div className="flex justify-between">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-black hover:text-green-600">
               <Image
                 src="/images/GCLogo-no-bg.png"
@@ -46,7 +46,7 @@ function Navbar(props) {
           <div className="flex items-center ml-auto space-x-1 lg:space-x-4">
             <ul className="hidden lg:flex items-center ml-auto">
               <li className="relative group">
-                <Link href="/about">
+                <Link href="/about" legacyBehavior>
                   <a className={`${classes.navLink}`}>
                     <span>About</span>
                   </a>
@@ -61,24 +61,24 @@ function Navbar(props) {
                   className={`${classes.dropdown.base} ${classes.dropdown.right} ${classes.dropdown.normal}`}
                 >
                   <div className={classes.dropdown.inner}>
-                    <Link href="/#features">
+                    <Link href="/#features" legacyBehavior>
                       <a className={classes.dropdown.link}>Features</a>
                     </Link>
-                    <Link href="/explainer">
+                    <Link href="/explainer" legacyBehavior>
                       <a className={classes.dropdown.link}>Research</a>
                     </Link>
                   </div>
                 </div>
               </li>
               <li className="relative group">
-                <Link href="/#faq">
+                <Link href="/#faq" legacyBehavior>
                   <a className={`${classes.navLink}`}>
                     <span>FAQ</span>
                   </a>
                 </Link>
               </li>
               <li className="relative group">
-                <Link href="/#contact">
+                <Link href="/#contact" legacyBehavior>
                   <a className={`${classes.navLink}`}>
                     <span>Contact</span>
                   </a>
@@ -103,19 +103,19 @@ function Navbar(props) {
           <div className="grid grid-cols-1 sm:grid-cols-3 border rounded-xl my-5">
             <div className="p-6 space-y-6">
               <nav className="flex flex-col space-y-3">
-                <Link href="/about">
+                <Link href="/about" legacyBehavior>
                   <a className={`${classes.dropdown.link}`}>About</a>
                 </Link>
-                <Link href="/#features">
+                <Link href="/#features" legacyBehavior>
                   <a className={`${classes.dropdown.link}`}>Features</a>
                 </Link>
-                <Link href="/explainer">
+                <Link href="/explainer" legacyBehavior>
                   <a className={`${classes.dropdown.link}`}>Research</a>
                 </Link>
-                <Link href="/#faq">
+                <Link href="/#faq" legacyBehavior>
                   <a className={`${classes.dropdown.link}`}>FAQ</a>
                 </Link>
-                <Link href="/#contact">
+                <Link href="/#contact" legacyBehavior>
                   <a className={`${classes.dropdown.link}`}>Contact</a>
                 </Link>
               </nav>

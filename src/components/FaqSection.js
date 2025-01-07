@@ -4,43 +4,21 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import Section from "components/common/Section";
 import SectionHeader from "components/common/SectionHeader";
 import Button from "components/common/Button";
+import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 function FaqSection(props) {
   const { t } = useTranslation();
-  const getText = () => {
-    return t("index.faq.questions", { returnObjects: true }) || {};
-  };
+  const faqItems = t("index.faq.questions", { returnObjects: true }) || {};
 
-  const faqItems = [
-    {
-      question: getText()["1"].question,
-      answer: getText()["1"].answer,
-    },
-    {
-      question: getText()["2"].question,
-      answer: getText()["2"].answer,
-    },
-    {
-      question: getText()["3"].question,
-      answer: getText()["3"].answer,
-    },
-    {
-      question: getText()["4"].question,
-      answer: getText()["4"].answer,
-    },
-    {
-      question: getText()["5"].question,
-      answer: getText()["5"].answer,
-    },
-    {
-      question: getText()["6"].question,
-      answer: getText()["6"].answer,
-    },
-    {
-      question: getText()["7"].question,
-      answer: getText()["7"].answer,
-    },
+  const faqData = [
+    { question: faqItems["1"]?.question, answer: faqItems["1"]?.answer },
+    { question: faqItems["2"]?.question, answer: faqItems["2"]?.answer },
+    { question: faqItems["3"]?.question, answer: faqItems["3"]?.answer },
+    { question: faqItems["4"]?.question, answer: faqItems["4"]?.answer },
+    { question: faqItems["5"]?.question, answer: faqItems["5"]?.answer },
+    { question: faqItems["6"]?.question, answer: faqItems["6"]?.answer },
+    { question: faqItems["7"]?.question, answer: faqItems["7"]?.answer },
   ];
 
   return (
@@ -53,24 +31,55 @@ function FaqSection(props) {
       textColor={props.textColor || "text-green-darkest"}
     >
       <div className="space-y-12 container">
-        <SectionHeader
-          title={props.title}
-          subtitle={props.subtitle}
-          strapline={props.strapline}
-          className="text-center text-green-darkest"
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          {faqItems.map((item, index) => (
-            <div className="prose prose-green" key={index}>
+        <motion.div
+          className="space-y-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <SectionHeader
+            title={props.title}
+            subtitle={props.subtitle}
+            strapline={props.strapline}
+            className="text-center text-green-darkest"
+          />
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            staggerChildren: 0.2, // Stagger the children animations
+            duration: 0.8,
+          }}
+        >
+          {faqData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="prose prose-green"
+            >
               <h4 className="text-green-darkest">{item.question}</h4>
               <p className="text-green-dark">{item.answer}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {props.showSupportButton && (
-          <div className="text-center">
-            <Link href="#contact" passHref={true}>
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <Link href="#contact" passHref={true} legacyBehavior>
               <Button
                 size="lg"
                 variant="primary"
@@ -81,7 +90,7 @@ function FaqSection(props) {
                 Get in touch
               </Button>
             </Link>
-          </div>
+          </motion.div>
         )}
       </div>
     </Section>

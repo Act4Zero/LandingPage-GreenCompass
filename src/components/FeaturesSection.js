@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   ShoppingBagIcon,
   ChartPieIcon,
@@ -6,6 +6,7 @@ import {
   BookOpenIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
+import { motion } from "motion/react";
 import Section from "components/common/Section";
 import SectionHeader from "components/common/SectionHeader";
 import FeatureIcon2 from "components/common/FeatureIcon2";
@@ -50,6 +51,30 @@ function FeaturesSection(props) {
     ],
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 } // Adjust the threshold as needed
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
     <Section
       id={props.id}
@@ -59,59 +84,69 @@ function FeaturesSection(props) {
       bgImageOpacity={props.bgImageOpacity}
       textColor={props.textColor || "text-green-darkest"}
     >
-      <div className="container">
-        <div className="flex flex-col lg:flex-row lg:items-center space-y-12 lg:space-y-0 lg:space-x-20">
-          <div className="lg:w-5/12 xl:w-5/12 md:py-12 space-y-10">
-            <SectionHeader
-              title={props.title}
-              subtitle={props.subtitle}
-              strapline={props.strapline}
-              className="text-green-dark"
-            />
-          </div>
-          <div className="lg:w-7/12 xl:w-7/12 flex-none relative">
-            <div className="pattern-dots opacity-10 absolute top-0 left-0 w-48 h-64 md:mt-20 transform -translate-x-10 -translate-y-10" />
-            <div className="pattern-dots opacity-10 absolute bottom-0 right-0 w-48 h-64 md:mb-20 transform translate-x-10 translate-y-10" />
-            <div className="relative flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
-              <div className="md:w-1/2 md:mt-24 space-y-6">
-                {features.left.map((feature, index) => (
-                  <div
-                    className="group bg-white p-5 transition ease-out duration-200 border-2 border-green-lightest rounded-2xl hover:border-green-light"
-                    key={index}
-                  >
-                    <FeatureIcon2 color={feature.iconColor} className="mb-6">
-                      <feature.icon />
-                    </FeatureIcon2>
-                    <h4 className="text-lg font-bold mb-2 text-green-darkest">
-                      {feature.title}
-                    </h4>
-                    <p className="leading-relaxed text-green-dark">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="md:w-1/2 space-y-6">
-                {features.right.map((feature, index) => (
-                  <div
-                    className="group bg-white p-5 transition ease-out duration-200 border-2 border-green-lightest rounded-2xl hover:border-green-light"
-                    key={index}
-                  >
-                    <FeatureIcon2 color={feature.iconColor} className="mb-6">
-                      <feature.icon />
-                    </FeatureIcon2>
-                    <h4 className="text-lg font-bold mb-2 text-green-darkest">
-                      {feature.title}
-                    </h4>
-                    <p className="leading-relaxed text-green-dark">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
+      <div ref={ref} className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="flex flex-col lg:flex-row lg:items-center space-y-12 lg:space-y-0 lg:space-x-20">
+            <div className="lg:w-5/12 xl:w-5/12 md:py-12 space-y-10">
+              <SectionHeader
+                title={props.title}
+                subtitle={props.subtitle}
+                strapline={props.strapline}
+                className="text-green-dark"
+              />
+            </div>
+            <div className="lg:w-7/12 xl:w-7/12 flex-none relative">
+              <div className="relative flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
+                <div className="md:w-1/2 md:mt-24 space-y-6">
+                  {features.left.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      className="group bg-white p-5 transition ease-out duration-200 border-2 border-green-lightest rounded-2xl hover:border-green-light"
+                      initial={{ opacity: 0, x: -50 }}
+                      animate={isVisible ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: index * 0.2, duration: 0.8 }}
+                    >
+                      <FeatureIcon2 color={feature.iconColor} className="mb-6">
+                        <feature.icon />
+                      </FeatureIcon2>
+                      <h4 className="text-lg font-bold mb-2 text-green-darkest">
+                        {feature.title}
+                      </h4>
+                      <p className="leading-relaxed text-green-dark">
+                        {feature.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="md:w-1/2 space-y-6">
+                  {features.right.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      className="group bg-white p-5 transition ease-out duration-200 border-2 border-green-lightest rounded-2xl hover:border-green-light"
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={isVisible ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: index * 0.2, duration: 0.8 }}
+                    >
+                      <FeatureIcon2 color={feature.iconColor} className="mb-6">
+                        <feature.icon />
+                      </FeatureIcon2>
+                      <h4 className="text-lg font-bold mb-2 text-green-darkest">
+                        {feature.title}
+                      </h4>
+                      <p className="leading-relaxed text-green-dark">
+                        {feature.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Section>
   );
