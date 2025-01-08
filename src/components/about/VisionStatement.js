@@ -47,7 +47,10 @@ function VisionStatement(props) {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ 
+            scale: 1.05,
+            transition: { duration: 0.2 } 
+          }}
         >
           <img
             src={aboutImage.src}
