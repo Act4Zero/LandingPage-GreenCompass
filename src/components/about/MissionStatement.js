@@ -44,8 +44,11 @@ function MissionStatement() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.2 }}
-              whileHover={{ scale: 1.2 }}
+              whileHover={{
+                scale: 1.05, // Scale on hover
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add shadow on hover
+              }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <Icon className="text-3xl text-green mb-2" />
               <p className="text-sm text-green-dark font-medium">{label}</p>
