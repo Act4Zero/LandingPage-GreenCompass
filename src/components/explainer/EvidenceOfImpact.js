@@ -75,6 +75,11 @@ const EvidenceOfImpact = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
+              whileHover={{
+                scale: 1.05, // Scale on hover
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add shadow on hover
+              }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <item.icon className="text-green-dark text-4xl mb-3" />
               <h3 className="text-2xl font-bold text-green-darkest">

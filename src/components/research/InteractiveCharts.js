@@ -11,6 +11,7 @@ import {
 } from "chart.js";
 import "util/i18n";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 
 // Register Chart.js components
 ChartJS.register(
@@ -102,10 +103,22 @@ const InteractiveCharts = () => {
   const insightsText = getText().insights;
 
   return (
-    <div className="py-16 px-6 bg-gradient-to-b text-green-darkest">
+    <motion.div
+      className="py-16 px-6 bg-gradient-to-b text-green-darkest"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Key Findings Section */}
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h3 className="text-3xl font-bold mb-4">Key Insights</h3>
           <div className="text-lg">
             <div className="text-6xl font-extrabold text-green-darkest">
@@ -113,26 +126,40 @@ const InteractiveCharts = () => {
             </div>
             <p>{insightsText.label1}</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Pie Chart Section */}
-        <div className="flex flex-col lg:flex-row items-center lg:space-x-8">
-          <div className="flex-1">
+        <motion.div
+          className="flex flex-col lg:flex-row items-center lg:space-x-8"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="flex-1 max-w-md mx-auto">
             <Pie data={pieData} options={pieOptions} />
           </div>
           <div className="flex-1 text-center lg:text-left">
             <h4 className="text-xl font-semibold mb-4">{pieText.label1}</h4>
             <p>{insightsText.description1}</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Bar Chart Section */}
-        <div className="space-y-8">
+        <motion.div
+          className="space-y-8"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8 }}
+        >
           <h4 className="text-xl font-semibold text-center">{barText.title}</h4>
-          <Bar data={barData} options={barOptions} />
-        </div>
+          <div className="max-w-4xl mx-auto">
+            <Bar data={barData} options={barOptions} />
+          </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
