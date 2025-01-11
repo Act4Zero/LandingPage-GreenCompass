@@ -1,9 +1,9 @@
 {
-  "name": "my-divjoy-project",
+  "name": "green-compass",
   "version": "0.1.0",
   "private": true,
   "keywords": [
-    "divjoy"
+    "green-compass"
   ],
   "dependencies": {
     "@analytics/google-analytics": "1.0.7",

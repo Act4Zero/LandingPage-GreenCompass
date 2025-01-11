@@ -19,7 +19,10 @@ function IndexPage(props) {
 
   return (
     <>
-      <Meta />
+      <Meta
+        title={t("meta.title")}
+        description={t("meta.description")}
+      />
       <Navbar bgColor="white" />
       <HeroSection
         title={t("index.hero.title")}
