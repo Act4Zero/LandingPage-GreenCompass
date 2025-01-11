@@ -43,7 +43,7 @@ function Meta(props) {
       "@type": "Organization",
       name: "Green Compass",
       url: meta.domain,
-      logo: `${meta.domain}/${meta.image}`,
+      logo: `${meta.domain}${meta.image}`,
     },
   };
 
