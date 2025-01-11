@@ -56,6 +56,9 @@ function Meta(props) {
       <meta content={meta.description} name="description" key="description" />
       {meta.domain && <link rel="canonical" href={`${meta.domain}${router.asPath}`} key="canonical" />}
 
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" type="x-icon" />
+
       {/* Open Graph */}
       <meta property="og:title" content={meta.title} key="og-title" />
       <meta property="og:description" content={meta.description} key="og-description" />
