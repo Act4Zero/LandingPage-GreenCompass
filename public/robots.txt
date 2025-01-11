@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://greencompass.app
+
+# Sitemaps
+Sitemap: https://greencompass.app/sitemap.xml

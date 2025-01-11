@@ -7,6 +7,7 @@ function ExplainerBanner(props) {
       <img
         src={explainerImage.src}
         alt="A scenic view of a forest with sunlight filtering through the trees"
+        loading="lazy"
         className="w-full h-64 object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black bg-opacity-60 flex items-center justify-center">

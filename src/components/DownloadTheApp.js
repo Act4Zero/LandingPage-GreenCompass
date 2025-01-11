@@ -46,6 +46,7 @@ function DownloadTheApp({
               <Image
                 src="/images/google-play-badge.png"
                 alt="Get it on Google Play"
+                loading="lazy"
                 width={180}
                 height={54}
                 className="transition"
@@ -57,6 +58,7 @@ function DownloadTheApp({
               <Image
                 src="/images/apple-app-store.svg"
                 alt="Download on the App Store"
+                loading="lazy"
                 width={180}
                 height={64}
                 className="opacity-50 transition transform group-hover:scale-105"
@@ -89,6 +91,7 @@ function DownloadTheApp({
               <Image
                 src={imageSrc}
                 alt="App preview"
+                loading="lazy"
                 width={500}
                 height={500}
                 className="object-cover transition"
