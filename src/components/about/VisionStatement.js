@@ -58,6 +58,7 @@ function VisionStatement(props) {
               props.imageAlt ||
               "Collaborative community working towards sustainability"
             }
+            loading="lazy"
             className="w-full h-72 sm:h-80 md:h-96 object-cover transition"
           />
         </motion.div>
