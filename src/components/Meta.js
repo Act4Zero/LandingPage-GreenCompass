@@ -57,7 +57,7 @@ function Meta(props) {
       {meta.domain && <link rel="canonical" href={`${meta.domain}${router.asPath}`} key="canonical" />}
 
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" type="x-icon" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
       {/* Open Graph */}
       <meta property="og:title" content={meta.title} key="og-title" />
