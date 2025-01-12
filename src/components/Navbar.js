@@ -26,7 +26,7 @@ function Navbar(props) {
   };
 
   return (
-    <Section bgColor={props.bgColor}>
+    <Section bgColor="bg-white" className="sticky top-0 z-50 shadow-md">
       <div className="container py-4">
         <div className="flex justify-between">
           {/* Logo */}
