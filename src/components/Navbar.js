@@ -67,6 +67,9 @@ function Navbar(props) {
                     <Link href="/explainer" legacyBehavior>
                       <a className={classes.dropdown.link}>Research</a>
                     </Link>
+                    <Link href="/#timeline" legacyBehavior>
+                      <a className={`${classes.dropdown.link}`}>Timeline</a>
+                    </Link>
                   </div>
                 </div>
               </li>
@@ -111,6 +114,9 @@ function Navbar(props) {
                 </Link>
                 <Link href="/explainer" legacyBehavior>
                   <a className={`${classes.dropdown.link}`}>Research</a>
+                </Link>
+                <Link href="/#timeline" legacyBehavior>
+                  <a className={`${classes.dropdown.link}`}>Timeline</a>
                 </Link>
                 <Link href="/#faq" legacyBehavior>
                   <a className={`${classes.dropdown.link}`}>FAQ</a>
