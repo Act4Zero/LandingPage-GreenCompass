@@ -71,6 +71,18 @@ const ProjectTimeline = () => {
       details: getText()["8"].details,
       icon: RocketLaunchIcon,
     },
+    {
+      title: getText()["9"].title,
+      description: getText()["9"].description,
+      details: getText()["9"].details,
+      icon: PuzzlePieceIcon,
+    },
+    {
+      title: getText()["10"].title,
+      description: getText()["10"].description,
+      details: getText()["10"].details,
+      icon: QuestionMarkCircleIcon
+    }
   ];
 
   useEffect(() => {

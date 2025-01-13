@@ -77,18 +77,28 @@
         },
         "6": {
           "title": "March 2025",
-          "description": "Enhance Feed Contents",
-          "details": "Integrate educational videos into the existing article feed, creating a seamless experience where users can effortlessly scroll through and explore both articles and videos in one unified stream."
+          "description": "Launched the Landing Page",
+          "details": "Introduced the Green Compass landing page to provide a comprehensive overview of our product, features, and mission."
         },
         "7": {
           "title": "June 2025",
-          "description": "Your Daily Dose of Sustainability",
-          "details": "A little something each day to inspire, surprise, and empower your green journey. Stay tuned!"
+          "description": "Enhance Feed Contents",
+          "details": "Integrate educational videos into the existing article feed, creating a seamless experience where users can effortlessly scroll through and explore both articles and videos in one unified stream."
         },
         "8": {
           "title": "July 2025",
-          "description": "Product Launch",
-          "details": "Share the product with the world."
+          "description": "iOS App Release",
+          "details": "Expand our reach to iOS users, making sustainability accessible to a broader audience."
+        },
+        "9": {
+          "title": "August 2025",
+          "description": "Your Daily Dose of Sustainability",
+          "details": "A little something each day to inspire, surprise, and empower your green journey. Stay tuned!"
+        },
+        "10": {
+          "title": "September 2025",
+          "description": "Feature Expansion",
+          "details": "Introduce new features to enhance user experience and provide more tools for tracking, learning, and connecting."
         }
       }
     },
