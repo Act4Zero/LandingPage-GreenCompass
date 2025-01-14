@@ -1,16 +1,18 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import translationEN from 'locales/en/translation.json';
+import translationBG from 'locales/bg/translation.json';
 
 const resources = {
-  en: { translation: translationEN }
+  en: { translation: translationEN },
+  bg: { translation: translationBG }
 };
 
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // default language
+    lng: navigator.language.split('-')[0] || 'en', // fallback to English
     interpolation: {
       escapeValue: false
     }

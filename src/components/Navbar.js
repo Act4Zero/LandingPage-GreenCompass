@@ -4,9 +4,22 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import Section from "components/common/Section";
 import Button from "components/common/Button";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 function Navbar(props) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
+
+  const languages = [
+    { code: "en", label: "English" },
+    { code: "bg", label: "Български" },
+  ];
+
+  const changeLanguage = (code) => {
+    i18n.changeLanguage(code);
+    setLanguageMenuOpen(false); // Close menu after selecting a language
+  };
 
   const classes = {
     navLink:
@@ -23,6 +36,12 @@ function Navbar(props) {
         "bg-white shadow-lg ring-1 ring-black ring-opacity-10 rounded-lg overflow-hidden",
       link: "text-gray-700 hover:text-green-600 hover:bg-gray-100 font-medium text-sm flex items-center space-x-2 px-4 py-2 transition duration-300",
     },
+    languageDropdown:
+      "relative group text-gray-700 hover:text-green-600 font-medium text-sm px-4 py-2 transition duration-300 cursor-pointer",
+    languageMenu:
+      "absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-40 z-20",
+    languageOption:
+      "block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-600 cursor-pointer",
   };
 
   return (
@@ -88,6 +107,29 @@ function Navbar(props) {
                 </Link>
               </li>
             </ul>
+
+            {/* Language Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
+                className={classes.languageDropdown}
+              >
+                Language
+              </button>
+              {languageMenuOpen && (
+                <div className={classes.languageMenu}>
+                  {languages.map(({ code, label }) => (
+                    <button
+                      key={code}
+                      onClick={() => changeLanguage(code)}
+                      className={classes.languageOption}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Mobile Menu Button */}
             <div className="flex lg:hidden items-center justify-center">
