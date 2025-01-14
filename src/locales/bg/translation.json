@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "title": "Green Compass - Навигирайте към по-зелено бъдеще",
+    "description": "Green Compass е вашият водач към по-устойчиво бъдеще. Открийте инструменти, ресурси и общност от съмишленици, които да ви помогнат да намалите въглеродния си отпечатък и да направите положително въздействие върху планетата.",
+    "keywords": "устойчивост, устойчив начин на живот, въглероден отпечатък, екологичност, зелен живот, климатични промени, екологично въздействие, устойчиво бъдеще, зелен компас, приложение за устойчивост, проследяване на въглероден отпечатък, екологично чист живот, възобновяема енергия, намаляване на въглеродния отпечатък"
+},
+  "index": {
+    "hero": {
+      "title": "По-устойчиво бъдеще. Една стъпка по едно време.",
+      "subtitle": "Въздействието на един човек може да изглежда малко, но колективната сила на милиони потребители, които правят осъзнати избори и се застъпват за промяна, е значителна."
+    },
+    "content": {
+      "title": "Пропастта на устойчивостта",
+      "paragraph1": "<p>Климатичните промени са неотложен проблем, който засяга нашата планета. Всички ние трябва да предприемем действия, но това може да бъде поразително. Ежедневните ни избори оставят екологичен отпечатък, допринасяйки за замърсяване, изчерпване на ресурси и променящ се климат.</p>",
+      "paragraph2": "<p>Дори малки промени в начина на живот могат да имат значителен ефект. Нараства желанието на хората да живеят по-устойчиво. Въпреки това, много хора срещат трудности при преодоляване на пропастта между добрите намерения и предприемането на реални действия.</p>",
+      "paragraph3": "<p>Съществува изобилие от информация, но тя често е поразителна и често липсва ясна, персонализирана насока.</p>",
+      "paragraph4": "<p>Хората се нуждаят от пътна карта за прилагане на практични промени и поддържане на мотивацията в тяхното пътешествие към устойчивост. Тук идва на помощ Green Compass.</p>",
+      "cta": "Научете как"
+    }, 
+    "features": {
+    "title": "С множество функции, които подкрепят вашите еко-съзнателни цели.",
+    "subtitle": "Изпитайте безпроблемна, целенасочена функционалност.",
+    "strapline": "Създадено за въздействие",
+    "feature1": {
+        "title": "Вашата врата към по-зелен свят",
+        "description": "Картата на устойчивостта ви свързва с близки екологични бизнеси и услуги, съобразени с вашите ценности. Лесно филтрирайте според това, което е най-важно за вас – чиста енергия, практики за нулеви отпадъци или продукти с локален произход."
+    },
+    "feature2": {
+        "title": "Подсилете своето устойчиво бъдеще",
+        "description": "Потопете се в свят на учене, създаден да ви вдъхнови и оборудва за по-зелено утре. Хъбът за знания предлага богата колекция от ресурси, които да задълбочат вашето разбиране за планетата, околната среда и стъпките, които можете да предприемете, за да живеете по-устойчиво."
+    },
+    "feature3": {
+        "title": "Всяко действие има значение",
+        "description": "Поемете контрол над своя въглероден отпечатък, като откриете своята зелена идентичност. Проследявайте своя напредък, поставяйте си цели и получавайте персонализирани препоръки за намаляване на вашето въздействие – една малка промяна наведнъж, изграждайки по-здрава планета."
+    },
+    "feature4": {
+        "title": "Сътрудничете и растете с общността",
+        "description": "Свържете се с приятели, семейство и съмишленици, за да сравнявате профили за устойчивост, споделяте цели и работите заедно към по-зелено бъдеще. Останете ангажирани с класации, предизвикателства и награди, докато насърчавате комуникацията и споделянето на знания за колективно въздействие."
+    },
+    "feature5": {
+        "title": "Пазарувайте с цел",
+        "description": "Открийте устойчиви стоки и услуги от проверени бизнеси, събрани в едно приложение. Пазарувайте с увереност, насладете се на изключителни оферти само за потребители и направете"
+    },
+    "cta": {
+      "title": "Try the App Today",
+      "subtitle": "Get a hands-on experience with our sustainability journey! Download the app now to explore its current features and start making an impact.",
+      "button": "Get Started"
+    },
+    "project-timeline": {
+      "title": "Project Timeline",
+      "milestones": {
+        "1": {
+          "title": "February 2024",
+          "description": "Market Research",
+          "details": "Exploring the market and started to form the overall product idea."
+        },
+        "2": {
+          "title": "May 2024",
+          "description": "Bootstraped mobile apps",
+          "details": "Established the mobile apps foundations. Prioritization and planning of the first feature."
+        },
+        "3": {
+          "title": "May 2024",
+          "description": "Product strategy",
+          "details": "Our product market strategy is inspired by the growth of a tree: starting as a small seed, we nurture and scale development step by step until we reach full maturity."
+        },
+        "4": {
+          "title": "June 2024",
+          "description": "Feature Planning Framework",
+          "details": "Developed a streamlined feature process enabling rapid prototyping, strategic planning, and efficient delivery."
+        },
+        "5": {
+          "title": "September 2024",
+          "description": "Released 1.0.0 in Google PlayStore",
+          "details": "Our initial app feature aggregates popular RSS feeds, delivering curated insights on key sustainability topics within the Knowledge Hub."
+        },
+        "6": {
+          "title": "March 2025",
+          "description": "Launched the Landing Page",
+          "details": "Introduced the Green Compass landing page to provide a comprehensive overview of our product, features, and mission."
+        },
+        "7": {
+          "title": "June 2025",
+          "description": "Enhance Feed Contents",
+          "details": "Integrate educational videos into the existing article feed, creating a seamless experience where users can effortlessly scroll through and explore both articles and videos in one unified stream."
+        },
+        "8": {
+          "title": "July 2025",
+          "description": "iOS App Release",
+          "details": "Expand our reach to iOS users, making sustainability accessible to a broader audience."
+        },
+        "9": {
+          "title": "August 2025",
+          "description": "Your Daily Dose of Sustainability",
+          "details": "A little something each day to inspire, surprise, and empower your green journey. Stay tuned!"
+        },
+        "10": {
+          "title": "September 2025",
+          "description": "Feature Expansion",
+          "details": "Introduce new features to enhance user experience and provide more tools for tracking, learning, and connecting."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Get answers to common questions about our app.",
+      "strapline": "We answer",
+      "questions": {
+        "1": {
+          "question": "Why do individuals need this app?",
+          "answer": "We all want to help the planet, but knowing where to start can be overwhelming. Our product bridges the gap between good intentions and real action by providing the knowledge, tools, and community support needed to make a measurable impact on our future."
+        },
+        "2": {
+          "question": "Who is this app for?",
+          "answer": "Individual consumers hold immense power in addressing climate change through collective action and cumulative impact. While the efforts of one person might feel small, the combined choices of millions can drive significant change. Green Compass empowers individuals to understand their impact, take meaningful action, and connect with a community striving for a more sustainable and hopeful future."
+        },
+        "3": {
+          "question": "Where Green Compass Fits in the Sustainability Space?",
+          "answer": "Green Compass empowers individuals to reduce their carbon footprint, shift demand toward sustainable alternatives, and inspire collective action. By nurturing awareness, advocacy, and community connections, it enables users to drive meaningful change and shape a more sustainable future."
+        },
+        "4": {
+          "question": "What can I do with the app right now?",
+          "answer": "Green Compass currently provides a curated feed of sustainability articles, offering actionable insights and inspiration to kickstart your eco-conscious journey. This feature marks our starting point, a deliberate step to bring value from the very beginning and build a foundation for a more comprehensive sustainability platform in the future."
+        },
+        "5": {
+            "question": "Will more features be added to the app?",
+            "answer": "Absolutely! We're actively exploring new features to enhance your sustainability journey, including tools for tracking your impact, connecting with like-minded individuals, and accessing more interactive content. Stay tuned as we grow and evolve, guided by your feedback and our mission to empower sustainable living."
+        },
+        "6": {
+            "question": "Can users suggest features or content for the app?",
+            "answer": "Absolutely! We value your input and believe the best ideas come from our community. If you have suggestions for features or content, you can reach out to us directly. Your feedback helps us shape Green Compass into a platform that truly meets your needs."
+        },
+        "7": {
+            "question": "How do I stay informed about updates and new features?",
+            "answer": "You can stay up-to-date by following us on social media, or subscribing to our newsletter. We’ll keep you informed about the latest updates, new features, and exciting developments in the Green Compass journey."
+        }
+      }
+    },
+    "download": {
+      "title": "Try the Beta Version of Green Compass",
+      "subtitle": "Be among the first to explore the app and help shape its future. Start your sustainability journey today and share your feedback to make an impact.",
+      "iosTooltip": "Coming soon to iOS—stay tuned!"
+    },
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "subtitle": "Stay informed about the latest updates and features.",
+      "placeholder": "Your email",
+      "button": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "inputRequired": "Please enter an email address",
+      "note": "Unsubscribe at any time.",
+      "privacyPolicy": {
+        "text": "Check out our",
+        "link": "Privacy Policy"
+      }
+    },
+    "contact": {
+      "title": "We’d Love to Hear From You",
+      "subtitle": "Whether it’s feedback, ideas, or a desire to contribute, we’re all ears! Reach out, and let’s explore how we can make a difference together."
+    },
+    "footer": {
+      "product": {
+        "title": "Product",
+        "faq": "FAQ",
+        "features": "Features",
+        "download": "Downloads"
+      },
+      "project": {
+        "title": "Project",
+        "about": "About",
+        "timeline": "Timeline",
+        "research": "Research",
+        "contact": "Contact",
+        "privacy": "Privacy Policy"
+      },
+      "social": {
+        "title": "Social"
+      },
+      "form": {
+        "title": "Subscribe to our newsletter",
+        "placeholder": "Your email",
+        "button": "Subscribe",
+        "required": "Please enter an email address"
+      }
+    }
+  },
+  "explainer": {
+    "title": "Turning Awareness Into Action",
+    "subtitle": "Green Compass transforms sustainability from an overwhelming concept into simple, meaningful actions. Learn how we empower individuals to create lasting change—one step at a time.",
+    "challenge": {
+      "title": "Growing Carbon Footprint",
+      "subtitle": "The global climate crisis is fueled by rising carbon emissions from daily activities—transportation, energy use, and consumption. While awareness of the issue has grown, it’s often not enough to drive meaningful action. The scale of the problem can feel overwhelming, leaving individuals uncertain about where to begin or how their choices make a difference.",
+      "paragraph1": {
+        "title": "The Reality of Emissions",
+        "content": "Every choice we make—what we eat, how we travel, the energy we consume—contributes to our carbon footprint. While these emissions may seem small individually, the collective impact is staggering."
+      },
+      "paragraph2": {
+        "title": "A Lack of Connection",
+        "content": "Many people struggle to connect their daily habits to the bigger picture of climate change, making it challenging to take steps toward reducing their footprint."
+      },
+      "paragraph3": {
+        "title": "Barriers to Action",
+        "content": "Without clear feedback or accessible tools, it’s easy for people to feel disconnected from the solutions, unsure of how their actions can lead to meaningful change."
+      },
+      "conclusion": "</br>The question remains: How can we empower individuals to understand their impact, take action, and drive collective change?"
+    },
+    "solution": {
+      "title": "How We Help You Make a Difference",
+      "subtitle": "Green Compass turns intentions into measurable actions through these tools.",
+      "solution1": {
+        "title": "What Can You Learn?",
+        "description": "Discover articles, videos, and resources to simplify sustainable living."
+      },
+      "solution2": {
+        "title": "Your Next Steps Toward Change",
+        "description": "Track your carbon footprint and take meaningful actions to reduce emissions."
+      },
+      "solution3": {
+        "title": "The Power of Collective Action",
+        "description": "Join challenges, collaborate, and celebrate collective progress."
+      },
+      "solution4": {
+        "title": "Positive Feedback Loops",
+        "description": "Receive real-time feedback and celebrate milestones along the way."
+      }
+    },
+    "challenge-cta": {
+      "title": "If 10,000 users complete this week’s challenge…",
+      "button": "Join the Challenge",
+      "dialog": {
+        "title": "Challenge Details",
+        "subtitle": "Join our community in this week’s challenge to reduce your carbon footprint. Together, we can make a significant impact on the planet. Are you in?",
+        "button": "Maybe later"
+      }
+    },
+    "evidence": {
+      "title": "Science-Backed Results at a Glance",
+      "subtitle": "Discover how feedback-driven tools like Green Compass are proven to reduce carbon emissions. Here’s a quick look at the numbers that matter.",
+      "evidence1": "Average reduction in carbon emissions",
+      "evidence2": "Reduction in household actions",
+      "evidence3": "Improvement in mobility habits",
+      "conclusion": "Research highlights that individual traits, like perceived green self-efficacy, amplify feedback’s effectiveness. Curious about the science behind the numbers?",
+      "button-more": "Read More",
+      "button-pdf": "See the science"
+    },
+    "banner": {
+      "title": "Together, We Can Create a Brighter, Sustainable Future",
+      "subtitle": "Small actions make a big difference. Let’s take the next step toward a greener world."
+    }
+  },
+  "research": {
+    "title": "Carbon Footprint Tracking: Insights and Impacts",
+    "quote": "\"Providing users with feedback through carbon tracking apps significantly reduces emissions by increasing awareness and encouraging actionable changes.\" - Hoffmann et al., 2024",
+    "subtitle": "Discover how digital tools like Carbon Footprint Tracking Apps empower users to reduce their environmental impact and make informed, sustainable choices.",
+    "insights": {
+      "label1": "Average reduction in carbon emissions through feedback.",
+      "label2": "reduction in mobility emissions",
+      "label3": "reduction in household emissions",
+      "description1": "Feedback bridges the gap between awareness and action, helping users align intentions with real-world habits.",
+      "description2": "Apps address the \"behavior-intention gap\" by providing actionable feedback, helping users align their intentions with real-world actions."
+    },
+    "chart": {
+      "pie": {
+        "label1": "Reduced Emissions",
+        "label2": "Remaining Emissions"
+      },
+      "bar": {
+        "title": "Domain-Specific Reductions",
+        "label1": "Reduction",
+        "label2": "Mobility",
+        "label3": "Food",
+        "label4": "Heating",
+        "label5": "Household"
+      }
+    },
+    "cta": {
+      "description": "Discover the power of Carbon Footprint Tracking Apps and take the first step on your journey toward sustainability.",
+      "button": "Read the Full Research"
+    },
+    "domain": {
+      "title": "Domain-Specific Impacts",
+      "subtitle": "Everyday choices shape our planet’s future. Explore how adjustments across four key domains—Mobility, Food, Heating, and Household Activities—can contribute to a sustainable lifestyle.",
+      "domains": {
+        "mobility": {
+          "title": "Mobility",
+          "description": "Reduce emissions by carpooling, using public transport, or switching to greener transportation options."
+        },
+        "food": {
+          "title": "Food",
+          "description": "Minimize emissions by adopting plant-based diets, buying local, or reducing food waste."
+        },
+        "heating": {
+          "title": "Heating",
+          "description": "Lower emissions by upgrading to energy-efficient systems, improving insulation, or optimizing thermostat use."
+        },
+        "household": {
+          "title": "Household Activities",
+          "description": "Conserve energy and reduce emissions through smart devices, unplugging unused electronics, and mindful consumption."
+        }
+      }
+    },
+    "reach-out": {
+      "title": "We Value Your Perspective",
+      "subtitle": "Your thoughts and insights can help shape the future of sustainable solutions. Have questions, feedback, or ideas? Reach out to us and be part of the movement to create a greener, more informed world."
+    }
+  },
+  "about": {
+    "headline": "Empowering Sustainable Living, One Action at a Time",
+    "subtitle": "At Green Compass, we believe in the transformative power of small actions. Our platform was created to make sustainable living simple, accessible, and impactful for individuals and communities alike. Whether it’s reducing carbon footprints, learning new habits, or connecting with like-minded people, we’re here to guide and inspire you every step of the way.",
+    "mission": {
+      "title": "",
+      "subtitle": " Our mission is to empower individuals to create a more sustainable future through meaningful actions. Together, we can make sustainability simple, actionable, and impactful for everyone.",
+      "description": "By promoting awareness, driving action, and nurturing a sense of community, we aim to bridge the gap between intentions and impactful change."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "subtitle": "We envision a future where sustainability isn’t just an aspiration but a way of life. A future where individuals, communities, and businesses come together, driven by shared purpose and awareness, to create a thriving planet for generations to come. Together, we can make sustainable living second nature."
+    },
+    "reach-out": {
+      "title": "Let’s Build the Future Together",
+      "subtitle": "We believe in a world where sustainability is second nature—a way of life embraced by individuals, communities, and businesses. Share your thoughts, ideas, or questions with us, and let’s create a thriving planet for generations to come."
+    },
+    "core-values": {
+      "title": "Our Core Values",
+      "subtitle": "These principles guide everything we do, ensuring our approach to sustainability is as impactful as it is meaningful.",
+      "values": {
+        "1": {
+          "title": "Empowerment",
+          "description": "Giving people the confidence and resources to take action."
+        },
+        "2": {
+          "title": "Collaboration",
+          "description": "Building a community that thrives on shared goals and collective impact."
+        },
+        "3": {
+          "title": "Transparency",
+          "description": "Offering clear, honest insights into sustainability and our approach."
+        },
+        "4": {
+          "title": "Innovation",
+          "description": "Continuously evolving to make sustainable living easier and more effective."
+        }
+      } 
+    },
+    "cta": {
+      "title": "Why It Matters",
+      "subtitle": "Climate change is a global challenge with personal implications. The choices we make every day shape the world we live in. Learn how collective action can make a lasting impact—and how you can be part of the solution.",
+      "button": "Learn Why"
+    }
+  }
+}
+}
