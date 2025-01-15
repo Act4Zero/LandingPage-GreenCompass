@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
 import Section from "components/common/Section";
@@ -7,35 +7,98 @@ import FormAlert from "components/FormAlert";
 import TextField from "components/common/TextField";
 import Button from "components/common/Button";
 import LoadingIcon from "components/common/LoadingIcon";
-import contact from "util/contact";
+import submitContactForm from "util/contact";
+import { Trans, useTranslation } from "react-i18next";
 
 function ContactSection(props) {
+  const { t } = useTranslation();
   const [pending, setPending] = useState(false);
   const [formAlert, setFormAlert] = useState(null);
-  const { handleSubmit, register, formState: { errors }, reset } = useForm();
+  const [extraData, setExtraData] = useState({
+    date: "",
+    country: "",
+    city: "",
+  });
 
-  const onSubmit = (data) => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  useEffect(() => {
+    // Set current date in a human-readable format
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleString("en-US", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZoneName: "short",
+    });
+
+    setExtraData((prev) => ({
+      ...prev,
+      date: formattedDate,
+    }));
+
+    // Fetch user's location (country and city) using a geolocation API
+    fetch("https://ipapi.co/json/")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          setExtraData((prev) => ({
+            ...prev,
+            country: data.country_name || "Unknown Country",
+            city: data.city || "Unknown City",
+          }));
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching location:", error);
+      });
+  }, []);
+
+  const onSubmit = async (formData) => {
     setPending(true);
 
-    contact
-      .submit(data)
-      .then(() => {
+    // Combine formData with extraData (date, country, city)
+    const submissionData = { ...formData, ...extraData };
+
+    try {
+      const result = await submitContactForm(submissionData);
+      if (result.success) {
         reset();
         setFormAlert({
           type: "success",
           message: "Your message has been sent!",
         });
-      })
-      .catch((error) => {
+        console.log("Contact form submission successful:", result);
+        props.onSuccess && props.onSuccess();
+      } else {
         setFormAlert({
           type: "error",
-          message: error.message,
+          message:
+            t("index.contact.error") ||
+            "Submission failed. Please try again later.",
         });
-      })
-      .finally(() => {
-        setPending(false);
+        console.error("Submission failed:", result);
+      }
+    } catch (error) {
+      console.error("Error during submission:", error);
+      setFormAlert({
+        type: "error",
+        message:
+          t("index.contact.error") || "An error occurred. Please try again.",
       });
+    } finally {
+      setPending(false);
+    }
   };
+
 
   return (
     <Section
@@ -74,7 +137,7 @@ function ContactSection(props) {
                     name="name"
                     placeholder="Your full name"
                     error={errors.name}
-                    inputRef={register()}
+                    {...register("name", {})}
                   />
                 </div>
                 <div>
@@ -85,8 +148,13 @@ function ContactSection(props) {
                     name="email"
                     placeholder="Your email address"
                     error={errors.email}
-                    inputRef={register("email", {
-                      required: "Please enter an email address",
+                    {...register("email", {
+                      required: t("index.newsletter.inputRequired"),
+                      pattern: {
+                        value:
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                        message: t("index.newsletter.invalidEmail"),
+                      },
                     })}
                   />
                 </div>
@@ -100,8 +168,8 @@ function ContactSection(props) {
                   placeholder="Write your message here"
                   error={errors.message}
                   rows={6}
-                  inputRef={register("message", {
-                    required: "Please enter a message",
+                  {...register("message", {
+                    required: "Please write a message.",
                   })}
                 />
               </div>
