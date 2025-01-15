@@ -1,26 +1,38 @@
-import { apiRequestExternal } from "./util.js";
+const subscribeToNewsletter = async (email) => {
+  const formId = process.env.NEXT_PUBLIC_KIT_FORM_ID; // Ensure this is defined
+  const apiEndpoint = `https://api.kit.com/v3/forms/${formId}/subscribe`;
+  const apiKey = process.env.NEXT_PUBLIC_KIT_API_KEY; // Ensure this is defined
 
-const endpoint = `https://app.convertkit.com/forms/${process.env.NEXT_PUBLIC_CONVERTKIT_FORM_ID}/subscriptions`;
+  const headers = {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  };
 
-function subscribe(data) {
-  const { email, ...fields } = data;
-
-  return apiRequestExternal(endpoint, "POST", {
-    email_address: email,
-    // Pass custom fields, such as "first_name"
-    fields: fields,
-  }).then((response) => {
-    if (response.status === "success") {
-      return response;
-    } else {
-      // Throw error so it can be caught and displayed by the UI.
-      // Convertkit returns an array of error messages,
-      // but we just throw the first one.
-      throw new Error(response.errors.messages[0]);
-    }
+  const body = JSON.stringify({
+    api_key: apiKey, // Include API key in the body
+    email: email, // Subscriber email
+    referrer: window.location.href, // Optional, add referrer URL
   });
-}
 
-const newsletter = { subscribe };
+  try {
+    const response = await fetch(apiEndpoint, {
+      method: "POST",
+      headers: headers,
+      body: body,
+    });
 
-export default newsletter;
+    const result = await response.json();
+    if (response.ok) {
+      console.log("Subscription successful:", result);
+      return { success: true, data: result };
+    } else {
+      console.error("Subscription failed:", result);
+      return { success: false, error: result };
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+    return { success: false, error };
+  }
+};
+
+export default subscribeToNewsletter;

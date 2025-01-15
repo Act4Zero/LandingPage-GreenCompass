@@ -1,13 +1,13 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-function TextField(props) {
+const TextField = forwardRef((props, ref) => {
   const {
     error,
     type = "text",
     size = "md",
     label,
     className,
-    inputRef,
+    inputRef, 
     ...inputProps
   } = props;
 
@@ -27,28 +27,26 @@ function TextField(props) {
       {label && (
         <label
           className="block mb-1 font-medium text-green-dark"
-          htmlFor={props.id}
+          htmlFor={inputProps.id}
         >
           {label}
         </label>
       )}
 
-      {type === "textarea" && (
+      {type === "textarea" ? (
         <textarea
           className={`${classes.base} ${
             error ? classes.error : classes.normal
           } ${classes.size[size]}`}
-          ref={inputRef}
+          ref={ref || inputRef} 
           {...inputProps}
         />
-      )}
-
-      {type !== "textarea" && (
+      ) : (
         <input
           className={`${classes.base} ${
             error ? classes.error : classes.normal
           } ${classes.size[size]}`}
-          ref={inputRef}
+          ref={ref || inputRef}
           type={type}
           {...inputProps}
         />
@@ -57,6 +55,6 @@ function TextField(props) {
       {error && <p className="text-sm text-red-600 mt-1">{error.message}</p>}
     </div>
   );
-}
+});
 
 export default TextField;
