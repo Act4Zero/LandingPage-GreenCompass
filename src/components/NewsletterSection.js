@@ -4,18 +4,40 @@ import { useForm } from "react-hook-form";
 import Section from "components/common/Section";
 import TextField from "components/common/TextField";
 import Button from "components/common/Button";
-import newsletter from "util/newsletter";
+import subscribeToNewsletter from "util/newsletter";
 import { Trans, useTranslation } from "react-i18next";
 
 function NewsletterSection(props) {
   const { t } = useTranslation();
   const [subscribed, setSubscribed] = useState(false);
-  const { handleSubmit, register, formState: { errors } } = useForm();
+  const [errorMessage, setErrorMessage] = useState("");
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
 
-  const onSubmit = ({ email }) => {
-    setSubscribed(true);
-    props.onSubscribed && props.onSubscribed();
-    newsletter.subscribe({ email });
+  const onSubmit = async ({ email }) => {
+    console.log("Submitting email:", email);
+    try {
+      const result = await subscribeToNewsletter(email);
+      if (result.success) {
+        setSubscribed(true);
+        console.log("Subscription successful:", result);
+        props.onSubscribed && props.onSubscribed();
+      } else {
+        setErrorMessage(
+          t("index.newsletter.error") ||
+            "Subscription failed. Please try again."
+        );
+        console.error("Subscription failed:", result);
+      }
+    } catch (error) {
+      console.error("Error during subscription:", error);
+      setErrorMessage(
+        t("index.newsletter.error") || "An error occurred. Please try again."
+      );
+    }
   };
 
   return (
@@ -43,23 +65,25 @@ function NewsletterSection(props) {
                 {t("index.newsletter.subtitle")}
               </p>
 
-              {subscribed === true && (
+              {subscribed ? (
                 <div className="mt-3 text-center text-green-dark">
                   {t("index.newsletter.success")}
                 </div>
-              )}
-
-              {subscribed === false && (
+              ) : (
                 <form className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex items-start space-x-3">
                     <TextField
                       type="email"
                       id="email"
-                      name="email"
                       placeholder={t("index.newsletter.placeholder")}
                       error={errors.email}
-                      inputRef={register("email", {
+                      {...register("email", {
                         required: t("index.newsletter.inputRequired"),
+                        pattern: {
+                          value:
+                            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                          message: t("index.newsletter.invalidEmail"),
+                        },
                       })}
                     />
                     <Button type="submit" size="lg" variant="primary">
