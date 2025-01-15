@@ -37,7 +37,7 @@ function Footer(props) {
       bgColor={props.bgColor || "bg-green-dark"}
       bgImage={props.bgImage}
       bgImageOpacity={props.bgImageOpacity}
-      textColor={props.textColor || "text-white"}
+      textColor={props.textColor || "text-green-dark"}
       className={props.sticky && "mt-auto"}
     >
       <footer className="container">
