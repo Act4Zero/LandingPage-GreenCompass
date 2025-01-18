@@ -15,7 +15,9 @@ const Privacy = () => {
         <h1 className="text-4xl font-bold text-green-dark mb-8">
           Privacy Policy
         </h1>
-        <p className="text-sm text-gray-600 mb-6">Effective Date: 16.01.2024</p>
+        <p className="text-sm text-gray-600 mb-6">
+          Effective Date: January 16, 2024
+        </p>
 
         {/* Table of Contents */}
         <nav className="mb-12">
@@ -189,7 +191,6 @@ const Privacy = () => {
             You have the right to:
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <br></br>
             <li>
               <strong>Access: </strong>Request access to the personal
               information we hold about you.
