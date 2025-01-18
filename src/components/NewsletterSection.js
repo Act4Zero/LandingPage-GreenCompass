@@ -94,7 +94,7 @@ function NewsletterSection(props) {
                     {t("index.newsletter.note")}
                     <br />
                     {t("index.newsletter.privacyPolicy.text")}{" "}
-                    <Link href="/legal/privacy-policy" legacyBehavior>
+                    <Link href="/privacy" legacyBehavior>
                       <a className="font-medium text-green hover:text-green-dark">
                         {t("index.newsletter.privacyPolicy.link")}
                       </a>
