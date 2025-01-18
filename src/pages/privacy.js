@@ -142,7 +142,6 @@ const Privacy = () => {
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
             <li>To respond to inquiries and provide customer support.</li>
             <li>To send newsletters and updates, if you have subscribed.</li>
-            <li>To send newsletters and updates, if you have subscribed.</li>
             <li>To analyze website usage and improve our services.</li>
             <li>To comply with legal obligations.</li>
           </ul>
