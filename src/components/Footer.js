@@ -42,7 +42,7 @@ function Footer(props) {
       className={props.sticky && "mt-auto"}
     >
       <footer className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Product Links */}
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
@@ -96,10 +96,10 @@ function Footer(props) {
               </div>
             ) : (
               <form
-                className="mt-6 flex items-start space-x-2"
+                className="mt-6 flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-2"
                 onSubmit={handleSubmit(onSubmit)}
               >
-                <div className="grow">
+                <div className="flex-grow w-full">
                   <TextField
                     type="email"
                     id="email"
@@ -124,7 +124,7 @@ function Footer(props) {
         </div>
 
         {/* Logo Section */}
-        <div className="flex items-start justify-start text-left mt-8">
+        <div className="flex flex-col items-center justify-center text-center mt-8">
           <Link href="/" legacyBehavior>
             <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-green-darkest hover:text-green">
               <Image
@@ -138,7 +138,7 @@ function Footer(props) {
           </Link>
         </div>
 
-        <div className="flex items-start text-white text-sm justify-start text-left">
+        <div className="flex flex-col items-center text-white text-sm text-center mt-4">
           <p>© {currentYear} Green Compass Project. All rights reserved.</p>
         </div>
       </footer>
