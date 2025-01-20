@@ -16,6 +16,7 @@ function Footer(props) {
     formState: { errors },
   } = useForm();
   const { t } = useTranslation();
+  const currentYear = new Date().getFullYear();
 
   const onSubmit = async ({ email }) => {
     try {
@@ -41,22 +42,7 @@ function Footer(props) {
       className={props.sticky && "mt-auto"}
     >
       <footer className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          {/* Logo Section */}
-          <div className="flex items-start justify-start text-left">
-            <Link href="/" legacyBehavior>
-              <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-green-darkest hover:text-green">
-                <Image
-                  src="/images/GCLogo-no-bg.png"
-                  alt="Green Compass Logo"
-                  width={48}
-                  height={48}
-                  className="transition-transform hover:scale-105"
-                />
-              </a>
-            </Link>
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-3">
           {/* Product Links */}
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
@@ -87,7 +73,7 @@ function Footer(props) {
                 { url: "/about", name: t("index.footer.project.about") },
                 { url: "/#timeline", name: t("index.footer.project.timeline") },
                 { url: "/explainer", name: t("index.footer.project.research") },
-                { url: "/privacy", name: t("index.footer.project.privacy") }
+                { url: "/privacy", name: t("index.footer.project.privacy") },
               ].map((link, index) => (
                 <Link href={link.url} key={index} legacyBehavior>
                   <a className="font-medium text-green-light hover:text-green">
@@ -135,6 +121,25 @@ function Footer(props) {
               </form>
             )}
           </div>
+        </div>
+
+        {/* Logo Section */}
+        <div className="flex items-start justify-start text-left mt-8">
+          <Link href="/" legacyBehavior>
+            <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-green-darkest hover:text-green">
+              <Image
+                src="/images/GCLogo-no-bg.png"
+                alt="Green Compass Logo"
+                width={48}
+                height={48}
+                className="transition-transform hover:scale-105"
+              />
+            </a>
+          </Link>
+        </div>
+
+        <div className="flex items-start text-white text-sm justify-start text-left">
+          <p>© {currentYear} Green Compass Project. All rights reserved.</p>
         </div>
       </footer>
     </Section>
