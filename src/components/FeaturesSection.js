@@ -60,8 +60,7 @@ function FeaturesSection(props) {
         if (entry.isIntersecting) {
           setIsVisible(true);
         }
-      },
-      { threshold: 0.2 } // Adjust the threshold as needed
+      }
     );
 
     if (ref.current) {
