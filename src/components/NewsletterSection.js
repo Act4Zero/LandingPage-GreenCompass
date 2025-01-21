@@ -11,6 +11,7 @@ function NewsletterSection(props) {
   const { t } = useTranslation();
   const [subscribed, setSubscribed] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
   const {
     handleSubmit,
     register,
@@ -55,6 +56,7 @@ function NewsletterSection(props) {
           <div className="absolute pattern-dots text-green-light bottom-0 right-0 w-32 h-48 md:h-96 transform translate-y-12 translate-x-16 rotate-3" />
           <div className="absolute rounded-full top-0 right-0 w-32 h-32 bg-accentLight bg-opacity-50 -mt-12 -mr-12" />
           <div className="absolute rounded-xl bottom-0 left-0 w-32 h-32 bg-brown bg-opacity-25 -mb-10 -ml-10 transform rotate-3" />
+
           {/* Newsletter Content */}
           <div className="p-2 rounded text-center relative bg-green-lightest bg-opacity-10">
             <div className="p-8 lg:py-12 lg:px-16 bg-white rounded shadow-lg">
@@ -71,7 +73,14 @@ function NewsletterSection(props) {
                 </div>
               ) : (
                 <form className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
-                  <div className="flex items-start space-x-3">
+                  {/*
+                    Use responsive utility classes:
+                    - "flex flex-col" on default (mobile) 
+                    - "space-y-3" to give spacing when stacked
+                    - Switch to "sm:flex-row" on small devices and up
+                    - "sm:space-y-0 sm:space-x-3" for horizontal spacing
+                  */}
+                  <div className="flex flex-col space-y-3 sm:flex-row sm:items-start sm:space-y-0 sm:space-x-3">
                     <TextField
                       type="email"
                       id="email"
@@ -90,6 +99,7 @@ function NewsletterSection(props) {
                       {t("index.newsletter.button")}
                     </Button>
                   </div>
+
                   <p className="text-sm text-green-dark leading-6">
                     {t("index.newsletter.note")}
                     <br />
@@ -101,6 +111,10 @@ function NewsletterSection(props) {
                     </Link>
                   </p>
                 </form>
+              )}
+
+              {errorMessage && (
+                <div className="mt-3 text-red-600 text-sm">{errorMessage}</div>
               )}
             </div>
           </div>
