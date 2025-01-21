@@ -8,9 +8,15 @@ import Image from "next/image";
 function Navbar(props) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const mobileNavRef = useRef(null);
+  const toggleButtonRef = useRef(null);
 
   const handleClickOutside = (event) => {
-    if (mobileNavRef.current && !mobileNavRef.current.contains(event.target)) {
+    if (
+      mobileNavRef.current &&
+      !mobileNavRef.current.contains(event.target) &&
+      toggleButtonRef.current &&
+      !toggleButtonRef.current.contains(event.target)
+    ) {
       setMobileNavOpen(false);
     }
   };
@@ -114,6 +120,7 @@ function Navbar(props) {
             {/* Mobile Menu Button */}
             <div className="flex lg:hidden items-center justify-center">
               <Button
+                ref={toggleButtonRef}
                 variant="simple"
                 size="sm"
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
