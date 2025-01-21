@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Section from "components/common/Section";
@@ -7,6 +7,28 @@ import Image from "next/image";
 
 function Navbar(props) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const mobileNavRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (mobileNavRef.current && !mobileNavRef.current.contains(event.target)) {
+      setMobileNavOpen(false);
+    }
+  };
+
+  const handleLinkClick = () => {
+    setMobileNavOpen(false);
+  };
+
+  useEffect(() => {
+    if (mobileNavOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [mobileNavOpen]);
 
   const classes = {
     navLink:
@@ -102,27 +124,60 @@ function Navbar(props) {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={"lg:hidden" + (!mobileNavOpen ? " hidden" : "")}>
+        <div
+          ref={mobileNavRef}
+          className={"lg:hidden" + (!mobileNavOpen ? " hidden" : "")}
+        >
           <div className="grid grid-cols-1 sm:grid-cols-3 border rounded-xl my-5">
             <div className="p-6 space-y-6">
               <nav className="flex flex-col space-y-3">
                 <Link href="/about" legacyBehavior>
-                  <a className={`${classes.dropdown.link}`}>About</a>
+                  <a
+                    className={`${classes.dropdown.link}`}
+                    onClick={handleLinkClick}
+                  >
+                    About
+                  </a>
                 </Link>
                 <Link href="/#features" legacyBehavior>
-                  <a className={`${classes.dropdown.link}`}>Features</a>
+                  <a
+                    className={`${classes.dropdown.link}`}
+                    onClick={handleLinkClick}
+                  >
+                    Features
+                  </a>
                 </Link>
                 <Link href="/explainer" legacyBehavior>
-                  <a className={`${classes.dropdown.link}`}>Research</a>
+                  <a
+                    className={`${classes.dropdown.link}`}
+                    onClick={handleLinkClick}
+                  >
+                    Research
+                  </a>
                 </Link>
                 <Link href="/#timeline" legacyBehavior>
-                  <a className={`${classes.dropdown.link}`}>Timeline</a>
+                  <a
+                    className={`${classes.dropdown.link}`}
+                    onClick={handleLinkClick}
+                  >
+                    Timeline
+                  </a>
                 </Link>
                 <Link href="/#faq" legacyBehavior>
-                  <a className={`${classes.dropdown.link}`}>FAQ</a>
+                  <a
+                    className={`${classes.dropdown.link}`}
+                    onClick={handleLinkClick}
+                  >
+                    FAQ
+                  </a>
                 </Link>
                 <Link href="/#contact" legacyBehavior>
-                  <a className={`${classes.dropdown.link}`}>Contact</a>
+                  <a
+                    className={`${classes.dropdown.link}`}
+                    onClick={handleLinkClick}
+                  >
+                    Contact
+                  </a>
                 </Link>
               </nav>
             </div>
