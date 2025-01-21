@@ -129,20 +129,20 @@ const ProjectTimeline = () => {
       id="timeline"
       className="relative bg-gradient-to-b from-green to-lightBg"
     >
-      <div className="container mx-auto px-6 py-10 relative z-10">
-        <h1 className="text-4xl font-bold text-center text-white mb-10">
+      <div className="container mx-auto px-4 sm:px-6 py-10 relative z-10">
+        <h1 className="text-2xl sm:text-4xl font-bold text-center text-white mb-6 sm:mb-10">
           {t("index.project-timeline.title")}
         </h1>
 
         {/* Scrollable area */}
-        <div className="relative h-[800px] overflow-y-scroll no-scrollbar py-10">
-          <div className="relative w-full" style={{ height: "2000px" }}>
+        <div className="relative h-[600px] sm:h-[800px] overflow-y-scroll no-scrollbar py-6 sm:py-10">
+          <div className="relative w-full" style={{ height: "2200px" }}>
             {/* Straight vertical line */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-[3px] bg-gradient-to-b from-accentLight to-green-darkest z-0" />
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-accentLight to-green-darkest z-0" />
 
             {milestonesData.map((m, i) => {
               const topPosition =
-                (i / (milestonesData.length - 1)) * 1800 + 100;
+                (i / (milestonesData.length - 1)) * 2000 + 120;
               const isEven = i % 2 === 0;
 
               return (
@@ -152,27 +152,35 @@ const ProjectTimeline = () => {
                   data-index={i}
                   className={`absolute transition-opacity duration-500 ease-out ${
                     visibleIndex === i ? "opacity-100" : "opacity-75"
-                  } min-h-[80px] min-w-[80px]`}
+                  }`}
                   style={{
                     top: `${topPosition}px`,
                     left: "50%",
                     transform: "translateX(-50%)",
                   }}
                 >
-                  <div className="relative flex justify-center items-center">
-                    {/* Pass the icon component to MilestoneMarker */}
-                    <MilestoneMarker details={m.details} Icon={m.icon} />
+                  <div className="relative flex flex-col items-center space-y-6">
+                    {/* Marker */}
+                    <div className="relative z-10">
+                      <MilestoneMarker details={m.details} Icon={m.icon} />
+                    </div>
+                    {/* Milestone Card */}
                     <div
-                      className={`bg-accentLight rounded-lg shadow-lg p-4 max-w-sm absolute top-1/2 transform -translate-y-1/2 ${
+                      className={`bg-accentLight rounded-lg shadow-lg p-4 max-w-xs sm:max-w-sm ${
                         isEven
-                          ? "right-full mr-6 text-right"
-                          : "left-full ml-6 text-left"
-                      }`}
+                          ? "sm:right-full sm:mr-8"
+                          : "sm:left-full sm:ml-8"
+                      } text-center sm:text-left`}
+                      style={{
+                        marginTop: "1rem", // Add extra margin to avoid overlap
+                      }}
                     >
-                      <h2 className="text-xl font-semibold text-green-darkest mb-1">
+                      <h2 className="text-lg sm:text-xl font-semibold text-green-darkest mb-1">
                         {m.title}
                       </h2>
-                      <p className="text-green-dark text-sm">{m.description}</p>
+                      <p className="text-green-dark text-sm sm:text-base">
+                        {m.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -180,27 +188,27 @@ const ProjectTimeline = () => {
             })}
           </div>
         </div>
-      </div>
 
-      {/* Smaller, elegant dots */}
-      <div className="absolute top-1/2 right-10 transform -translate-y-1/2 flex flex-col items-center space-y-3 z-20">
-        {milestonesData.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => scrollToMilestone(i)}
-            className={`w-3 h-3 rounded-full border border-green-darkest transition-transform duration-300 ${
-              visibleIndex === i
-                ? "bg-green-darkest scale-125"
-                : "bg-accentLight hover:bg-green-dark"
-            }`}
-          />
-        ))}
+        {/* Smaller, elegant dots */}
+        <div className="absolute top-1/2 right-4 sm:right-10 transform -translate-y-1/2 flex flex-col items-center space-y-2 sm:space-y-3 z-20">
+          {milestonesData.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => scrollToMilestone(i)}
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-green-darkest transition-transform duration-300 ${
+                visibleIndex === i
+                  ? "bg-green-darkest scale-110"
+                  : "bg-accentLight hover:bg-green-dark"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-const MilestoneMarker = ({ details, Icon }) => {
+const MilestoneMarker = ({ details, Icon, isEven }) => {
   return (
     <div className="relative group flex-shrink-0 z-10">
       <div className="relative w-12 h-12 bg-gradient-to-br from-green-dark to-green-light rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -208,7 +216,11 @@ const MilestoneMarker = ({ details, Icon }) => {
         <Icon className="h-6 w-6 text-white" />
       </div>
       {/* Tooltip */}
-      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-3 w-56 p-4 bg-green-dark text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 z-10">
+      <div
+        className={`absolute ${
+          isEven ? "bottom-full mb-4" : "top-full mt-4"
+        } left-1/2 transform -translate-x-1/2 w-64 p-3 bg-green-dark text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 z-20`}
+      >
         <p className="text-sm">{details}</p>
       </div>
     </div>
