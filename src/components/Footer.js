@@ -84,7 +84,7 @@ function Footer(props) {
             </nav>
           </div>
 
-          {/* Subscription Form */}
+          {/* Subscription Form and Social Icons */}
           <div>
             <h4 className="text-sm uppercase font-semibold tracking-wider text-accentLight">
               {t("index.footer.form.title")}
@@ -120,6 +120,35 @@ function Footer(props) {
                 </Button>
               </form>
             )}
+
+            {/* Social Icons Section */}
+            <div className="flex space-x-4 mt-4">
+              <Link
+                href="https://www.linkedin.com/company/green-compass-app"
+                legacyBehavior
+              >
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/linkedin-icon.png"
+                    alt="LinkedIn"
+                    width={32}
+                    height={32}
+                    className="transition-transform hover:scale-105"
+                  />
+                </a>
+              </Link>
+              <Link href="https://x.com/GreenCompassApp" legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/x-icon.png"
+                    alt="X"
+                    width={24}
+                    height={24}
+                    className="transition-transform hover:scale-105"
+                  />
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -138,6 +167,7 @@ function Footer(props) {
           </Link>
         </div>
 
+        {/* Copyright Section */}
         <div className="flex flex-col items-center text-white text-sm text-center mt-4">
           <p>© {currentYear} Green Compass Project. All rights reserved.</p>
         </div>
