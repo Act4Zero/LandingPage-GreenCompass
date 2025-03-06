@@ -74,6 +74,7 @@ function Footer(props) {
                 { url: "/#timeline", name: t("index.footer.project.timeline") },
                 { url: "/explainer", name: t("index.footer.project.research") },
                 { url: "/privacy", name: t("index.footer.project.privacy") },
+                { url: "/tos", name: t("index.footer.project.tos") },
               ].map((link, index) => (
                 <Link href={link.url} key={index} legacyBehavior>
                   <a className="font-medium text-green-light hover:text-green">
