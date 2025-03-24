@@ -26,13 +26,17 @@ function IndexPage(props) {
         title={t("index.hero.title")}
         subtitle={t("index.hero.subtitle")}
         strapline=""
-        size="full"
+        size="md"
         bgColor="white"
         bgImageOpacity={1}
         textColor={{
-          title: "text-accent",
-          subtitle: "text-accent",
+          title: "text-white",
+          subtitle: "text-white",
         }}
+        showButton={true}
+        buttonText={t("index.hero.cta")}
+        buttonHref="https://app.greencompass.app"
+        buttonVariant="secondary"
       />
       <FeaturesSection
         id="features"
