@@ -40,6 +40,7 @@ function HeroSection(props) {
                 onClick={props.onButtonClick}
                 href={props.buttonHref}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="shadow-md hover:shadow-lg transition-all duration-300 border-2"
               >
                 {props.buttonText || t("index.hero.cta", "Get Started")}
