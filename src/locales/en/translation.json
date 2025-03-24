@@ -42,11 +42,6 @@
         "description": "Discover sustainable goods and services from verified businesses, all in one app. Order with confidence, enjoy exclusive user-only deals, and make every purchase a step toward a greener future."
       }
     },
-    "cta": {
-      "title": "Try the App Today",
-      "subtitle": "Get a hands-on experience with our sustainability journey! Download the app now to explore its current features and start making an impact.",
-      "button": "Get Started"
-    },
     "project-timeline": {
       "title": "Project Timeline",
       "milestones": {
@@ -137,11 +132,6 @@
         }
       }
     },
-    "download": {
-      "title": "Try the Beta Version of Green Compass",
-      "subtitle": "Be among the first to explore the app and help shape its future. Start your sustainability journey today and share your feedback to make an impact.",
-      "iosTooltip": "Coming soon to iOS—stay tuned!"
-    },
     "newsletter": {
       "title": "Subscribe to Our Newsletter",
       "subtitle": "Stay informed about the latest updates and features.",
@@ -163,8 +153,7 @@
       "product": {
         "title": "Product",
         "faq": "FAQ",
-        "features": "Features",
-        "download": "Downloads"
+        "features": "Features"
       },
       "project": {
         "title": "Project",

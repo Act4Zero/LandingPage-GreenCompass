@@ -7,9 +7,7 @@ import HeroSection from "components/HeroSection";
 import ContentSection from "components/ContentSection";
 import ProjectTimeline from "components/ProjectTimeline";
 import FeaturesSection from "components/FeaturesSection";
-import CtaSection from "components/CtaSection";
 import FaqSection from "components/FaqSection";
-import DownloadTheApp from "components/DownloadTheApp";
 import NewsletterSection from "components/NewsletterSection";
 import ContactSection from "components/ContactSection";
 import Footer from "components/Footer";
@@ -47,17 +45,6 @@ function IndexPage(props) {
         bgImageOpacity={1}
         textColor=""
       />
-      <CtaSection
-        title={t("index.cta.title")}
-        subtitle={t("index.cta.subtitle")}
-        ctaText={t("index.cta.button")}
-        strapline=""
-        size="lg"
-        bgColor="white"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor="text-white"
-      />
       <ContentSection
         id="content"
         title={t("index.content.title")}
@@ -91,11 +78,6 @@ function IndexPage(props) {
         textColor=""
         showSupportButton={true}
         supportUrl="https://zendesk.com"
-      />
-      <DownloadTheApp
-        title={t("index.download.title")}
-        subtitle={t("index.download.subtitle")}
-        iosTooltip={t("index.download.iosTooltip")}
       />
       <ContactSection
         id="contact"
