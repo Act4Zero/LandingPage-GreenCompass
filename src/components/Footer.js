@@ -51,7 +51,6 @@ function Footer(props) {
             <nav className="flex flex-col space-y-3 mt-6">
               {[
                 { url: "/#features", name: t("index.footer.product.features") },
-                { url: "/#download", name: t("index.footer.product.download") },
                 { url: "/#faq", name: t("index.footer.product.faq") },
               ].map((link, index) => (
                 <Link href={link.url} key={index} legacyBehavior>

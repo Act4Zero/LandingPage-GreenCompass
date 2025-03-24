@@ -7,9 +7,7 @@ import HeroSection from "components/HeroSection";
 import ContentSection from "components/ContentSection";
 import ProjectTimeline from "components/ProjectTimeline";
 import FeaturesSection from "components/FeaturesSection";
-import CtaSection from "components/CtaSection";
 import FaqSection from "components/FaqSection";
-import DownloadTheApp from "components/DownloadTheApp";
 import NewsletterSection from "components/NewsletterSection";
 import ContactSection from "components/ContactSection";
 import Footer from "components/Footer";
@@ -28,13 +26,17 @@ function IndexPage(props) {
         title={t("index.hero.title")}
         subtitle={t("index.hero.subtitle")}
         strapline=""
-        size="full"
+        size="md"
         bgColor="white"
         bgImageOpacity={1}
         textColor={{
-          title: "text-accent",
-          subtitle: "text-accent",
+          title: "text-white",
+          subtitle: "text-white",
         }}
+        showButton={true}
+        buttonText={t("index.hero.cta")}
+        buttonHref="https://app.greencompass.app"
+        buttonVariant="secondary"
       />
       <FeaturesSection
         id="features"
@@ -46,17 +48,6 @@ function IndexPage(props) {
         bgImage=""
         bgImageOpacity={1}
         textColor=""
-      />
-      <CtaSection
-        title={t("index.cta.title")}
-        subtitle={t("index.cta.subtitle")}
-        ctaText={t("index.cta.button")}
-        strapline=""
-        size="lg"
-        bgColor="white"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor="text-white"
       />
       <ContentSection
         id="content"
@@ -91,11 +82,6 @@ function IndexPage(props) {
         textColor=""
         showSupportButton={true}
         supportUrl="https://zendesk.com"
-      />
-      <DownloadTheApp
-        title={t("index.download.title")}
-        subtitle={t("index.download.subtitle")}
-        iosTooltip={t("index.download.iosTooltip")}
       />
       <ContactSection
         id="contact"
