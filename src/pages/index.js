@@ -51,12 +51,8 @@ function IndexPage(props) {
       />
       <ContentSection
         id="content"
-        title={t("index.content.title")}
         paragraphs={[
-          t("index.content.paragraph1"),
-          t("index.content.paragraph2"),
-          t("index.content.paragraph3"),
-          t("index.content.paragraph4"),
+          t("index.content.paragraph1")
         ]}
         showButton={true}
         buttonText={t("index.content.cta")}
