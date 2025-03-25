@@ -1,15 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import Section from "components/common/Section";
 import SectionHeader from "components/common/SectionHeader";
 import Button from "components/common/Button";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
+
+// FAQ Item component to handle individual collapsible items
+const FaqItem = ({ question, answer, index, isOpen, toggleItem }) => {
+  return (
+    <div className="mb-4">
+      <button
+        onClick={() => toggleItem(index)}
+        className={`w-full flex justify-between items-center p-4 text-left transition-colors duration-200 border ${isOpen ? 'border-green-300 bg-green-50' : 'border-green-200 bg-white'} rounded-t-lg ${!isOpen && 'rounded-b-lg'} shadow-sm`}
+        aria-expanded={isOpen}
+      >
+        <h4 className="text-green-darkest font-medium text-lg m-0">{question}</h4>
+        <span className="flex-shrink-0 ml-2">
+          {isOpen ? (
+            <ChevronUpIcon className="w-5 h-5 text-green-600" />
+          ) : (
+            <ChevronDownIcon className="w-5 h-5 text-green-600" />
+          )}
+        </span>
+      </button>
+      
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div 
+            key={`content-${index}`}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden border-x border-b border-green-300 rounded-b-lg shadow-sm"
+          >
+            <div className="p-4 bg-white text-green-dark prose prose-green">
+              <p className="mb-0">{answer}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 function FaqSection(props) {
   const { t } = useTranslation();
   const faqItems = t("index.faq.questions", { returnObjects: true }) || {};
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleItem = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const faqData = [
     { question: faqItems["1"]?.question, answer: faqItems["1"]?.answer },
@@ -46,30 +91,25 @@ function FaqSection(props) {
           />
         </motion.div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            staggerChildren: 0.2, // Stagger the children animations
-            duration: 0.8,
-          }}
-        >
+        <div className="max-w-3xl mx-auto">
           {faqData.map((item, index) => (
-            <motion.div
+            <motion.div 
               key={index}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="prose prose-green"
+              transition={{ delay: index * 0.1 }}
             >
-              <h4 className="text-green-darkest">{item.question}</h4>
-              <p className="text-green-dark">{item.answer}</p>
+              <FaqItem 
+                question={item.question} 
+                answer={item.answer} 
+                index={index}
+                isOpen={openIndex === index}
+                toggleItem={toggleItem}
+              />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {props.showSupportButton && (
           <motion.div
