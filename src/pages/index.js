@@ -57,7 +57,6 @@ function IndexPage(props) {
         showButton={true}
         buttonText={t("index.content.cta")}
       />
-      <ProjectTimeline />
       <NewsletterSection
         strapline=""
         size="md"
