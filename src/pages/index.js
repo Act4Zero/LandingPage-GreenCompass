@@ -5,11 +5,12 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import HeroSection from "components/HeroSection";
 import ContentSection from "components/ContentSection";
-import ProjectTimeline from "components/ProjectTimeline";
 import FeaturesSection from "components/FeaturesSection";
 import FaqSection from "components/FaqSection";
 import NewsletterSection from "components/NewsletterSection";
+import CoreValues from "components/index/CoreValues";
 import ContactSection from "components/ContactSection";
+import WhyItMatters from "components/index/WhyItMatters";
 import Footer from "components/Footer";
 
 function IndexPage(props) {
@@ -78,6 +79,7 @@ function IndexPage(props) {
         showSupportButton={true}
         supportUrl="https://zendesk.com"
       />
+      <CoreValues />
       <ContactSection
         id="contact"
         title={t("index.contact.title")}
@@ -88,6 +90,11 @@ function IndexPage(props) {
         bgImage=""
         bgImageOpacity={1}
         textColor=""
+      />
+      <WhyItMatters
+        title={t("index.cta.title")}
+        subtitle={t("index.cta.subtitle")}
+        button={t("index.cta.button")}
       />
       <Footer
         size="md"
