@@ -73,16 +73,10 @@ function Navbar(props) {
           {/* Desktop Navigation */}
           <div className="flex items-center ml-auto space-x-1 lg:space-x-4">
             <ul className="hidden lg:flex items-center ml-auto">
-              <li className="relative group">
-                <Link href="/about" legacyBehavior>
-                  <a className={`${classes.navLink}`}>
-                    <span>About</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="relative group">
+              {/* Commented out until we have the main features ready for showcase */}
+              {/* <li className="relative group">
                 <a className={`${classes.navLink}`}>
-                  <span>Product</span>
+                  <span>Features</span>
                   <span className={classes.navLinkIcon}>▼</span>
                 </a>
                 <div
@@ -97,7 +91,7 @@ function Navbar(props) {
                     </Link>
                   </div>
                 </div>
-              </li>
+              </li> */}
               <li className="relative group">
                 <Link href="/#faq" legacyBehavior>
                   <a className={`${classes.navLink}`}>
@@ -135,14 +129,6 @@ function Navbar(props) {
           <div className="grid grid-cols-1 sm:grid-cols-3 border rounded-xl my-5">
             <div className="p-6 space-y-6">
               <nav className="flex flex-col space-y-3">
-                <Link href="/about" legacyBehavior>
-                  <a
-                    className={`${classes.dropdown.link}`}
-                    onClick={handleLinkClick}
-                  >
-                    About
-                  </a>
-                </Link>
                 <Link href="/#features" legacyBehavior>
                   <a
                     className={`${classes.dropdown.link}`}

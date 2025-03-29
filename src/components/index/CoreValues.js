@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 function CoreValues() {
   const { t } = useTranslation();
   const getText = () => {
-    return t("about.core-values", { returnObjects: true }) || {};
+    return t("index.core-values", { returnObjects: true }) || {};
   };
   const valuesText = getText().values;
 
@@ -41,7 +41,7 @@ function CoreValues() {
 
   return (
     <motion.section
-      className="py-16 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-lightBg to-white"
+      className="py-16 px-6 sm:px-8 lg:px-12 bg-gradient-to-b"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}

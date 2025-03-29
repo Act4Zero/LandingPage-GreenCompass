@@ -69,7 +69,6 @@ function Footer(props) {
             </h4>
             <nav className="flex flex-col space-y-3 mt-6">
               {[
-                { url: "/about", name: t("index.footer.project.about") },
                 { url: "/explainer", name: t("index.footer.project.research") },
                 { url: "/privacy", name: t("index.footer.project.privacy") },
                 { url: "/tos", name: t("index.footer.project.tos") },
