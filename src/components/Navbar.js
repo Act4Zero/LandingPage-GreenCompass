@@ -93,6 +93,18 @@ function Navbar(props) {
                 </div>
               </li> */}
               <li className="relative group">
+                <a
+                  href="https://app.greencompass.app/auth/signin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${classes.navLink} bg-green-600 text-white rounded-lg px-4 py-2 mr-2 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-300 transition-all duration-150`}
+                  aria-label="Log in to Green Compass"
+                  style={{ marginRight: '0.5rem' }}
+                >
+                  Log in
+                </a>
+              </li>
+              <li className="relative group">
                 <Link href="/#faq" legacyBehavior>
                   <a className={`${classes.navLink}`}>
                     <span>FAQ</span>
@@ -153,6 +165,17 @@ function Navbar(props) {
                     Timeline
                   </a>
                 </Link>
+                <a
+                  href="https://app.greencompass.app/auth/signin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${classes.dropdown.link} bg-green-600 text-white rounded-lg px-4 py-2 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-300 transition-all duration-150`}
+                  aria-label="Log in to Green Compass"
+                  style={{ marginBottom: '0.5rem' }}
+                  onClick={handleLinkClick}
+                >
+                  Log in
+                </a>
                 <Link href="/#faq" legacyBehavior>
                   <a
                     className={`${classes.dropdown.link}`}
