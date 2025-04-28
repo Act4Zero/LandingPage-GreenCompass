@@ -35,12 +35,16 @@ function FeaturesSection(props) {
         description: t("index.features.feature3.description"),
         icon: ChartPieIcon,
         iconColor: "green",
+        image: "/images/features/feature-tracker.png",
+
       },
       {
         title: t("index.features.feature4.title"),
         description: t("index.features.feature4.description"),
         icon: UserGroupIcon,
         iconColor: "green",
+        image: "/images/features/feature-community.png",
+
       },
       {
         title: t("index.features.feature5.title"),
@@ -109,9 +113,18 @@ function FeaturesSection(props) {
                       animate={isVisible ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: index * 0.2, duration: 0.8 }}
                     >
-                      <FeatureIcon2 color={feature.iconColor} className="mb-6">
-                        <feature.icon />
-                      </FeatureIcon2>
+                      {feature.image ? (
+                        <img
+                          src={feature.image}
+                          alt={feature.title}
+                          className="w-full h-40 md:h-48 object-cover rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                          style={{ maxHeight: '240px' }}
+                        />
+                      ) : (
+                        <FeatureIcon2 color={feature.iconColor} className="mb-6">
+                          <feature.icon />
+                        </FeatureIcon2>
+                      )}
                       <h4 className="text-lg font-bold mb-2 text-green-darkest">
                         {feature.title}
                       </h4>
@@ -130,9 +143,18 @@ function FeaturesSection(props) {
                       animate={isVisible ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: index * 0.2, duration: 0.8 }}
                     >
-                      <FeatureIcon2 color={feature.iconColor} className="mb-6">
-                        <feature.icon />
-                      </FeatureIcon2>
+                      {feature.image ? (
+                        <img
+                          src={feature.image}
+                          alt={feature.title}
+                          className="w-full h-40 md:h-48 object-cover rounded-xl mb-4 transition-transform duration-300 group-hover:scale-105"
+                          style={{ maxHeight: '220px' }}
+                        />
+                      ) : (
+                        <FeatureIcon2 color={feature.iconColor} className="mb-6">
+                          <feature.icon />
+                        </FeatureIcon2>
+                      )}
                       <h4 className="text-lg font-bold mb-2 text-green-darkest">
                         {feature.title}
                       </h4>
