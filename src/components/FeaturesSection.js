@@ -22,6 +22,7 @@ function FeaturesSection(props) {
         description: t("index.features.feature1.description"),
         icon: GlobeAmericasIcon,
         iconColor: "green",
+        image: "/images/features/feature-map.png",
       },
       {
         title: t("index.features.feature2.title"),
@@ -209,7 +210,7 @@ function FeaturesSection(props) {
               {previewFeature.description}
             </p>
             <a
-              href="https://app.greencompass.app"
+              href={previewFeature.icon === GlobeAmericasIcon ? "https://app.greencompass.app/map" : "https://app.greencompass.app"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-200 text-lg"
