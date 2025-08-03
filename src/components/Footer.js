@@ -127,7 +127,7 @@ function Footer(props) {
               >
                 <a target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/images/linkedin-icon.png"
+                    src="/images/socials/linkedin-icon.png"
                     alt="LinkedIn"
                     width={32}
                     height={32}
@@ -138,10 +138,38 @@ function Footer(props) {
               <Link href="https://x.com/GreenCompassApp" legacyBehavior>
                 <a target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/images/x-icon.png"
+                    src="/images/socials/x-icon.png"
                     alt="X"
                     width={24}
                     height={24}
+                    className="transition-transform hover:scale-105"
+                  />
+                </a>
+              </Link>
+              <Link
+                href="https://www.facebook.com/profile.php?id=61577595789202"
+                legacyBehavior
+              >
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/socials/facebook-icon.png"
+                    alt="Facebook"
+                    width={28}
+                    height={28}
+                    className="transition-transform hover:scale-105"
+                  />
+                </a>
+              </Link>
+              <Link
+                href="https://www.instagram.com/greencompass.app/"
+                legacyBehavior
+              >
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/images/socials/instagram-icon.png"
+                    alt="Instagram"
+                    width={32}
+                    height={32}
                     className="transition-transform hover:scale-105"
                   />
                 </a>
