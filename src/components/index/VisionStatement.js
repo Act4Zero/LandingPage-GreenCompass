@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "motion/react";
-import aboutImage from "/public/images/about-green-compass.jpg";
 
 function VisionStatement(props) {
   return (
@@ -53,7 +52,7 @@ function VisionStatement(props) {
           }}
         >
           <img
-            src={aboutImage.src}
+            src="/images/about-green-compass.jpg"
             alt={
               props.imageAlt ||
               "Collaborative community working towards sustainability"

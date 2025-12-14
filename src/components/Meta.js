@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import logo from "/public/images/GCLogo-no-bg.png";
 
 function Meta(props) {
   const { children, ...customPageMeta } = props;
@@ -24,7 +23,7 @@ function Meta(props) {
     // Page description
     description: props.description,
     // Social share image (create this file in /public/images/)
-    image: logo.src,
+    image: "/images/GCLogo-no-bg.png",
     // Page type (see https://ogp.me/#types)
     type: "website",
   };

@@ -1,11 +1,10 @@
 import React from "react";
-import explainerImage from "/public/images/explainer-banner-bg.jpeg";
 
 function ExplainerBanner(props) {
   return (
     <div className="relative bg-gradient-to-br from-lightBg to-green-lightest rounded-lg shadow-lg mt-0 overflow-hidden">
       <img
-        src={explainerImage.src}
+        src="/images/explainer-banner-bg.jpeg"
         alt="A scenic view of a forest with sunlight filtering through the trees"
         loading="lazy"
         className="w-full h-64 object-cover"

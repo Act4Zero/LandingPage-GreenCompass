@@ -3,7 +3,6 @@ import Section from "components/common/Section";
 import SectionHeader from "components/common/SectionHeader";
 import Button from "components/common/Button";
 import { useTranslation } from 'react-i18next';
-import heroImage from "/public/images/index-hero-bg.jpg";
 
 function HeroSection(props) {
   const { t } = useTranslation();
@@ -16,7 +15,7 @@ function HeroSection(props) {
       textColor="text-white"
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url(${heroImage.src})`,
+        backgroundImage: "url(/images/index-hero-bg.jpg)",
         minHeight: "250px",
         height: "auto"
       }}
