@@ -10,8 +10,8 @@ const TermsOfService = () => {
         title="Terms of Service - Green Compass"
         description="Review the terms and conditions for using Green Compass. Understand your rights, responsibilities, and limitations while using our services."
       />
-      <Navbar bgColor="white" />
-      <main className="container mx-auto py-12 px-6 lg:px-12">
+      <Navbar />
+      <main id="main-content" className="legal-page">
         <h1 className="text-4xl font-bold text-green-dark mb-8">Terms of Service</h1>
         <p className="text-sm text-gray-600 mb-6">Effective Date: January 16, 2025</p>
 
@@ -36,7 +36,7 @@ const TermsOfService = () => {
         <section id="introduction" className="mb-8">
           <h2 className="text-2xl font-semibold text-green-dark mb-4">1. Introduction</h2>
           <p className="text-gray-700 leading-relaxed">
-            Welcome to Green Compass ("we," "our," "us"). By accessing or using our website and services, you agree to be bound by these Terms of Service.
+            Welcome to Green Compass (&ldquo;we,&rdquo; &ldquo;our,&rdquo; &ldquo;us&rdquo;). By accessing or using our website and services, you agree to be bound by these Terms of Service.
             If you do not agree to these terms, please do not use our services.
           </p>
         </section>
@@ -72,7 +72,7 @@ const TermsOfService = () => {
         <section id="disclaimers" className="mb-8">
           <h2 className="text-2xl font-semibold text-green-dark mb-4">6. Disclaimers & Limitation of Liability</h2>
           <p className="text-gray-700 leading-relaxed">
-            We provide our services "as is" and do not guarantee uninterrupted access. We are not liable for any damages resulting from use or inability to use the platform.
+            We provide our services &ldquo;as is&rdquo; and do not guarantee uninterrupted access. We are not liable for any damages resulting from use or inability to use the platform.
           </p>
         </section>
 
@@ -85,6 +85,7 @@ const TermsOfService = () => {
 
         <section id="governing-law" className="mb-8">
           <h2 className="text-2xl font-semibold text-green-dark mb-4">8. Governing Law</h2>
+          {/* Legal review required: the repository does not specify a jurisdiction. */}
           <p className="text-gray-700 leading-relaxed">
             These terms are governed by the laws of [Your Country/State], without regard to its conflict of law principles.
           </p>
@@ -105,14 +106,7 @@ const TermsOfService = () => {
           </p>
         </section>
       </main>
-      <Footer
-        size="md"
-        bgColor="bg-green-dark"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor=""
-        sticky={false}
-      />
+      <Footer />
     </>
   );
 };

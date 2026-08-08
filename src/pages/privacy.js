@@ -10,8 +10,8 @@ const Privacy = () => {
         title="Privacy Policy - Green Compass"
         description="Understand how Green Compass collects, uses, and protects your personal information. Learn about your rights and our commitment to privacy."
       />
-      <Navbar bgColor="white" />
-      <main className="container mx-auto py-12 px-6 lg:px-12">
+      <Navbar />
+      <main id="main-content" className="legal-page">
         <h1 className="text-4xl font-bold text-green-dark mb-8">
           Privacy Policy
         </h1>
@@ -87,7 +87,7 @@ const Privacy = () => {
             1. Introduction
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Welcome to Green Compass ("we," "our," "us"). Your privacy is
+            Welcome to Green Compass (&ldquo;we,&rdquo; &ldquo;our,&rdquo; &ldquo;us&rdquo;). Your privacy is
             important to us, and we are committed to protecting it. This Privacy
             Policy explains how we collect, use, and safeguard your information
             when you visit our website, interact with our services, or
@@ -274,14 +274,7 @@ const Privacy = () => {
           Thank you for trusting Green Compass. Your privacy matters to us.
         </p>
       </main>
-      <Footer
-        size="md"
-        bgColor="bg-green-dark"
-        bgImage=""
-        bgImageOpacity={1}
-        textColor=""
-        sticky={false}
-      />
+      <Footer />
     </>
   );
 };

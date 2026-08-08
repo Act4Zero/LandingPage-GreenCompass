@@ -1,203 +1,122 @@
-import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import { Bars3Icon } from "@heroicons/react/24/solid";
-import Section from "components/common/Section";
-import Button from "components/common/Button";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-function Navbar(props) {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const mobileNavRef = useRef(null);
-  const toggleButtonRef = useRef(null);
+const links = [
+  { href: "/explainer", label: "How it works" },
+  { href: "/research", label: "Research" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
+];
 
-  const handleClickOutside = (event) => {
-    if (
-      mobileNavRef.current &&
-      !mobileNavRef.current.contains(event.target) &&
-      toggleButtonRef.current &&
-      !toggleButtonRef.current.contains(event.target)
-    ) {
-      setMobileNavOpen(false);
-    }
-  };
-
-  const handleLinkClick = () => {
-    setMobileNavOpen(false);
-  };
+function Navbar() {
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
-    if (mobileNavOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setOpen(false);
     };
-  }, [mobileNavOpen]);
+    const closeOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) setOpen(false);
+    };
 
-  const classes = {
-    navLink:
-      "font-semibold inline-flex items-center space-x-1 h-8 px-4 group-hover:text-green-600 hover:text-green-600 py-6 transition duration-300",
-    navLinkIcon:
-      "opacity-50 transform transition duration-200 ease-out group-hover:rotate-180 ",
-    dropdown: {
-      base: "absolute top-full mt-2 z-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out",
-      left: "right-0",
-      center: "left-1/2 -translate-x-1/2",
-      right: "left-0",
-      normal: "w-56",
-      inner:
-        "bg-white shadow-lg ring-1 ring-black ring-opacity-10 rounded-lg overflow-hidden",
-      link: "text-gray-700 hover:text-green-600 hover:bg-gray-100 font-medium text-sm flex items-center space-x-2 px-4 py-2 transition duration-300",
-    },
-  };
+    document.addEventListener("keydown", closeOnEscape);
+    document.addEventListener("mousedown", closeOutside);
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      document.removeEventListener("mousedown", closeOutside);
+    };
+  }, []);
+
+  const isActive = (href) => href.startsWith("/") && !href.startsWith("/#") && router.pathname === href;
 
   return (
-    <Section bgColor="bg-white" className="sticky top-0 z-50 shadow-md">
-      <div className="container py-4">
-        <div className="flex justify-between">
-          {/* Logo */}
-          <Link href="/" legacyBehavior>
-            <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-black hover:text-green-600">
-              <Image
-                src="/images/GCLogo-no-bg.png"
-                alt="Green Compass Logo"
-                width={48}
-                height={48}
-              />
-              <span>Green Compass</span>
-            </a>
+    <>
+      <a
+        href="#main-content"
+        className="fixed left-4 top-3 z-[60] -translate-y-24 rounded-full bg-moss px-4 py-2 font-bold text-ink transition focus:translate-y-0"
+      >
+        Skip to content
+      </a>
+      <header className="sticky top-0 z-50 border-b border-forest/10 bg-paper/90 backdrop-blur-xl">
+        <div className="site-container flex min-h-20 items-center justify-between">
+          <Link href="/" className="group flex items-center gap-3" aria-label="Green Compass home">
+            <Image
+              src="/images/GCLogo-no-bg.png"
+              alt=""
+              width={42}
+              height={42}
+              priority
+              className="rounded-xl transition group-hover:rotate-3"
+            />
+            <span className="text-base font-extrabold tracking-[-0.02em] text-ink">Green Compass</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="flex items-center ml-auto space-x-1 lg:space-x-4">
-            <ul className="hidden lg:flex items-center ml-auto">
-              {/* Commented out until we have the main features ready for showcase */}
-              {/* <li className="relative group">
-                <a className={`${classes.navLink}`}>
-                  <span>Features</span>
-                  <span className={classes.navLinkIcon}>▼</span>
-                </a>
-                <div
-                  className={`${classes.dropdown.base} ${classes.dropdown.right} ${classes.dropdown.normal}`}
-                >
-                  <div className={classes.dropdown.inner}>
-                    <Link href="/#features" legacyBehavior>
-                      <a className={classes.dropdown.link}>Features</a>
-                    </Link>
-                    <Link href="/explainer" legacyBehavior>
-                      <a className={classes.dropdown.link}>Research</a>
-                    </Link>
-                  </div>
-                </div>
-              </li> */}
-              <li className="relative group">
-                <a
-                  href="https://app.greencompass.app/auth/signin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${classes.navLink} bg-green-600 text-white rounded-lg px-4 py-2 mr-2 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-300 transition-all duration-150`}
-                  aria-label="Log in to Green Compass"
-                  style={{ marginRight: '0.5rem' }}
-                >
-                  Log in
-                </a>
-              </li>
-              <li className="relative group">
-                <Link href="/#faq" legacyBehavior>
-                  <a className={`${classes.navLink}`}>
-                    <span>FAQ</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="relative group">
-                <Link href="/#contact" legacyBehavior>
-                  <a className={`${classes.navLink}`}>
-                    <span>Contact</span>
-                  </a>
-                </Link>
-              </li>
-            </ul>
+          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
+            {links.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`rounded-full px-4 py-2 text-sm font-bold transition hover:bg-white hover:text-leaf ${
+                  isActive(link.href) ? "bg-white text-leaf" : "text-ink/75"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="https://app.greencompass.app/auth/signin"
+              target="_blank"
+              rel="noreferrer"
+              className="ml-2 rounded-full border border-forest/20 px-4 py-2 text-sm font-bold text-forest transition hover:bg-white"
+            >
+              Sign in
+            </a>
+          </nav>
 
-            {/* Mobile Menu Button */}
-            <div className="flex lg:hidden items-center justify-center">
-              <Button
-                ref={toggleButtonRef}
-                variant="simple"
-                size="sm"
-                onClick={() => setMobileNavOpen(!mobileNavOpen)}
-                endIcon={<Bars3Icon className="inline-block w-5 h-5" />}
-              />
-            </div>
-          </div>
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-forest/15 bg-white text-forest lg:hidden"
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+          </button>
         </div>
 
-        {/* Mobile Navigation */}
-        <div
-          ref={mobileNavRef}
-          className={"lg:hidden" + (!mobileNavOpen ? " hidden" : "")}
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-3 border rounded-xl my-5">
-            <div className="p-6 space-y-6">
-              <nav className="flex flex-col space-y-3">
-                <Link href="/#features" legacyBehavior>
-                  <a
-                    className={`${classes.dropdown.link}`}
-                    onClick={handleLinkClick}
-                  >
-                    Features
-                  </a>
-                </Link>
-                <Link href="/explainer" legacyBehavior>
-                  <a
-                    className={`${classes.dropdown.link}`}
-                    onClick={handleLinkClick}
-                  >
-                    Research
-                  </a>
-                </Link>
-                <Link href="/#timeline" legacyBehavior>
-                  <a
-                    className={`${classes.dropdown.link}`}
-                    onClick={handleLinkClick}
-                  >
-                    Timeline
-                  </a>
-                </Link>
-                <a
-                  href="https://app.greencompass.app/auth/signin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${classes.dropdown.link} bg-green-600 text-white rounded-lg px-4 py-2 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-300 transition-all duration-150`}
-                  aria-label="Log in to Green Compass"
-                  style={{ marginBottom: '0.5rem' }}
-                  onClick={handleLinkClick}
+        {open && (
+          <div id="mobile-navigation" ref={menuRef} className="border-t border-forest/10 bg-paper px-5 py-5 lg:hidden">
+            <nav className="site-container flex flex-col gap-2" aria-label="Mobile navigation">
+              {links.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-2xl px-4 py-3 text-base font-bold text-ink hover:bg-white"
                 >
-                  Log in
-                </a>
-                <Link href="/#faq" legacyBehavior>
-                  <a
-                    className={`${classes.dropdown.link}`}
-                    onClick={handleLinkClick}
-                  >
-                    FAQ
-                  </a>
+                  {link.label}
                 </Link>
-                <Link href="/#contact" legacyBehavior>
-                  <a
-                    className={`${classes.dropdown.link}`}
-                    onClick={handleLinkClick}
-                  >
-                    Contact
-                  </a>
-                </Link>
-              </nav>
-            </div>
+              ))}
+              <a
+                href="https://app.greencompass.app/auth/signin"
+                target="_blank"
+                rel="noreferrer"
+                className="button-secondary mt-2"
+              >
+                Sign in
+              </a>
+            </nav>
           </div>
-        </div>
-      </div>
-    </Section>
+        )}
+      </header>
+    </>
   );
 }
 
