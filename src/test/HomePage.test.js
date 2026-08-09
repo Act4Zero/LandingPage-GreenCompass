@@ -14,6 +14,8 @@ describe("Home page product framing", () => {
     expect(screen.getByText("Available today")).toBeVisible();
     expect(screen.getByText("Coming next")).toBeVisible();
     expect(screen.getByText(/not a promise of what Green Compass will achieve/i)).toBeVisible();
+    expect(screen.getByText("Guiding principle")).toBeVisible();
+    expect(screen.getByText("Progress over perfection").closest("a, button")).toBeNull();
   });
 
   it("disables non-essential motion when reduced motion is requested", () => {

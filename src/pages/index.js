@@ -15,12 +15,41 @@ import Footer from "components/Footer";
 import FaqAccordion from "components/site/FaqAccordion";
 import NewsletterSignup from "components/site/NewsletterSignup";
 import ContactForm from "components/site/ContactForm";
+import RoadmapDisclosure from "components/site/RoadmapDisclosure";
 
 const roadmap = [
-  { icon: MapPinIcon, title: "Local green discovery", text: "Find lower-impact shops, services, and places around you." },
-  { icon: ChartBarIcon, title: "Footprint tracking", text: "Connect everyday habits to a clearer view of personal impact." },
-  { icon: UserGroupIcon, title: "Community challenges", text: "Build momentum with shared goals and progress worth celebrating." },
-  { icon: ShoppingBagIcon, title: "A considered marketplace", text: "Explore better choices with more context and less greenwash." },
+  {
+    icon: MapPinIcon,
+    title: "Local green discovery",
+    summary: "Find lower-impact shops, services, and places around you.",
+    stage: "Discovery",
+    exploring: "A location-aware directory with useful context about nearby options—not just a list of pins.",
+    question: "How can we build trustworthy local coverage before expanding to more places?",
+  },
+  {
+    icon: ChartBarIcon,
+    title: "Footprint tracking",
+    summary: "Connect everyday habits to a clearer view of personal impact.",
+    stage: "Research and definition",
+    exploring: "Guided inputs, understandable estimates, and feedback that supports reflection without pretending to be exact.",
+    question: "Which inputs are useful enough to act on while staying honest about uncertainty?",
+  },
+  {
+    icon: UserGroupIcon,
+    title: "Community challenges",
+    summary: "Build momentum with shared goals and progress worth celebrating.",
+    stage: "Early concept",
+    exploring: "Small opt-in challenges that encourage shared progress without public pressure or unhelpful comparison.",
+    question: "What moderation and privacy safeguards should exist before people participate together?",
+  },
+  {
+    icon: ShoppingBagIcon,
+    title: "A considered marketplace",
+    summary: "Explore better choices with more context and less greenwash.",
+    stage: "Early concept",
+    exploring: "Product and service discovery with visible criteria, decision context, and no pay-to-rank shortcuts.",
+    question: "Which evidence standards can make recommendations genuinely useful and credible?",
+  },
 ];
 
 function IndexPage() {
@@ -54,17 +83,19 @@ function IndexPage() {
               </p>
             </div>
 
-            <div className="relative mx-auto w-full max-w-lg" aria-hidden="true">
+            <figure className="relative mx-auto w-full max-w-lg">
               <div className="hero-orbit relative aspect-square overflow-hidden rounded-full shadow-soft">
                 <div className="absolute inset-x-[18%] bottom-[18%] rounded-3xl border border-white/25 bg-white/10 p-5 text-white backdrop-blur-md">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-moss">Your direction</p>
                   <p className="mt-2 font-serif text-2xl">Learn. Choose. Keep moving.</p>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -left-2 rounded-full bg-moss px-5 py-3 text-sm font-bold text-ink shadow-lg sm:left-2">
-                Progress over perfection
-              </div>
-            </div>
+              <figcaption className="mt-5 flex items-center gap-3 border-l-2 border-leaf pl-4 text-sm leading-6 text-ink/60">
+                <span className="font-bold text-forest">Guiding principle</span>
+                <span aria-hidden="true">—</span>
+                <span>Progress over perfection</span>
+              </figcaption>
+            </figure>
           </div>
         </section>
 
@@ -99,7 +130,7 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className="section-pad overflow-hidden">
+        <section id="roadmap" className="section-pad overflow-hidden">
           <div className="site-container">
             <div className="max-w-3xl">
               <p className="eyebrow">Coming next</p>
@@ -108,16 +139,9 @@ function IndexPage() {
                 These ideas are the direction of travel. They are not being presented as finished features.
               </p>
             </div>
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-              {roadmap.map(({ icon: Icon, title, text }, index) => (
-                <article key={title} className="editorial-card relative overflow-hidden">
-                  <span className="absolute right-5 top-5 rounded-full bg-stone px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-forest">
-                    Roadmap {index + 1}
-                  </span>
-                  <Icon className="h-8 w-8 text-leaf" aria-hidden="true" />
-                  <h3 className="mt-12 text-xl font-bold">{title}</h3>
-                  <p className="mt-3 leading-7 text-ink/65">{text}</p>
-                </article>
+            <div className="mt-12 grid items-start gap-5 md:grid-cols-2 lg:grid-cols-4">
+              {roadmap.map((item, index) => (
+                <RoadmapDisclosure key={item.title} index={index} {...item} />
               ))}
             </div>
           </div>
