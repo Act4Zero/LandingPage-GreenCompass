@@ -7,18 +7,27 @@ module.exports = {
     extend: {
       colors: {
         white: "#FFFFFF",
+        ink: "#12251B",
+        forest: "#164B35",
+        leaf: "#2F7D4A",
+        moss: "#B8D86B",
+        paper: "#F7F7F0",
+        stone: "#E7E6DC",
         green: {
-          lightest: "#EAFFEA",
-          light: "#B5F1BF",
-          DEFAULT: "#7FB88B",
-          dark: "#4B8359",
-          darkest: "#18512C",
+          lightest: "#EEF5E8",
+          light: "#CBE2BF",
+          DEFAULT: "#2F7D4A",
+          dark: "#164B35",
+          darkest: "#12251B",
         },
         brown: {
           DEFAULT: "#87521B",
         },
-        lightBg: "#FFEEE0",
-        accentLight: "#FFDCC1",
+        lightBg: "#F7F7F0",
+        accentLight: "#DDE8B6",
+      },
+      boxShadow: {
+        soft: "0 24px 70px rgba(18, 37, 27, 0.10)",
       },
     },
     container: {

@@ -33,8 +33,19 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
+    "lint": "eslint src/pages src/components/site src/components/Navbar.js src/components/Footer.js src/components/Meta.js src/components/Chat.js src/util/analytics.js src/util/contact.js src/util/newsletter.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "postbuild": "next-sitemap",
     "start": "next start"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.0.10",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.7"
   }
 }

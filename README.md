@@ -1,109 +1,43 @@
+# Green Compass
 
-## 👉 Get Started
-Install dependencies
-```
-npm install
-```
-Update your `.env` file with values for each environment variable
-```
-API_KEY=AIzaSyBkkFF0XhNZeWuDmOfEhsgdfX1VBG7WTas
-etc ...
-```
+The Green Compass marketing site presents practical sustainability guidance and the product roadmap with an editorial eco-tech visual system.
 
-Run the development server
-```
-npm run dev
-```
-When the above command completes you'll be able to view your website at `http://localhost:3000`
+## Local development
 
-## 🥞 Stack
-This project uses the following libraries and services:
-- Framework - [Next.js](https://nextjs.org)
-- UI Kit - [Tailwind](https://tailwindcss.com)
-- Newsletter - [ConvertKit](https://convertkit.com)
-- Contact Form - [Google Sheets](https://www.google.com/sheets/about/)
-- Analytics - [Google Analytics](https://googleanalytics.com)
-- Hosting - [Vercel](https://vercel.com)
+Install dependencies and start the Pages Router application:
 
-
-## 📚 Guide
-
-<details> <summary><b>Styles</b></summary> <p> Styles are applied within each component using Tailwind classes. You can customize your Tailwind colors, breakpoints, and other high-level values in <code>tailwind.config.js</code> (<a href="https://tailwindcss.com/docs/configuration">docs</a>). You can add new global classes in <code>src/styles/global.css</code> (<a href="https://tailwindcss.com/docs/adding-custom-styles#adding-component-classes">docs</a>). Your template contains Tailwind components designed by <a href="https://tailkit.com">Tailkit</a>. You can find a larger selection of nicely designed components at <a href="https://tailkit.com">tailkit.com</a>. </p> </details>
-
-<details>
-<summary><b>Routing</b></summary>
-<p>
-  This project uses the built-in Next.js router and its convenient <code>useRouter</code> hook. Learn more in the <a target="_blank" href="https://github.com/zeit/next.js/#routing">Next.js docs</a>.
-
-```js
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-
-function MyComponent() {
-  // Get the router object
-  const router = useRouter();
-
-  // Get value from query string (?postId=123) or route param (/:postId)
-  console.log(router.query.postId);
-
-  // Get current pathname
-  console.log(router.pathname);
-
-  // Navigate with the <Link> component or with router.push()
-  return (
-    <div>
-      <Link href="/about" legacyBehavior><a>About</a></Link>
-      <button onClick={(e) => router.push("/about")}>About</button>
-    </div>
-  );
-}
-```
-</p>
-</details>
-
-
-
-
-
-<details>
-<summary><b>Deployment</b></summary>
-<p>
-Install the Vercel CLI
-
-```
-npm install -g vercel
-```
-Link codebase to a Vercel project
-
-```
-vercel link
-```
-Add each variable from your `.env` file to your Vercel project, including the ones prefixed with "NEXT_PUBLIC\_". You'll be prompted to enter its value and choose one or more environments (development, preview, or production). See <a target="_blank" href="https://vercel.com/docs/environment-variables">Vercel Environment Variables</a> to learn more about how this works, how to update values through the Vercel UI, and how to use secrets for extra security.
-
-```
-vercel env add plain VARIABLE_NAME
+```bash
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-Run this command to deploy to a unique preview URL. Your "preview" environment variables will be used.
+Open [http://localhost:3000](http://localhost:3000).
 
+Copy `.env.example` to `.env.local` and configure only the integrations needed in your environment. Newsletter and contact provider credentials are server-only:
+
+```text
+KIT_FORM_ID=
+KIT_API_KEY=
+SHEETS_ENDPOINT=
+SHEETS_TAB_ID=
 ```
-vercel
+
+Public analytics and chat identifiers remain optional. Do not prefix provider secrets with `NEXT_PUBLIC_`.
+
+## Quality checks
+
+```bash
+pnpm lint
+pnpm test
+pnpm build
 ```
 
-Run this command to deploy to your production domain. Your "production" environment variables will be used.
+The production build runs `next-sitemap` after Next.js compilation.
 
-```
-vercel --prod
-```
+## Stack
 
-See <a target="_blank" href="https://vercel.com/docs/platform/deployments">Vercel Deployments</a> for more details.
-</p>
-</details>
-
-<details>
-<summary><b>Other</b></summary>
-<p>
-  This project was created using <a href="https://divjoy.com?ref=readme_other">Divjoy</a>, the React codebase generator. You can find more info in the <a href="https://docs.divjoy.com">Divjoy Docs</a>.
-</p>
-</details>
-  
+- Next.js Pages Router and React
+- Tailwind CSS
+- Vitest and React Testing Library
+- Kit newsletter integration via `/api/newsletter`
+- Google Sheets-compatible contact integration via `/api/contact`

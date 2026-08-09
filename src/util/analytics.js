@@ -2,25 +2,15 @@ import Analytics from "analytics";
 import googleAnalyticsPlugin from "@analytics/google-analytics";
 import Router from "next/router";
 
-// Initialize analytics and plugins
-// Documentation: https://getanalytics.io
+const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const analytics = Analytics({
-  debug: process.env.NODE_ENV !== "production",
-  plugins: [
-    googleAnalyticsPlugin({
-      measurementIds: [process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID],
-    }),
-  ],
+  debug: false,
+  plugins: measurementId ? [googleAnalyticsPlugin({ measurementIds: [measurementId] })] : [],
 });
 
-// Track initial pageview
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && measurementId) {
   analytics.page();
+  Router.events.on("routeChangeComplete", () => analytics.page());
 }
-
-// Track pageview on route change
-Router.events.on("routeChangeComplete", (url) => {
-  analytics.page();
-});
 
 export default analytics;
