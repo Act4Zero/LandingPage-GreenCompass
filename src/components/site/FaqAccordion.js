@@ -5,7 +5,7 @@ export const faqItems = [
   {
     question: "What can I use Green Compass for today?",
     answer:
-      "Today, Green Compass is a growing knowledge hub with curated sustainability articles and practical guidance. More interactive tools are being developed and are labeled clearly on this site.",
+      "Green Compass includes habits and impact estimates, a personal ecosystem, personalized learning, sustainable places and events, Community, and a pilot Marketplace. Some personal and interactive experiences require an account.",
   },
   {
     question: "Do I need to change everything at once?",
@@ -18,9 +18,9 @@ export const faqItems = [
       "No. The figures shown on this site come from independent research into carbon-footprint tracking apps. They describe that study's results and are not a promise of individual outcomes.",
   },
   {
-    question: "What is coming next?",
+    question: "Is every marketplace feature available?",
     answer:
-      "The roadmap includes local green discovery, footprint tracking, community challenges, and a more considered marketplace. These ideas are presented as upcoming—not as finished features.",
+      "Marketplace discovery is being introduced through a staged pilot. Product catalogues and checkout may be limited while partners, evidence, and certifications are reviewed.",
   },
   {
     question: "How can I share feedback?",

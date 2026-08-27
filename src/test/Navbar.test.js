@@ -7,6 +7,7 @@ describe("Navbar", () => {
   it("exposes the primary destinations and an accessible mobile menu", () => {
     render(<Navbar />);
 
+    expect(screen.getAllByRole("link", { name: "Features" }).length).toBeGreaterThan(0);
     expect(screen.getAllByRole("link", { name: "How it works" }).length).toBeGreaterThan(0);
     expect(screen.getAllByRole("link", { name: "Research" }).length).toBeGreaterThan(0);
     expect(screen.getByRole("link", { name: "Skip to content" })).toHaveAttribute("href", "#main-content");
