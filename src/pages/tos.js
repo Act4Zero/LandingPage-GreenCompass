@@ -2,113 +2,70 @@ import React from "react";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
+import { useLanguage } from "context/LanguageContext";
 
-const TermsOfService = () => {
+const content = {
+  en: {
+    metaTitle: "Terms of Service - Green Compass", metaDescription: "Review the terms for using Green Compass, including your rights, responsibilities, and service limitations.",
+    title: "Terms of Service", effective: "Effective Date: January 16, 2025", contents: "Contents",
+    sections: [
+      ["introduction", "1. Introduction", "By accessing or using Green Compass websites and services, you agree to these Terms of Service. If you do not agree, do not use our services."],
+      ["eligibility", "2. Eligibility", "You must be at least 13 years old to use our services. By using the platform, you confirm that you meet this requirement."],
+      ["user-obligations", "3. User Obligations", "You agree to use Green Compass responsibly and in compliance with all applicable laws and regulations."],
+      ["acceptable-use", "4. Acceptable Use", "You may not use Green Compass for unlawful purposes, including spamming, hacking, abuse, or spreading misinformation."],
+      ["intellectual-property", "5. Intellectual Property", "Green Compass content, including logos, text, and images, is protected intellectual property. Unauthorized use is prohibited."],
+      ["disclaimers", "6. Disclaimers and Limitation of Liability", "Services are provided as is without a guarantee of uninterrupted access. To the extent permitted by law, Green Compass is not liable for damage caused by use of or inability to use the platform."],
+      ["termination", "7. Termination", "We may suspend or terminate accounts that violate these terms."],
+      ["governing-law", "8. Governing Law", "These terms are governed by the applicable laws identified by Green Compass, without regard to conflict-of-law principles."],
+      ["changes", "9. Changes to Terms", "We may update these terms. Continued use of Green Compass after a change means you accept the updated terms."],
+      ["contact", "10. Contact Us", "For questions about these terms, contact support@greencompass.app."],
+    ],
+  },
+  bg: {
+    metaTitle: "Условия за ползване - Green Compass", metaDescription: "Прегледай условията за използване на Green Compass, включително правата, отговорностите и ограниченията на услугата.",
+    title: "Условия за ползване", effective: "В сила от: 16 януари 2025 г.", contents: "Съдържание",
+    sections: [
+      ["introduction", "1. Въведение", "С достъпа до сайтовете и услугите на Green Compass приемаш тези Условия за ползване. Ако не си съгласен с тях, не използвай услугите ни."],
+      ["eligibility", "2. Допустимост", "Трябва да си навършил поне 13 години, за да използваш услугите. С използването на платформата потвърждаваш, че отговаряш на това изискване."],
+      ["user-obligations", "3. Задължения на потребителя", "Съгласяваш се да използваш Green Compass отговорно и в съответствие с всички приложими закони и разпоредби."],
+      ["acceptable-use", "4. Допустима употреба", "Не можеш да използваш Green Compass за незаконни цели, включително спам, хакерски действия, злоупотреба или разпространяване на невярна информация."],
+      ["intellectual-property", "5. Интелектуална собственост", "Съдържанието на Green Compass, включително лога, текстове и изображения, е защитена интелектуална собственост. Неразрешеното използване е забранено."],
+      ["disclaimers", "6. Отказ от гаранции и ограничение на отговорността", "Услугите се предоставят във вида, в който са, без гаранция за непрекъснат достъп. В допустимата от закона степен Green Compass не носи отговорност за вреди от използването или невъзможността за използване на платформата."],
+      ["termination", "7. Прекратяване", "Може да спрем временно или окончателно профили, които нарушават тези условия."],
+      ["governing-law", "8. Приложимо право", "Тези условия се уреждат от приложимото право, посочено от Green Compass, без прилагане на принципите за стълкновение на закони."],
+      ["changes", "9. Промени в условията", "Може да актуализираме тези условия. Продължаването на използването на Green Compass след промяна означава, че приемаш актуализираните условия."],
+      ["contact", "10. Контакт", "За въпроси относно тези условия пиши на support@greencompass.app."],
+    ],
+  },
+};
+
+function TermsOfService() {
+  const { language } = useLanguage();
+  const copy = content[language];
+
   return (
     <>
-      <Meta
-        title="Terms of Service - Green Compass"
-        description="Review the terms and conditions for using Green Compass. Understand your rights, responsibilities, and limitations while using our services."
-      />
+      <Meta title={copy.metaTitle} description={copy.metaDescription} />
       <Navbar />
       <main id="main-content" className="legal-page">
-        <h1 className="text-4xl font-bold text-green-dark mb-8">Terms of Service</h1>
-        <p className="text-sm text-gray-600 mb-6">Effective Date: January 16, 2025</p>
-
-        {/* Table of Contents */}
-        <nav className="mb-12">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">Contents</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li><a href="#introduction" className="hover:text-green-600">1. Introduction</a></li>
-            <li><a href="#eligibility" className="hover:text-green-600">2. Eligibility</a></li>
-            <li><a href="#user-obligations" className="hover:text-green-600">3. User Obligations</a></li>
-            <li><a href="#acceptable-use" className="hover:text-green-600">4. Acceptable Use</a></li>
-            <li><a href="#intellectual-property" className="hover:text-green-600">5. Intellectual Property</a></li>
-            <li><a href="#disclaimers" className="hover:text-green-600">6. Disclaimers & Limitation of Liability</a></li>
-            <li><a href="#termination" className="hover:text-green-600">7. Termination</a></li>
-            <li><a href="#governing-law" className="hover:text-green-600">8. Governing Law</a></li>
-            <li><a href="#changes" className="hover:text-green-600">9. Changes to Terms</a></li>
-            <li><a href="#contact" className="hover:text-green-600">10. Contact Us</a></li>
+        <h1 className="mb-8 text-4xl font-bold text-green-dark">{copy.title}</h1>
+        <p className="mb-6 text-sm text-gray-600">{copy.effective}</p>
+        <nav className="mb-12" aria-label={copy.contents}>
+          <h2 className="mb-4 text-2xl font-semibold text-green-dark">{copy.contents}</h2>
+          <ul className="list-inside list-disc space-y-2 text-gray-700">
+            {copy.sections.map(([id, title]) => <li key={id}><a href={`#${id}`} className="hover:text-green-600">{title}</a></li>)}
           </ul>
         </nav>
-
-        {/* Sections */}
-        <section id="introduction" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">1. Introduction</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Welcome to Green Compass (&ldquo;we,&rdquo; &ldquo;our,&rdquo; &ldquo;us&rdquo;). By accessing or using our website and services, you agree to be bound by these Terms of Service.
-            If you do not agree to these terms, please do not use our services.
-          </p>
-        </section>
-
-        <section id="eligibility" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">2. Eligibility</h2>
-          <p className="text-gray-700 leading-relaxed">
-            You must be at least 13 years old to use our services. By using our platform, you confirm that you meet this requirement.
-          </p>
-        </section>
-
-        <section id="user-obligations" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">3. User Obligations</h2>
-          <p className="text-gray-700 leading-relaxed">
-            You agree to use Green Compass responsibly and in compliance with all applicable laws and regulations.
-          </p>
-        </section>
-
-        <section id="acceptable-use" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">4. Acceptable Use</h2>
-          <p className="text-gray-700 leading-relaxed">
-            You may not use Green Compass for unlawful purposes, including but not limited to spamming, hacking, or spreading misinformation.
-          </p>
-        </section>
-
-        <section id="intellectual-property" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">5. Intellectual Property</h2>
-          <p className="text-gray-700 leading-relaxed">
-            All content, including logos, text, and images, belongs to Green Compass. Unauthorized use of our intellectual property is strictly prohibited.
-          </p>
-        </section>
-
-        <section id="disclaimers" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">6. Disclaimers & Limitation of Liability</h2>
-          <p className="text-gray-700 leading-relaxed">
-            We provide our services &ldquo;as is&rdquo; and do not guarantee uninterrupted access. We are not liable for any damages resulting from use or inability to use the platform.
-          </p>
-        </section>
-
-        <section id="termination" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">7. Termination</h2>
-          <p className="text-gray-700 leading-relaxed">
-            We reserve the right to terminate or suspend accounts that violate these terms.
-          </p>
-        </section>
-
-        <section id="governing-law" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">8. Governing Law</h2>
-          {/* Legal review required: the repository does not specify a jurisdiction. */}
-          <p className="text-gray-700 leading-relaxed">
-            These terms are governed by the laws of [Your Country/State], without regard to its conflict of law principles.
-          </p>
-        </section>
-
-        <section id="changes" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">9. Changes to Terms</h2>
-          <p className="text-gray-700 leading-relaxed">
-            We may update these Terms of Service from time to time. Continued use of Green Compass after changes constitutes acceptance of the new terms.
-          </p>
-        </section>
-
-        <section id="contact" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">10. Contact Us</h2>
-          <p className="text-gray-700 leading-relaxed">
-            If you have any questions, contact us at:
-            <a href="mailto:support@greencompass.app" className="text-green-600 underline"> support@greencompass.app</a>.
-          </p>
-        </section>
+        {copy.sections.map(([id, title, paragraph]) => (
+          <section id={id} key={id} className="mb-8">
+            <h2 className="mb-4 text-2xl font-semibold text-green-dark">{title}</h2>
+            <p className="leading-relaxed text-gray-700">{paragraph}</p>
+          </section>
+        ))}
       </main>
       <Footer />
     </>
   );
-};
+}
 
 export default TermsOfService;

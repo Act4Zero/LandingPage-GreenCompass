@@ -2,281 +2,77 @@ import React from "react";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
+import { useLanguage } from "context/LanguageContext";
 
-const Privacy = () => {
+const content = {
+  en: {
+    metaTitle: "Privacy Policy - Green Compass",
+    metaDescription: "Understand how Green Compass collects, uses, and protects your personal information, your rights, and our commitment to privacy.",
+    title: "Privacy Policy", effective: "Effective Date: January 16, 2025", contents: "Contents",
+    sections: [
+      ["introduction", "1. Introduction", ["Welcome to Green Compass (we, our, us). Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website, use our services, or communicate with us.", "By using our website, you agree to the terms outlined in this Privacy Policy."]],
+      ["information-collection", "2. Information We Collect", ["We collect information you provide voluntarily, including your name, email address, and message when you use our contact form, and your email address when you subscribe to our newsletter.", "We use Google Analytics to collect anonymized information about visits, such as pages viewed, time spent, and general geographic location, so we can improve our services."]],
+      ["information-use", "3. How We Use Your Information", ["We use your information to respond to inquiries, provide support, send subscribed newsletters and updates, analyze website use, improve our services, and comply with legal obligations."]],
+      ["information-sharing", "4. Information Sharing", ["We do not sell, trade, or rent your personal information. We may share data with trusted service providers, such as Google Analytics, when needed to operate and improve the website.", "We may disclose information to authorities when required by law or necessary to protect our legal rights."]],
+      ["data-retention", "5. Data Retention", ["We keep personal information only for as long as necessary to fulfill the purposes described in this policy or as required by law."]],
+      ["your-rights", "6. Your Rights", ["You may request access to your personal information, correction of inaccurate information, deletion of your data, or withdrawal from newsletters and marketing communications.", "To exercise these rights, contact privacy@greencompass.app."]],
+      ["security", "7. Security", ["We use industry-standard security measures to protect personal information. No online system is entirely secure, so absolute security cannot be guaranteed."]],
+      ["third-party-links", "8. Third-Party Links", ["Our website may link to external websites. We are not responsible for their privacy practices or content. Review their privacy policies before providing personal information."]],
+      ["policy-changes", "9. Changes to This Privacy Policy", ["We may update this policy periodically. Changes will appear on this page with an updated effective date. Continued use of the website after a change means you accept the updated policy."]],
+      ["contact", "10. Contact Us", ["For questions or concerns about this Privacy Policy, contact privacy@greencompass.app."]],
+    ],
+    closing: "Thank you for trusting Green Compass. Your privacy matters to us.",
+  },
+  bg: {
+    metaTitle: "Политика за поверителност - Green Compass",
+    metaDescription: "Научи как Green Compass събира, използва и защитава личната ти информация, какви са правата ти и как се грижим за поверителността.",
+    title: "Политика за поверителност", effective: "В сила от: 16 януари 2025 г.", contents: "Съдържание",
+    sections: [
+      ["introduction", "1. Въведение", ["Добре дошли в Green Compass (ние, наш, нас). Поверителността ти е важна за нас. Тази политика обяснява как събираме, използваме и защитаваме информацията, когато посещаваш сайта, използваш услугите или се свързваш с нас.", "С използването на сайта приемаш условията в тази Политика за поверителност."]],
+      ["information-collection", "2. Информация, която събираме", ["Събираме информацията, която предоставяш доброволно, включително име, имейл адрес и съобщение чрез контактната форма, както и имейл адрес при абонамент за новини.", "Използваме Google Analytics за анонимизирана информация за посещенията, като разгледани страници, време в сайта и общо географско местоположение, за да подобряваме услугите си."]],
+      ["information-use", "3. Как използваме информацията", ["Използваме информацията, за да отговаряме на запитвания, да предоставяме поддръжка, да изпращаме заявени новини, да анализираме използването на сайта, да подобряваме услугите и да изпълняваме законови задължения."]],
+      ["information-sharing", "4. Споделяне на информация", ["Не продаваме, не търгуваме и не отдаваме личната ти информация. Може да споделяме данни с доверени доставчици, като Google Analytics, когато това е необходимо за работата и подобряването на сайта.", "Може да разкрием информация пред органи, когато законът го изисква или когато това е необходимо за защита на законните ни права."]],
+      ["data-retention", "5. Съхранение на данните", ["Пазим личната информация само толкова дълго, колкото е необходимо за целите, описани в тази политика, или според изискванията на закона."]],
+      ["your-rights", "6. Твоите права", ["Можеш да поискаш достъп до личната си информация, корекция на неточни данни, изтриване на данните или отписване от новини и маркетингови съобщения.", "За да упражниш тези права, пиши на privacy@greencompass.app."]],
+      ["security", "7. Сигурност", ["Използваме стандартни за индустрията мерки за защита на личната информация. Никоя онлайн система не е напълно сигурна, затова абсолютна сигурност не може да бъде гарантирана."]],
+      ["third-party-links", "8. Връзки към трети страни", ["Сайтът може да съдържа връзки към външни сайтове. Не носим отговорност за техните практики за поверителност или съдържание. Прегледай политиките им, преди да предоставиш лични данни."]],
+      ["policy-changes", "9. Промени в политиката", ["Може периодично да актуализираме тази политика. Промените ще бъдат публикувани тук с нова дата на влизане в сила. Продължаването на използването на сайта означава приемане на актуализираната политика."]],
+      ["contact", "10. Контакт", ["За въпроси или притеснения относно тази политика пиши на privacy@greencompass.app."]],
+    ],
+    closing: "Благодарим ти за доверието в Green Compass. Поверителността ти е важна за нас.",
+  },
+};
+
+function Privacy() {
+  const { language } = useLanguage();
+  const copy = content[language];
+
   return (
     <>
-      <Meta
-        title="Privacy Policy - Green Compass"
-        description="Understand how Green Compass collects, uses, and protects your personal information. Learn about your rights and our commitment to privacy."
-      />
+      <Meta title={copy.metaTitle} description={copy.metaDescription} />
       <Navbar />
       <main id="main-content" className="legal-page">
-        <h1 className="text-4xl font-bold text-green-dark mb-8">
-          Privacy Policy
-        </h1>
-        <p className="text-sm text-gray-600 mb-6">
-          Effective Date: January 16, 2025
-        </p>
-
-        {/* Table of Contents */}
-        <nav className="mb-12">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            Contents
-          </h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>
-              <a href="#introduction" className="hover:text-green-600">
-                1. Introduction
-              </a>
-            </li>
-            <li>
-              <a
-                href="#information-collection"
-                className="hover:text-green-600"
-              >
-                2. Information We Collect
-              </a>
-            </li>
-            <li>
-              <a href="#information-use" className="hover:text-green-600">
-                3. How We Use Your Information
-              </a>
-            </li>
-            <li>
-              <a href="#information-sharing" className="hover:text-green-600">
-                4. Information Sharing
-              </a>
-            </li>
-            <li>
-              <a href="#data-retention" className="hover:text-green-600">
-                5. Data Retention
-              </a>
-            </li>
-            <li>
-              <a href="#your-rights" className="hover:text-green-600">
-                6. Your Rights
-              </a>
-            </li>
-            <li>
-              <a href="#security" className="hover:text-green-600">
-                7. Security
-              </a>
-            </li>
-            <li>
-              <a href="#third-party-links" className="hover:text-green-600">
-                8. Third-Party Links
-              </a>
-            </li>
-            <li>
-              <a href="#policy-changes" className="hover:text-green-600">
-                9. Changes to This Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-green-600">
-                10. Contact Us
-              </a>
-            </li>
+        <h1 className="mb-8 text-4xl font-bold text-green-dark">{copy.title}</h1>
+        <p className="mb-6 text-sm text-gray-600">{copy.effective}</p>
+        <nav className="mb-12" aria-label={copy.contents}>
+          <h2 className="mb-4 text-2xl font-semibold text-green-dark">{copy.contents}</h2>
+          <ul className="list-inside list-disc space-y-2 text-gray-700">
+            {copy.sections.map(([id, title]) => <li key={id}><a href={`#${id}`} className="hover:text-green-600">{title}</a></li>)}
           </ul>
         </nav>
-
-        {/* Sections */}
-        <section id="introduction" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            1. Introduction
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            Welcome to Green Compass (&ldquo;we,&rdquo; &ldquo;our,&rdquo; &ldquo;us&rdquo;). Your privacy is
-            important to us, and we are committed to protecting it. This Privacy
-            Policy explains how we collect, use, and safeguard your information
-            when you visit our website, interact with our services, or
-            communicate with us.
-            <br />
-            <br />
-            By using our website, you agree to the terms outlined in this
-            Privacy Policy.
-          </p>
-        </section>
-
-        <section id="information-collection" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            2. Information We Collect
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            We collect the following types of information:
-          </p>
-          <h3 className="text-xl font-medium text-green-dark mb-2">
-            <br></br>
-            2.1 Information You Provide Voluntarily
-          </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>
-              <strong>Contact Form Data:</strong> When you fill out our contact
-              form, we collect your name, email address, and any other details
-              you provide.
-            </li>
-            <li>
-              <strong>Newsletter Subscription:</strong> When subscribing to our
-              newsletter, we collect your email address.
-            </li>
-          </ul>
-          <h3 className="text-xl font-medium text-green-dark mb-2">
-            2.2 Automatically Collected Information
-          </h3>
-          <p className="text-gray-700 leading-relaxed">
-            We use Google Analytics to collect information about your visit to
-            our site, such as pages viewed, time spent, and general geographic
-            location. This information is anonymized and used to improve our
-            services.
-          </p>
-        </section>
-
-        <section id="information-use" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            3. How We Use Your Information
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            We use your information for the following purposes:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>To respond to inquiries and provide customer support.</li>
-            <li>To send newsletters and updates, if you have subscribed.</li>
-            <li>To analyze website usage and improve our services.</li>
-            <li>To comply with legal obligations.</li>
-          </ul>
-        </section>
-
-        <section id="information-sharing" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            4. Information Sharing
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            We do not sell, trade, or rent your personal information to others.
-            However, we may share your information with third parties in the
-            following circumstances:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <br></br>
-            <li>
-              <strong>Service Providers:</strong> We may share data with trusted
-              third parties, such as Google Analytics, to help us operate and
-              improve our website.
-            </li>
-            <li>
-              <strong>Legal Compliance:</strong> If required by law or to
-              protect our legal rights, we may disclose your information to
-              authorities.
-            </li>
-          </ul>
-        </section>
-
-        <section id="data-retention" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            5. Data Retention
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            We retain your personal information only as long as necessary to
-            fulfill the purposes outlined in this Privacy Policy or as required
-            by law.
-          </p>
-        </section>
-
-        <section id="your-rights" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            6. Your Rights
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            You have the right to:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>
-              <strong>Access: </strong>Request access to the personal
-              information we hold about you.
-            </li>
-            <li>
-              <strong>Correction: </strong> Request corrections to your personal
-              information.
-            </li>
-            <li>
-              <strong>Deletion: </strong>Request the deletion of your personal
-              data.
-            </li>
-            <li>
-              <strong>Opt-Out: </strong> Unsubscribe from our newsletter or
-              marketing communications at any time.
-            </li>
-            <p className="text-gray-700 leading-relaxed">
-              <br></br>To exercise these rights, contact us at:
-              <a
-                href="mailto:privacy@greencompass.app"
-                className="text-green-600 underline"
-              >
-                privacy@greencompass.app
-              </a>
-            </p>
-          </ul>
-        </section>
-
-        <section id="security" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            7. Security
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            We implement industry-standard security measures to protect your
-            personal information. However, no online system is entirely secure,
-            and we cannot guarantee absolute security.
-          </p>
-        </section>
-
-        <section id="third-party-links" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            8. Third-Party Links
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            Our website may contain links to external websites. We are not
-            responsible for the privacy practices or content of these
-            third-party sites. Please review their privacy policies before
-            providing any personal information.
-          </p>
-        </section>
-
-        <section id="policy-changes" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            9. Changes to This Privacy Policy
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            We may update this Privacy Policy periodically. Any changes will be
-            posted on this page with an updated effective date. Your continued
-            use of our website after such changes constitutes acceptance of the
-            updated policy.
-          </p>
-        </section>
-
-        <section id="contact" className="mb-8">
-          <h2 className="text-2xl font-semibold text-green-dark mb-4">
-            10. Contact Us
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            If you have any questions or concerns about this Privacy Policy,
-            please contact us at:
-            <a
-              href="mailto:privacy@greencompass.app"
-              className="text-green-600 underline"
-            >
-              privacy@greencompass.app
-            </a>
-            .
-          </p>
-        </section>
-
-        <p className="text-gray-700 leading-relaxed">
-          Thank you for trusting Green Compass. Your privacy matters to us.
-        </p>
+        {copy.sections.map(([id, title, paragraphs]) => (
+          <section id={id} key={id} className="mb-8">
+            <h2 className="mb-4 text-2xl font-semibold text-green-dark">{title}</h2>
+            <div className="space-y-4 text-gray-700">
+              {paragraphs.map((paragraph) => <p key={paragraph} className="leading-relaxed">{paragraph}</p>)}
+            </div>
+          </section>
+        ))}
+        <p className="leading-relaxed text-gray-700">{copy.closing}</p>
       </main>
       <Footer />
     </>
   );
-};
+}
 
 export default Privacy;

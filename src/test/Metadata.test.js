@@ -8,9 +8,9 @@ import PrivacyPage from "../pages/privacy";
 import TermsPage from "../pages/tos";
 
 const routes = [
-  ["/", IndexPage, "Green Compass — Make greener choices with less guesswork"],
-  ["/explainer", ExplainerPage, "How Green Compass works — From awareness to action"],
-  ["/research", ResearchPage, "Research — Carbon-footprint feedback and behavior"],
+  ["/", IndexPage, "Green Compass: Turn sustainable intent into everyday progress"],
+  ["/explainer", ExplainerPage, "How Green Compass works: From awareness to action"],
+  ["/research", ResearchPage, "Research & methodology: Green Compass carbon clarity"],
   ["/privacy", PrivacyPage, "Privacy Policy - Green Compass"],
   ["/tos", TermsPage, "Terms of Service - Green Compass"],
 ];

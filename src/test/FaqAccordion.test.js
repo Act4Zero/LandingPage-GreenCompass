@@ -11,7 +11,7 @@ describe("FaqAccordion", () => {
     expect(question).toHaveAttribute("aria-expanded", "false");
     fireEvent.click(question);
     expect(question).toHaveAttribute("aria-expanded", "true");
-    expect(screen.getByText(/growing knowledge hub/i)).toBeVisible();
+    expect(screen.getByText(/habits and impact estimates/i)).toBeVisible();
     fireEvent.click(question);
     expect(question).toHaveAttribute("aria-expanded", "false");
   });

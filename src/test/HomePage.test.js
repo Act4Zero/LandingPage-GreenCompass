@@ -5,18 +5,18 @@ import { describe, expect, it } from "vitest";
 import IndexPage from "../pages/index";
 
 describe("Home page product framing", () => {
-  it("keeps the hero visible and separates current capabilities from the roadmap", () => {
+  it("keeps the hero visible and clearly labels current product capabilities", () => {
     delete globalThis.IntersectionObserver;
     render(<IndexPage />);
-    const hero = screen.getByRole("heading", { level: 1, name: /make greener choices/i });
+    const hero = screen.getByRole("heading", { level: 1, name: /turn good intentions/i });
     expect(hero).toBeVisible();
     expect(hero.className).not.toContain("opacity-0");
-    expect(screen.getByText("Available today")).toBeVisible();
-    expect(screen.getByText("Coming next")).toBeVisible();
+    expect(screen.getAllByText("In the app").length).toBeGreaterThan(0);
+    expect(screen.getByText("Sign-in required")).toBeVisible();
+    expect(screen.getByText("Pilot rollout")).toBeVisible();
     expect(screen.getByText(/not a promise of what Green Compass will achieve/i)).toBeVisible();
-    expect(screen.getByText("Guiding principle")).toBeVisible();
-    expect(screen.getByText("Progress over perfection").closest("a, button")).toBeNull();
-  });
+    expect(screen.getByText("One connected journey")).toBeVisible();
+  }, 10000);
 
   it("disables non-essential motion when reduced motion is requested", () => {
     const styles = readFileSync("src/styles/global.css", "utf8");
