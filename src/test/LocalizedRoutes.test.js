@@ -6,6 +6,7 @@ import ExplainerPage from "../pages/explainer";
 import ResearchPage from "../pages/research";
 import PrivacyPage from "../pages/privacy";
 import TermsPage from "../pages/tos";
+import SofiaPage from "../pages/sofia";
 import { LanguageProvider } from "context/LanguageContext";
 
 const routes = [
@@ -14,6 +15,7 @@ const routes = [
   [ResearchPage, /Въглеродната яснота започва/i],
   [PrivacyPage, /Политика за поверителност/i],
   [TermsPage, /Условия за ползване/i],
+  [SofiaPage, /От устойчивите политики до практичните решения/i],
 ];
 
 describe("Bulgarian site routes", () => {
