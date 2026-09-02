@@ -10,14 +10,15 @@ const socialLinks = [
   ["X", "https://x.com/GreenCompassApp"],
 ];
 
-function Footer() {
+function Footer({ forceLanguage }) {
   const { language } = useLanguage();
-  const copy = language === "bg" ? {
+  const activeLanguage = forceLanguage || language;
+  const copy = activeLanguage === "bg" ? {
     home: "Начало на Green Compass",
     description: "Едно свързано място за учене, действие, разбиране на въздействието и устойчив напредък заедно с други хора.",
     explore: "Разгледай",
     nav: "Навигация в долната част",
-    links: [["/#features", "Функции"], ["/explainer", "Как работи"], ["/research", "Изследвания"], ["/#faq", "Въпроси"], ["/privacy", "Поверителност"], ["/tos", "Условия"]],
+    links: [["/#features", "Функции"], ["/explainer", "Как работи"], ["/research", "Изследвания"], ["/sofia", "За София"], ["/#faq", "Въпроси"], ["/privacy", "Поверителност"], ["/tos", "Условия"]],
     follow: "Последвай ни",
     rights: "Всички права запазени.",
     principle: "Създадено за напредък, не за съвършенство.",
@@ -26,7 +27,7 @@ function Footer() {
     description: "One connected place to learn, act, understand your impact, and grow sustainable progress with others.",
     explore: "Explore",
     nav: "Footer navigation",
-    links: [["/#features", "Features"], ["/explainer", "How it works"], ["/research", "Research"], ["/#faq", "FAQ"], ["/privacy", "Privacy"], ["/tos", "Terms"]],
+    links: [["/#features", "Features"], ["/explainer", "How it works"], ["/research", "Research"], ["/sofia", "For Sofia"], ["/#faq", "FAQ"], ["/privacy", "Privacy"], ["/tos", "Terms"]],
     follow: "Follow along",
     rights: "All rights reserved.",
     principle: "Built for progress, not perfection.",

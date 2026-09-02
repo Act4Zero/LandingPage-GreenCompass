@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://greencompass.app",
+  siteUrl: "https://www.greencompass.app",
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.7,

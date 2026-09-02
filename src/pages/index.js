@@ -53,9 +53,9 @@ const features = [
   },
   {
     icon: ShoppingBagIcon,
-    status: "Pilot rollout",
-    title: "Verified marketplace",
-    summary: "Marketplace navigation stays visible on desktop and mobile. Product availability still depends on the configured partner catalogue and Supabase backend.",
+    status: "Partner onboarding",
+    title: "Marketplace for local impact",
+    summary: "A marketplace built to give Bulgarian bio-producers and responsible local businesses a trusted place to present their products. Public offers appear after partner and product claims are reviewed.",
   },
 ];
 
@@ -65,7 +65,7 @@ const featuresBg = [
   { icon: MapPinIcon, status: "Изисква вход", title: "Карта на устойчивостта", summary: "Разглеждай проверени места, събития и екотурове в България чрез интерактивен 3D глобус и публичен каталог." },
   { icon: BookOpenIcon, status: "В приложението", title: "Персонализиран център за знания", summary: "Следвай персонализирани пътеки със статии, тестове, мисии, симулации и уебинари. Цялото приложение и навигацията са налични на български и английски." },
   { icon: UserGroupIcon, status: "В приложението", title: "Действие с общността", summary: "Секциите на общността остават достъпни и при проблем с публикациите, а предизвикателствата, групите, общите цели, класациите, точките и значките са лесни за откриване." },
-  { icon: ShoppingBagIcon, status: "Пилотно внедряване", title: "Проверен marketplace", summary: "Marketplace е винаги видим на компютър и телефон. Наличността на продуктите зависи от конфигурирания партньорски каталог и Supabase." },
+  { icon: ShoppingBagIcon, status: "Включване на партньори", title: "Marketplace с местна стойност", summary: "Marketplace е създаден, за да дава видимост на български биопроизводители и отговорни местни бизнеси. Публични предложения се добавят след проверка на партньора и продуктовите твърдения." },
 ];
 
 const faqItems = [
@@ -87,7 +87,7 @@ const faqItems = [
   },
   {
     question: "Can I buy products or offsets in the app?",
-    answer: "Marketplace discovery is being introduced through a staged pilot. Product catalogues and checkout may be limited while partners and evidence are reviewed. Offsets are only shown as confirmed when a provider has confirmed them.",
+    answer: "Marketplace infrastructure is built to support Bulgarian bio-producers and responsible local businesses. Product catalogues and checkout open as real partners, certifications, and evidence complete review. Offsets are shown as confirmed only after provider confirmation.",
   },
   {
     question: "Why does Community ask me to sign in?",
@@ -100,7 +100,7 @@ const faqItemsBg = [
   { question: "Точни ли са въглеродните стойности?", answer: "Не. Green Compass показва ориентировъчни оценки според версионирана методология. Емисиите, избегнатото въздействие, потвърдените от доставчик компенсации и оставащият баланс се показват отделно." },
   { question: "Картата налична ли е навсякъде?", answer: "Първият проверен каталог е фокусиран върху България. Публичният сайт предлага преглед, а интерактивният 3D глобус и персонализираното преживяване изискват вход." },
   { question: "Мога ли да използвам Green Compass на български?", answer: "Да. Всяка страница, меню и функция е налична на български и английски. Избраният език остава един и същ в цялото приложение." },
-  { question: "Мога ли да купувам продукти или компенсации в приложението?", answer: "Marketplace се въвежда поетапно. Каталогът и плащането може да са ограничени, докато партньорите и доказателствата се проверяват. Компенсациите се показват като потвърдени само след потвърждение от доставчик." },
+  { question: "Мога ли да купувам продукти или компенсации в приложението?", answer: "Marketplace е разработен с цел да подкрепя български биопроизводители и отговорни местни бизнеси. Каталогът и плащането се отварят с включването на реални партньори и след проверка на сертификатите и доказателствата. Компенсациите се показват като потвърдени само след потвърждение от доставчик." },
   { question: "Защо Community изисква вход?", answer: "Участието и личните данни в Community изискват профил. След вход приложението те връща към избраното място, а функционалните секции остават видими дори ако публикациите не се заредят." },
 ];
 

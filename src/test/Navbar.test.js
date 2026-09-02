@@ -10,6 +10,7 @@ describe("Navbar", () => {
     expect(screen.getAllByRole("link", { name: "Features" }).length).toBeGreaterThan(0);
     expect(screen.getAllByRole("link", { name: "How it works" }).length).toBeGreaterThan(0);
     expect(screen.getAllByRole("link", { name: "Research" }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole("link", { name: "For Sofia" }).length).toBeGreaterThan(0);
     expect(screen.getByRole("link", { name: "Skip to content" })).toHaveAttribute("href", "#main-content");
 
     const toggle = screen.getByRole("button", { name: "Open navigation" });

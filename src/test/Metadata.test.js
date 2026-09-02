@@ -6,6 +6,7 @@ import ExplainerPage from "../pages/explainer";
 import ResearchPage from "../pages/research";
 import PrivacyPage from "../pages/privacy";
 import TermsPage from "../pages/tos";
+import SofiaPage from "../pages/sofia";
 
 const routes = [
   ["/", IndexPage, "Green Compass: Turn sustainable intent into everyday progress"],
@@ -13,6 +14,7 @@ const routes = [
   ["/research", ResearchPage, "Research & methodology: Green Compass carbon clarity"],
   ["/privacy", PrivacyPage, "Privacy Policy - Green Compass"],
   ["/tos", TermsPage, "Terms of Service - Green Compass"],
+  ["/sofia", SofiaPage, "Green Compass за устойчива София"],
 ];
 
 describe("route metadata", () => {
@@ -27,10 +29,10 @@ describe("route metadata", () => {
     await waitFor(() => expect(document.title).toBe(title));
     expect(document.querySelector('meta[name="description"]')?.content).toBeTruthy();
     expect(document.querySelector('link[rel="canonical"]')?.href).toBe(
-      `https://greencompass.app${route}`,
+      `https://www.greencompass.app${route}`,
     );
     expect(document.querySelector('meta[property="og:image"]')?.content).toBe(
-      "https://greencompass.app/og.png",
+      "https://www.greencompass.app/og.png",
     );
     unmount();
   });

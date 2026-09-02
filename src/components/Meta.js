@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const SITE_NAME = "Green Compass";
-const SITE_URL = "https://greencompass.app";
+const SITE_URL = "https://www.greencompass.app";
 const DEFAULT_TITLE = "Green Compass: A clearer path to sustainable living";
 const DEFAULT_DESCRIPTION =
   "Practical sustainability guidance today, with thoughtful tools for lower-impact living on the horizon.";

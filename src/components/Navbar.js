@@ -6,12 +6,13 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import LanguageSwitcher from "components/site/LanguageSwitcher";
 import { useLanguage } from "context/LanguageContext";
 
-function Navbar() {
+function Navbar({ forceLanguage }) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
   const router = useRouter();
   const { language } = useLanguage();
-  const copy = language === "bg" ? {
+  const activeLanguage = forceLanguage || language;
+  const copy = activeLanguage === "bg" ? {
     home: "Начало на Green Compass",
     skip: "Към съдържанието",
     primary: "Основна навигация",
@@ -23,6 +24,7 @@ function Navbar() {
       ["/#features", "Функции"],
       ["/explainer", "Как работи"],
       ["/research", "Изследвания"],
+      ["/sofia", "За София"],
       ["/#faq", "Въпроси"],
       ["/#contact", "Контакт"],
     ],
@@ -38,6 +40,7 @@ function Navbar() {
       ["/#features", "Features"],
       ["/explainer", "How it works"],
       ["/research", "Research"],
+      ["/sofia", "For Sofia"],
       ["/#faq", "FAQ"],
       ["/#contact", "Contact"],
     ],
@@ -97,7 +100,7 @@ function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <LanguageSwitcher className="ml-2" />
+            {!forceLanguage && <LanguageSwitcher className="ml-2" />}
             <a
               href="https://app.greencompass.app/auth/signin"
               target="_blank"
@@ -133,7 +136,7 @@ function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <LanguageSwitcher className="mt-2 self-start" />
+              {!forceLanguage && <LanguageSwitcher className="mt-2 self-start" />}
               <a
                 href="https://app.greencompass.app/auth/signin"
                 target="_blank"

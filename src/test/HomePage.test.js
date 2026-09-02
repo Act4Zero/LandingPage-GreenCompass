@@ -13,7 +13,7 @@ describe("Home page product framing", () => {
     expect(hero.className).not.toContain("opacity-0");
     expect(screen.getAllByText("In the app").length).toBeGreaterThan(0);
     expect(screen.getByText("Sign-in required")).toBeVisible();
-    expect(screen.getByText("Pilot rollout")).toBeVisible();
+    expect(screen.getByText("Partner onboarding")).toBeVisible();
     expect(screen.getByText(/not a promise of what Green Compass will achieve/i)).toBeVisible();
     expect(screen.getByText("One connected journey")).toBeVisible();
   }, 10000);
