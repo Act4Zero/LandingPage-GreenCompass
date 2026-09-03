@@ -126,9 +126,9 @@ function SofiaPage() {
           <div className="site-container grid gap-14 lg:grid-cols-[1fr_0.9fr] lg:items-start lg:gap-20">
             <div><p className="eyebrow">Контакт</p><h2 className="section-title">Разговор при проявен интерес.</h2><p className="mt-6 text-lg leading-8 text-ink/75">Ако инициативата представлява интерес, ще се радваме да представим разработеното дотук и да обсъдим с определени от Столична община експерти дали и в кои области платформата би могла да има практическо приложение за града.</p></div>
             <div className="border-y border-forest/15 py-2">
-              <div className="border-b border-forest/15 py-6"><strong className="block text-xl">Стоян Коруджиев</strong><span className="mt-1 block text-ink/70">Android разработчик и основател</span></div>
+              <div className="border-b border-forest/15 py-6"><strong className="block text-xl">Стоян Коруджиев</strong><span className="mt-1 block text-ink/70">Софтуерен разработчик и основател</span></div>
               <div className="border-b border-forest/15 py-6"><strong className="block text-xl">Цветомира Машова</strong><span className="mt-1 block text-ink/70">Биотехнолог и съосновател</span></div>
-              <div className="flex flex-wrap gap-3 py-6"><a className="button-secondary" href="tel:+359888307632">0888 307 632</a><a className="button-secondary" href="mailto:support@greencompass.app">support@greencompass.app</a></div>
+              <div className="flex flex-wrap gap-3 py-6"><a className="button-secondary" href="mailto:support@greencompass.app">support@greencompass.app</a></div>
               <div className="flex flex-wrap gap-x-6 gap-y-3 pb-6 font-bold text-leaf"><Link href="/">Уебсайт</Link><a href={APP_URL} target="_blank" rel="noreferrer">Приложение</a></div>
             </div>
           </div>
